@@ -1,0 +1,29 @@
+{
+  "name": "p5.man",
+  "version": "1.0.0",
+  "description": "Generate neovim help documentation from p5.js reference",
+  "main": "generate.js",
+  "scripts": {
+    "generate": "node generate.js",
+    "clean": "rm -rf doc/ temp/"
+  },
+  "bin": {
+    "p5-man": "./generate.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/prjctimg/p5.man.git"
+  },
+  "keywords": [
+    "p5.js",
+    "neovim",
+    "documentation",
+    "help",
+    "manpages"
+  ],
+  "author": "prjctimg",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.0.0"
+  }
+}

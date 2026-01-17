@@ -1,0 +1,270 @@
+name: Update p5.js Documentation
+
+on:
+  release:
+    types: [published]
+    repositories:
+      - processing/p5.js
+  workflow_dispatch:
+    inputs:
+      force_update:
+        description: 'Force update even if version unchanged'
+        required: false
+        default: false
+        type: boolean
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+      
+      - name: Install dependencies
+        run: npm install
+      
+      - name: Get latest p5.js release
+        id: release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          # Simplified version detection using GitHub CLI (more reliable in CI)
+          echo "Getting latest p5.js release version..."
+          
+          if command -v gh &> /dev/null; then
+            LATEST=$(gh release view --repo processing/p5.js --json tagName --jq '.tagName' 2>/dev/null | sed 's/^v//' || echo "")
+          fi
+          
+          # Fallback to stable API call
+          if [ -z "$LATEST" ] || [ "$LATEST" = "null" ]; then
+            echo "Using GitHub API fallback..."
+            LATEST=$(curl -s -H "Authorization: token ${{ github.token }}" https://api.github.com/repos/processing/p5.js/releases/latest | jq -r '.tag_name' 2>/dev/null | sed 's/^v//' || echo "")
+          fi
+          
+          # Verify we got a valid version
+          if [ -z "$LATEST" ] || [ "$LATEST" = "null" ] || ! [[ "$LATEST" =~ ^[0-9]+\.[0-9]+\.[0-9]+ ]]; then
+            echo "ERROR: Could not determine valid p5.js version. Got: '$LATEST'"
+            exit 1
+          fi
+          
+          # Get current version, with validation
+          CURRENT=$(cat .last_p5_version 2>/dev/null || echo "")
+          if [ -z "$CURRENT" ] || ! [[ "$CURRENT" =~ ^[0-9]+\.[0-9]+\.[0-9]+ ]]; then
+            echo "Current version is invalid or missing, treating as update needed"
+            CURRENT=""
+          fi
+          
+          echo "version=$LATEST" >> $GITHUB_OUTPUT
+          echo "current=$CURRENT" >> $GITHUB_OUTPUT
+          
+          # Determine if update is needed
+          if [ "$LATEST" != "$CURRENT" ] && [ -n "$CURRENT" ]; then
+            echo "needs_update=true" >> $GITHUB_OUTPUT
+            echo "Will update from $CURRENT to $LATEST"
+          elif [ -z "$CURRENT" ]; then
+            echo "needs_update=true" >> $GITHUB_OUTPUT
+            echo "No current version found, will initialize with $LATEST"
+          elif [ "${{ github.event.inputs.force_update }}" = "true" ]; then
+            echo "needs_update=true" >> $GITHUB_OUTPUT
+            echo "Force update requested, updating from $CURRENT to $LATEST"
+          else
+            echo "needs_update=false" >> $GITHUB_OUTPUT
+            echo "No update needed (current: $CURRENT, latest: $LATEST)"
+          fi
+      
+      - name: Generate docs
+        if: steps.release.outputs.needs_update == 'true'
+        run: |
+          echo "Generating documentation for p5.js version ${{ steps.release.outputs.version }}"
+          
+          # Update version file first
+          echo "${{ steps.release.outputs.version }}" > .last_p5_version
+          
+          # Generate documentation (script clones source code internally)
+          npm run generate
+          
+          echo "Documentation generation completed"
+      
+      - name: Verify generated files
+        if: steps.release.outputs.needs_update == 'true'
+        run: |
+          echo "Verifying generated documentation files..."
+          
+          # Check that main files were generated
+          if [ ! -f "doc/p5.txt" ]; then
+            echo "ERROR: Main documentation file not generated"
+            exit 1
+          fi
+          
+          if [ ! -f "doc/tags" ]; then
+            echo "ERROR: Tags file not generated"
+            exit 1
+          fi
+          
+          # Count generated files
+          FILE_COUNT=$(find doc -name "*.txt" | wc -l)
+          echo "Generated $FILE_COUNT documentation files"
+          
+          if [ "$FILE_COUNT" -lt 10 ]; then
+            echo "WARNING: Unexpectedly low number of files generated"
+          fi
+          
+          echo "Verification successful"
+      
+      - name: Checkout p5.nvim repository
+        if: steps.release.outputs.needs_update == 'true'
+        uses: actions/checkout@v4
+        with:
+          repository: prjctimg/p5.nvim
+          token: ${{ secrets.P5NVIM_PUSH_TOKEN }}
+          path: p5.nvim
+      
+      - name: Validate p5.nvim repository access
+        if: steps.release.outputs.needs_update == 'true'
+        run: |
+          if [ ! -d "p5.nvim" ]; then
+            echo "ERROR: Failed to checkout p5.nvim repository"
+            exit 1
+          fi
+          
+          if [ ! -f "p5.nvim/.git/config" ]; then
+            echo "ERROR: p5.nvim is not a git repository"
+            exit 1
+          fi
+          
+          echo "p5.nvim repository checkout successful"
+      
+      - name: Copy generated docs to p5.nvim
+        if: steps.release.outputs.needs_update == 'true'
+        run: |
+          echo "Copying generated documentation to p5.nvim repository..."
+          
+          # Create doc directory if it doesn't exist
+          mkdir -p p5.nvim/doc
+          
+          # Check if p5-nvim.txt exists and preserve it
+          if [ -f "p5.nvim/doc/p5-nvim.txt" ]; then
+            echo "Found existing p5-nvim.txt, preserving it..."
+            cp p5.nvim/doc/p5-nvim.txt p5.nvim/doc/p5-nvim.txt.backup
+          fi
+          
+          # Copy all generated txt files
+          cp doc/*.txt p5.nvim/doc/
+          echo "Copied $(find doc -name "*.txt" | wc -l) documentation files"
+          
+          # Restore p5-nvim.txt if it was backed up
+          if [ -f "p5.nvim/doc/p5-nvim.txt.backup" ]; then
+            echo "Restoring preserved p5-nvim.txt..."
+            mv p5.nvim/doc/p5-nvim.txt.backup p5.nvim/doc/p5-nvim.txt
+          fi
+          
+          # Handle tags concatenation and deduplication
+          if [ -f "p5.nvim/doc/tags" ]; then
+            echo "Existing tags file found, concatenating and deduplicating..."
+            
+            # Create temporary combined tags file
+            cat doc/tags > p5.nvim/doc/tags_temp
+            cat p5.nvim/doc/tags >> p5.nvim/doc/tags_temp
+            
+            # Process tags: keep unique header lines first, then deduplicated entries
+            {
+              # Keep unique header lines (starting with !_TAG_)
+              grep "^!_TAG_" p5.nvim/doc/tags_temp | sort -u || true
+              echo ""
+              # Add deduplicated tag entries (skip header lines)
+              grep -v "^!_TAG_" p5.nvim/doc/tags_temp | sort -u
+            } > p5.nvim/doc/tags
+            
+            # Clean up
+            rm p5.nvim/doc/tags_temp
+            echo "Tags concatenated and deduplicated successfully"
+          else
+            echo "No existing tags file, copying new tags..."
+            cp doc/tags p5.nvim/doc/
+          fi
+      
+      - name: Cleanup p5.man working directory
+        if: steps.release.outputs.needs_update == 'true'
+        run: |
+          echo "Cleaning up p5.man working directory to avoid committing docs..."
+          # Reset any documentation changes in p5.man repository
+          git reset -- doc/ 2>/dev/null || true
+          git clean -fd doc/ 2>/dev/null || true
+          echo "Documentation files removed from p5.man working directory"
+      
+      - name: Verify copied files
+        if: steps.release.outputs.needs_update == 'true'
+        run: |
+          echo "Verifying copied documentation files..."
+          
+          # Check that files were copied
+          if [ ! -f "p5.nvim/doc/p5.txt" ]; then
+            echo "ERROR: Main documentation file not copied"
+            exit 1
+          fi
+          
+          if [ ! -f "p5.nvim/doc/tags" ]; then
+            echo "ERROR: Tags file not copied"
+            exit 1
+          fi
+          
+          # Count copied files
+          FILE_COUNT=$(find p5.nvim/doc -name "*.txt" | wc -l)
+          echo "Successfully copied $FILE_COUNT documentation files to p5.nvim"
+      
+      - name: Commit and push to p5.nvim
+        if: steps.release.outputs.needs_update == 'true'
+        run: |
+          cd p5.nvim
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "prjctimg@outlook.com"
+          
+          # Show what will be committed
+          echo "Files to be committed to p5.nvim:"
+          git add doc/
+          git diff --cached --name-only
+          
+          # Commit if there are changes
+          if ! git diff --cached --quiet; then
+            git commit -m "Update docs for p5.js ${{ steps.release.outputs.version }}"
+            git push
+            echo "Documentation successfully pushed to p5.nvim repository"
+          else
+            echo "No changes to commit to p5.nvim"
+          fi
+      
+      - name: Update version tracking in p5.man
+        if: steps.release.outputs.needs_update == 'true'
+        run: |
+          # Ensure we're in the correct repository (p5.man)
+          pwd
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "prjctimg@outlook.com"
+          
+          # Reset any potential doc/ changes to avoid committing them to p5.man
+          git reset -- doc/ 2>/dev/null || true
+          
+          # Only commit version file changes to p5.man
+          git add .last_p5_version
+          echo "Files staged for p5.man:"
+          git diff --cached --name-only
+          
+          if ! git diff --cached --quiet; then
+            git commit -m "Track p5.js version ${{ steps.release.outputs.version }}"
+            git push
+            echo "Version tracking updated in p5.man"
+          else
+            echo "No version changes to commit to p5.man"
+          fi
+
