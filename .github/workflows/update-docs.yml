@@ -34,22 +34,53 @@ jobs:
       - name: Install dependencies
         run: npm install
       
+      - name: Setup Neovim
+        run: |
+          echo "Setting up neovim for help tag generation..."
+          
+          # Check if neovim is already available
+          if ! command -v nvim &> /dev/null; then
+            echo "Installing neovim..."
+            
+            # Detect platform and install accordingly
+            case "$(uname -s)" in
+              Linux*)
+                wget -q https://github.com/neovim/neovim/releases/download/v0.10.2/nvim-linux64.tar.gz
+                tar -xzf nvim-linux64.tar.gz
+                sudo cp -r nvim-linux64/* /usr/local/
+                ;;
+              Darwin*)
+                wget -q https://github.com/neovim/neovim/releases/download/v0.10.2/nvim-macos.tar.gz
+                tar -xzf nvim-macos.tar.gz
+                sudo cp -r nvim-osx64/* /usr/local/
+                ;;
+              CYGWIN*|MINGW*|MSYS*)
+                wget -q https://github.com/neovim/neovim/releases/download/v0.10.2/nvim-win64.zip
+                unzip nvim-win64.zip
+                echo "$PWD/Neovim/bin" >> $GITHUB_PATH
+                ;;
+              *)
+                echo "Unsupported platform: $(uname -s)"
+                exit 1
+                ;;
+            esac
+          else
+            echo "Neovim already available: $(nvim --version | head -n1)"
+          fi
+      
       - name: Get latest p5.js release
         id: release
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          # Simplified version detection using GitHub CLI (more reliable in CI)
+          # Get latest p5.js release version using GitHub CLI (p5.js uses 'v' prefix convention)
           echo "Getting latest p5.js release version..."
           
           if command -v gh &> /dev/null; then
-            LATEST=$(gh release view --repo processing/p5.js --json tagName --jq '.tagName' 2>/dev/null | sed 's/^v//' || echo "")
-          fi
-          
-          # Fallback to stable API call
-          if [ -z "$LATEST" ] || [ "$LATEST" = "null" ]; then
-            echo "Using GitHub API fallback..."
-            LATEST=$(curl -s -H "Authorization: token ${{ github.token }}" https://api.github.com/repos/processing/p5.js/releases/latest | jq -r '.tag_name' 2>/dev/null | sed 's/^v//' || echo "")
+            LATEST=$(gh release view --repo processing/p5.js --json tagName --jq '.tagName' 2>/dev/null | sed 's/^v//')
+          else
+            echo "ERROR: GitHub CLI not available"
+            exit 1
           fi
           
           # Verify we got a valid version
@@ -107,20 +138,26 @@ jobs:
             exit 1
           fi
           
-          if [ ! -f "doc/tags" ]; then
-            echo "ERROR: Tags file not generated"
-            exit 1
-          fi
-          
           # Count generated files
           FILE_COUNT=$(find doc -name "*.txt" | wc -l)
           echo "Generated $FILE_COUNT documentation files"
           
           if [ "$FILE_COUNT" -lt 10 ]; then
-            echo "WARNING: Unexpectedly low number of files generated"
+            echo "ERROR: Unexpectedly low number of files generated (expected at least 10, got $FILE_COUNT)"
+            exit 1
           fi
           
-          echo "Verification successful"
+          # Verify each expected module file exists
+          expected_files="p5-shape.txt p5-color.txt p5-typography.txt p5-image.txt p5-transform.txt p5-environment.txt p5-3d.txt p5-rendering.txt p5-math.txt p5-io.txt p5-events.txt p5-dom.txt p5-data.txt p5-structure.txt p5-constants.txt p5-foundation.txt"
+          
+          for file in $expected_files; do
+            if [ ! -f "doc/$file" ]; then
+              echo "ERROR: Expected module file not found: doc/$file"
+              exit 1
+            fi
+          done
+          
+          echo "All expected documentation files generated successfully"
       
       - name: Checkout p5.nvim repository
         if: steps.release.outputs.needs_update == 'true'
@@ -173,13 +210,13 @@ jobs:
           echo "Generating tags with neovim..."
           cd p5.nvim
           
-          # Install neovim if not present
+          # Ensure neovim is available (should be setup in previous step)
           if ! command -v nvim &> /dev/null; then
-            echo "Installing neovim..."
-            wget -q https://github.com/neovim/neovim/releases/download/v0.9.0/nvim-linux64.tar.gz
-            tar -xzf nvim-linux64.tar.gz
-            export PATH=$PWD/nvim-linux64/bin:$PATH
+            echo "ERROR: Neovim not found. Please ensure setup step ran correctly."
+            exit 1
           fi
+          
+          echo "Using neovim version: $(nvim --version | head -n1)"
           
           # Generate tags for the doc directory
           nvim --headless -c "helptags doc/" -c "quit"

@@ -119,27 +119,11 @@ class P5ManGenerator {
     }
     fs.mkdirSync(path.join(__dirname, 'temp'), { recursive: true });
     
-    try {
-      // Try to clone the specific version tag first
-      execSync(`git clone --depth 1 --branch ${version} https://github.com/processing/p5.js.git ${tempDir}`, {
-        stdio: 'inherit',
-        timeout: 180000 // 3 minutes timeout
-      });
-    } catch (error) {
-      console.log(`Failed to clone version ${version}, trying with 'v' prefix...`);
-      try {
-        execSync(`git clone --depth 1 --branch v${version} https://github.com/processing/p5.js.git ${tempDir}`, {
-          stdio: 'inherit',
-          timeout: 180000
-        });
-      } catch (vError) {
-        console.log(`Failed to clone v${version}, falling back to main branch...`);
-        execSync(`git clone --depth 1 https://github.com/processing/p5.js.git ${tempDir}`, {
-          stdio: 'inherit',
-          timeout: 180000
-        });
-      }
-    }
+// Clone with v prefix since p5.js uses this tag convention
+    execSync(`git clone --depth 1 --branch v${version} https://github.com/processing/p5.js.git ${tempDir}`, {
+      stdio: 'inherit',
+      timeout: 180000 // 3 minutes timeout
+    });
 
     // Extract documentation from source code
     console.log('Extracting documentation from source code...');
