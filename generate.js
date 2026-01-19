@@ -378,7 +378,7 @@ class P5ManGenerator {
       content += `1. 🎯 Functions (${uniqueFunctions.length} total)\n\n`;
       
       for (const func of uniqueFunctions.sort((a, b) => a.method.localeCompare(b.method))) {
-        content += `   • |${func.method}()|\n`;
+        content += `   • ${func.method}()\n`;
       }
       content += '\n';
     }
@@ -415,7 +415,7 @@ class P5ManGenerator {
     
     // Function header with tag and emoji
     // Use module-qualified tag for functions that could conflict across modules
-    const tagName = this.shouldQualifyTag(func.method) ? `p5.${func.method}()|${moduleName.toLowerCase()}` : `p5.${func.method}()`;
+    const tagName = this.shouldQualifyTag(func.method) ? `p5.${func.method}()--${moduleName.toLowerCase()}` : `p5.${func.method}()`;
     content += `\n🔧 ${func.method}()                                                *${tagName}*\n`;
     content += `${'─'.repeat(func.method.length + 8)}\n`;
     
@@ -480,7 +480,7 @@ class P5ManGenerator {
     const conflictingFunctions = [
       'clear', 'print', 'save', 'load', 'get', 'set', 'close', 'open',
       'remove', 'add', 'create', 'update', 'delete', 'copy', 'move',
-      'draw', 'write', 'read'
+      'draw', 'write', 'read', 'updatePixels'
     ];
     
     const baseName = methodName.replace(/\(\)$/, '');
