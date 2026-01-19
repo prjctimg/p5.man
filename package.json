@@ -5,6 +5,7 @@
   "main": "generate.js",
   "scripts": {
     "generate": "node generate.js",
+    "test": "node tests/documentation.test.js",
     "clean": "rm -rf doc/ temp/"
   },
   "bin": {
