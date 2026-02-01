@@ -1,0 +1,92 @@
+name: p5.js Documentation Sync
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+    inputs:
+      force:
+        description: 'Force regeneration regardless of releases'
+        required: false
+        default: false
+        type: boolean
+
+env:
+  NODE_VERSION: '18'
+
+jobs:
+  generate-docs:
+    runs-on: ubuntu-latest
+    name: Generate and Sync Documentation
+    
+    permissions:
+      contents: write
+      pull-requests: write
+    
+    steps:
+      - name: Checkout this repository
+        uses: actions/checkout@v4
+        
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'npm'
+          
+      - name: Install dependencies
+        run: npm ci
+        
+      - name: Clone p5.js repository
+        run: |
+          echo "📥 Cloning p5.js repository..."
+          git clone --depth 1 https://github.com/processing/p5.js.git /tmp/p5.js
+          
+      - name: Generate documentation
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          P5_NVIM_TOKEN: ${{ secrets.P5_NVIM_TOKEN }}
+          DEBUG: ${{ github.event.inputs.force }}
+        run: |
+          echo "🚀 Starting documentation generation..."
+          npm start
+          
+      - name: Upload generated files as artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: p5-documentation
+          path: doc/
+          retention-days: 30
+          
+      - name: Summary
+        run: |
+          echo "## Documentation Generation Complete 🎉" >> $GITHUB_STEP_SUMMARY
+          echo "- Generated Vim documentation files" >> $GITHUB_STEP_SUMMARY
+          echo "- Created tags file" >> $GITHUB_STEP_SUMMARY
+          echo "- Updated p5.nvim repository" >> $GITHUB_STEP_SUMMARY
+          echo "- All files are available in the artifacts" >> $GITHUB_STEP_SUMMARY
+
+  test-generation:
+    runs-on: ubuntu-latest
+    name: Test Documentation Generation
+    
+    if: github.event.inputs.force == 'true'
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          
+      - name: Install dependencies
+        run: npm ci
+        
+      - name: Run tests
+        run: npm test
+        
+      - name: Validate generated files
+        run: |
+          npm run validate

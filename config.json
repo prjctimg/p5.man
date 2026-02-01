@@ -1,0 +1,118 @@
+{
+  "languages": {
+    "javascript": {
+      "name": "JavaScript",
+      "extension": "txt",
+      "emoji": "🟨",
+      "parser": "jsDocParser",
+      "generator": "vimdocGenerator",
+      "docFormat": "vimdoc"
+    },
+    "zig": {
+      "name": "Zig",
+      "extension": "zig",
+      "emoji": "🦎",
+      "parser": "zigDocParser", 
+      "generator": "zigdocGenerator",
+      "docFormat": "zigdoc"
+    }
+  },
+  "modules": {
+    "shape": {
+      "file": "p5-shape.txt",
+      "zigFile": "zig-shape.zig",
+      "emoji": "📐",
+      "description": "Shape drawing functions and primitives"
+    },
+    "color": {
+      "file": "p5-color.txt", 
+      "zigFile": "zig-color.zig",
+      "emoji": "🎨",
+      "description": "Color creation and manipulation"
+    },
+    "typography": {
+      "file": "p5-typography.txt",
+      "zigFile": "zig-typography.zig", 
+      "emoji": "📝", 
+      "description": "Text rendering and font handling"
+    },
+    "image": {
+      "file": "p5-image.txt",
+      "zigFile": "zig-image.zig",
+      "emoji": "🖼️",
+      "description": "Image loading and manipulation"
+    },
+    "transform": {
+      "file": "p5-transform.txt",
+      "zigFile": "zig-transform.zig",
+      "emoji": "🔄",
+      "description": "Coordinate transformations"
+    },
+    "environment": {
+      "file": "p5-environment.txt",
+      "zigFile": "zig-environment.zig",
+      "emoji": "🌍",
+      "description": "Canvas environment and properties"
+    },
+    "3d": {
+      "file": "p5-3d.txt",
+      "zigFile": "zig-3d.zig",
+      "emoji": "🎮",
+      "description": "3D graphics and WebGL"
+    },
+    "rendering": {
+      "file": "p5-rendering.txt",
+      "zigFile": "zig-rendering.zig",
+      "emoji": "🖥️",
+      "description": "Rendering and canvas setup"
+    },
+    "math": {
+      "file": "p5-math.txt",
+      "zigFile": "zig-math.zig",
+      "emoji": "🔢",
+      "description": "Mathematical functions and vectors"
+    },
+    "io": {
+      "file": "p5-io.txt",
+      "zigFile": "zig-io.zig",
+      "emoji": "📁",
+      "description": "Input/output operations"
+    },
+    "events": {
+      "file": "p5-events.txt",
+      "zigFile": "zig-events.zig",
+      "emoji": "🎭",
+      "description": "Event handling system"
+    },
+    "data": {
+      "file": "p5-data.txt",
+      "zigFile": "zig-data.zig",
+      "emoji": "📊",
+      "description": "Data structures and handling"
+    },
+    "structure": {
+      "file": "p5-structure.txt",
+      "zigFile": "zig-structure.zig",
+      "emoji": "🏗️",
+      "description": "Program flow and structure"
+    },
+    "dom": {
+      "file": "p5-dom.txt",
+      "zigFile": "zig-dom.zig",
+      "emoji": "🌐",
+      "description": "DOM manipulation and elements"
+    },
+    "constants": {
+      "file": "p5-constants.txt",
+      "zigFile": "zig-constants.zig",
+      "emoji": "📋",
+      "description": "Predefined constants"
+    }
+  },
+  "p5Repo": "processing/p5.js",
+  "p5nvimRepo": "prjctimg/p5.nvim", 
+  "targetBranch": "main",
+  "outputDir": "doc",
+  "defaultLanguage": "javascript",
+  "supportedTargets": ["javascript", "zig"]
+}
