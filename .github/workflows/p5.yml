@@ -31,10 +31,9 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: ${{ env.NODE_VERSION }}
-          cache: "npm"
 
       - name: Install dependencies
-        run: npm ci
+        run: npm install
 
       - name: Clone p5.js
         run: |
@@ -50,6 +49,30 @@ jobs:
           echo "🚀 Starting documentation generation..."
           npm start
 
+      - name: Clone p5.nvim repository
+        run: |
+          echo "📥 Cloning p5.nvim repository..."
+          git clone https://x-access-token:${{ secrets.P5NVIM_PUSH_TOKEN }}@github.com/p5-nvim/p5.nvim.git /tmp/p5.nvim
+
+      - name: Commit and push docs to p5.nvim
+        run: |
+          echo "📝 Committing documentation to p5.nvim..."
+          cd /tmp/p5.nvim
+          
+          # Copy generated docs
+          cp -r /home/runner/work/automata/automata/doc/* doc/ || true
+          
+          # Configure git
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          
+          # Add and commit changes
+          git add doc/
+          git diff --staged --quiet || git commit -m "Update p5.js documentation ($(date +'%Y-%m-%d %H:%M:%S'))"
+          
+          # Push changes
+          git push origin main
+
       - name: Upload docs
         if: always()
         uses: actions/upload-artifact@v4
@@ -64,6 +87,3 @@ jobs:
           echo "- Created tags file" >> $GITHUB_STEP_SUMMARY
           echo "- Updated p5.nvim repository" >> $GITHUB_STEP_SUMMARY
           echo "- All files are available in the artifacts" >> $GITHUB_STEP_SUMMARY
-
-
-
