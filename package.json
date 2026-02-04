@@ -12,6 +12,19 @@
   ],
   "author": "iseeheaven",
   "license": "MIT",
-  "dependencies": {},
-  "devDependencies": {}
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/prjctimg/automata.git"
+  },
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/prjctimg/automata/issues"
+  },
+  "homepage": "https://github.com/prjctimg/automata#readme",
+  "dependencies": {
+    "@types/p5": "^1.7.7",
+    "dts-bundle": "^0.7.3",
+    "typescript": "^5.9.3"
+  }
 }
