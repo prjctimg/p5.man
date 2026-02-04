@@ -103,13 +103,13 @@ jobs:
           echo "📦 Installing dependencies..."
           npm install
 
-      - name: Install p5 types and dts-bundle-generator
+      - name: Install p5 types and @types/p5
         if: |
           github.event.inputs.skip_types != 'true' && 
           github.event.inputs.modules_only != 'true'
         run: |
-          echo "📦 Installing p5 types and dts-bundle-generator..."
-          npm install @types/p5 dts-bundle-generator
+          echo "📦 Installing p5 types and @types/p5..."
+          npm install @types/p5 @types/p5
 
       - name: Clone p5.js
         run: |
@@ -156,7 +156,7 @@ jobs:
           if [ "${{ github.event.inputs.types_only }}" = "true" ]; then
             echo "📝 Running type bundling only..."
             mkdir -p assets/types
-            npx dts-bundle-generator -o assets/types/index.d.ts node_modules/@types/p5/index.d.ts
+            cp node_modules/@types/p5/index.d.ts assets/types/index.d.ts
           elif [ "${{ github.event.inputs.modules_only }}" = "true" ]; then
             echo "📦 Running module fetching only..."
             node scripts/p5/fetch-modules.js --repo ${{ env.P5_REPO }}
@@ -166,11 +166,11 @@ jobs:
           elif [ "${{ github.event.inputs.skip_modules }}" = "true" ]; then
             echo "📝 Running type bundling only (skip modules)..."
             mkdir -p assets/types
-            npx dts-bundle-generator -o assets/types/index.d.ts node_modules/@types/p5/index.d.ts
+            cp node_modules/@types/p5/index.d.ts assets/types/index.d.ts
           else
             echo "🚀 Running both types and modules..."
             mkdir -p assets/types
-            npx dts-bundle-generator -o assets/types/index.d.ts node_modules/@types/p5/index.d.ts
+            cp node_modules/@types/p5/index.d.ts assets/types/index.d.ts
             node scripts/p5/fetch-modules.js --repo ${{ env.P5_REPO }}
           fi
 
@@ -268,13 +268,13 @@ jobs:
           echo "📦 Installing dependencies..."
           npm install
 
-      - name: Install p5 types and dts-bundle-generator
+      - name: Install p5 types and @types/p5
         if: |
           github.event.inputs.skip_types != 'true' && 
           github.event.inputs.modules_only != 'true'
         run: |
-          echo "📦 Installing p5 types and dts-bundle-generator..."
-          npm install @types/p5 dts-bundle-generator
+          echo "📦 Installing p5 types and @types/p5..."
+          npm install @types/p5 @types/p5
 
       - name: Clone p5.js
         run: |
