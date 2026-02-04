@@ -1,0 +1,333 @@
+name: p5.js Types and Modules Sync
+
+on:
+  release:
+    types: [published]
+  schedule:
+    # Run daily at 2 AM UTC to check for type updates
+    - cron: '0 2 * * *'
+  workflow_dispatch:
+    inputs:
+      force:
+        description: "Force regeneration regardless of releases"
+        required: false
+        default: false
+        type: boolean
+      skip_docs:
+        description: "Skip documentation generation"
+        required: false
+        default: false
+        type: boolean
+      skip_types:
+        description: "Skip type bundling"
+        required: false
+        default: false
+        type: boolean
+      skip_modules:
+        description: "Skip module fetching"
+        required: false
+        default: false
+        type: boolean
+      types_only:
+        description: "Only run type bundling"
+        required: false
+        default: false
+        type: boolean
+      modules_only:
+        description: "Only run module fetching"
+        required: false
+        default: false
+        type: boolean
+
+env:
+  NODE_VERSION: "24"
+
+jobs:
+  # Check if we need to run (for scheduled runs)
+  check-updates:
+    runs-on: ubuntu-latest
+    name: Check for Updates
+    if: github.event_name == 'schedule'
+    
+    permissions:
+      contents: read
+    
+    outputs:
+      should_run: ${{ steps.check.outputs.should_run }}
+      p5_version: ${{ steps.check.outputs.p5_version }}
+      p5nvim_version: ${{ steps.check.outputs.p5nvim_version }}
+
+    steps:
+      - name: Check for new releases
+        id: check
+        run: |
+          echo "Checking for new p5.js releases..."
+          
+          # Get latest p5.js release
+          P5_LATEST=$(curl -s https://api.github.com/repos/processing/p5.js/releases/latest | jq -r .tag_name)
+          echo "p5_latest=$P5_LATEST" >> $GITHUB_OUTPUT
+          
+          # Get latest p5.nvim commit (to track if we've already processed this version)
+          curl -s https://api.github.com/repos/prjctimg/p5.nvim/commits/main | jq -r .sha > p5nvim_latest.txt
+          
+          # Simple check - if we have a new release, we should run
+          if [ -n "$P5_LATEST" ]; then
+            echo "Found p5.js version: $P5_LATEST"
+            echo "should_run=true" >> $GITHUB_OUTPUT
+            echo "p5_version=$P5_LATEST" >> $GITHUB_OUTPUT
+          else
+            echo "No new releases found"
+            echo "should_run=false" >> $GITHUB_OUTPUT
+          fi
+
+  # Generate types and modules
+  generate-types-and-modules:
+    runs-on: ubuntu-latest
+    name: Generate Types and Modules
+    needs: check-updates
+    if: |
+      github.event_name != 'schedule' || 
+      needs.check-updates.outputs.should_run == 'true' ||
+      github.event.inputs.force == 'true'
+
+    permissions:
+      contents: write
+      pull-requests: write
+
+    steps:
+      - name: Checkout this repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+
+      - name: Install dependencies
+        run: |
+          echo "📦 Installing dependencies..."
+          npm install
+
+      - name: Install p5 types and tsdown
+        if: |
+          github.event.inputs.skip_types != 'true' && 
+          github.event.inputs.modules_only != 'true'
+        run: |
+          echo "📦 Installing p5 types and tsdown..."
+          npm install @types/p5 tsdown
+
+      - name: Clone p5.js
+        run: |
+          echo "📥 Cloning p5.js repository..."
+          git clone --depth 1 https://github.com/processing/p5.js.git /tmp/p5.js
+
+      - name: Build arguments
+        id: args
+        run: |
+          ARGS=""
+          
+          if [ "${{ github.event.inputs.skip_docs }}" = "true" ]; then
+            ARGS="$ARGS --skip-docs"
+          fi
+          
+          if [ "${{ github.event.inputs.skip_types }}" = "true" ]; then
+            ARGS="$ARGS --skip-types"
+          fi
+          
+          if [ "${{ github.event.inputs.skip_modules }}" = "true" ]; then
+            ARGS="$ARGS --skip-modules"
+          fi
+          
+          if [ "${{ github.event.inputs.types_only }}" = "true" ]; then
+            ARGS="$ARGS --types-only"
+          fi
+          
+          if [ "${{ github.event.inputs.modules_only }}" = "true" ]; then
+            ARGS="$ARGS --modules-only"
+          fi
+          
+          echo "args=$ARGS" >> $GITHUB_OUTPUT
+          echo "Running with arguments: $ARGS"
+
+      - name: Generate types and modules
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          P5_NVIM_TOKEN: ${{ secrets.P5NVIM_PUSH_TOKEN }}
+          DEBUG: ${{ github.event.inputs.force }}
+        run: |
+          echo "🚀 Starting types and modules generation..."
+          
+          # Run dedicated scripts based on arguments
+          if [ "${{ github.event.inputs.types_only }}" = "true" ]; then
+            echo "📝 Running type bundling only..."
+            mkdir -p assets/types
+            npx tsdown node_modules/@types/p5/index.d.ts --out-file assets/types/index.d.ts --format dts --keep-names --preserve-comments
+          elif [ "${{ github.event.inputs.modules_only }}" = "true" ]; then
+            echo "📦 Running module fetching only..."
+            node scripts/p5/fetch-modules.js --repo ${{ env.P5_REPO }}
+          elif [ "${{ github.event.inputs.skip_types }}" = "true" ]; then
+            echo "📦 Running module fetching only (skip types)..."
+            node scripts/p5/fetch-modules.js --repo ${{ env.P5_REPO }}
+          elif [ "${{ github.event.inputs.skip_modules }}" = "true" ]; then
+            echo "📝 Running type bundling only (skip modules)..."
+            mkdir -p assets/types
+            npx tsdown node_modules/@types/p5/index.d.ts --out-file assets/types/index.d.ts --format dts --keep-names --preserve-comments
+          else
+            echo "🚀 Running both types and modules..."
+            mkdir -p assets/types
+            npx tsdown node_modules/@types/p5/index.d.ts --out-file assets/types/index.d.ts --format dts --keep-names --preserve-comments
+            node scripts/p5/fetch-modules.js --repo ${{ env.P5_REPO }}
+          fi
+
+      - name: Clone p5.nvim repository
+        run: |
+          echo "📥 Cloning p5.nvim repository..."
+          git clone https://x-access-token:${{ secrets.P5NVIM_PUSH_TOKEN }}@github.com/prjctimg/p5.nvim.git /tmp/p5.nvim
+
+      - name: Commit and push types and modules to p5.nvim
+        run: |
+          echo "📝 Committing types and modules to p5.nvim..."
+          cd /tmp/p5.nvim
+
+          # Copy generated types if they exist
+          if [ -d "/home/runner/work/automata/automata/assets/types" ]; then
+            mkdir -p assets/types
+            cp -r /home/runner/work/automata/automata/assets/types/* assets/types/ || true
+            echo "✅ Copied types"
+          fi
+
+          # Copy generated modules if they exist
+          if [ -d "/home/runner/work/automata/automata/assets" ]; then
+            cp -r /home/runner/work/automata/automata/assets/* . || true
+            echo "✅ Copied modules"
+          fi
+
+          # Configure git
+          git config user.name "iseeheaven"
+          git config user.email "xml-wizard@outlook.com"
+
+          # Add and commit changes
+          git add .
+          git diff --staged --quiet || git commit -m "Update p5.js types and core modules ($(date +'%Y-%m-%d %H:%M:%S'))"
+
+          # Push changes
+          git push origin main
+
+      - name: Upload types
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: p5-types
+          path: assets/types/
+
+      - name: Upload modules
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: p5-modules
+          path: assets/
+
+      - name: Summary
+        run: |
+          echo "## Types and Modules Generation Complete 🎉" >> $GITHUB_STEP_SUMMARY
+          
+          if [ -d "/home/runner/work/automata/automata/assets/types" ]; then
+            echo "- ✅ Generated TypeScript definitions" >> $GITHUB_STEP_SUMMARY
+            echo "  - index.d.ts (bundled p5 types in assets/types/)" >> $GITHUB_STEP_SUMMARY
+            echo "  - Includes globals and p5 namespace support" >> $GITHUB_STEP_SUMMARY
+          fi
+          
+          if [ -d "/home/runner/work/automata/automata/assets" ]; then
+            echo "- ✅ Generated core modules" >> $GITHUB_STEP_SUMMARY
+            echo "  - Non-minified p5.js modules in assets/modules/" >> $GITHUB_STEP_SUMMARY
+            echo "  - Module index (modules.js)" >> $GITHUB_STEP_SUMMARY
+          fi
+          
+          echo "- ✅ Updated p5.nvim repository" >> $GITHUB_STEP_SUMMARY
+          echo "- ✅ All files are available in the artifacts" >> $GITHUB_STEP_SUMMARY
+          
+          if [ "${{ needs.check-updates.outputs.p5_version }}" != "" ]; then
+            echo "- 📦 p5.js version: ${{ needs.check-updates.outputs.p5_version }}" >> $GITHUB_STEP_SUMMARY
+          fi
+
+  # Generate documentation (separate job to avoid conflicts)
+  generate-docs:
+    runs-on: ubuntu-latest
+    name: Generate Documentation
+    needs: check-updates
+    if: |
+      github.event_name != 'schedule' || 
+      needs.check-updates.outputs.should_run == 'true' ||
+      github.event.inputs.force == 'true'
+    
+    permissions:
+      contents: write
+      pull-requests: write
+
+    steps:
+      - name: Checkout this repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+
+      - name: Install dependencies
+        run: |
+          echo "📦 Installing dependencies..."
+          npm install
+
+      - name: Clone p5.js
+        run: |
+          echo "📥 Cloning p5.js repository..."
+          git clone --depth 1 https://github.com/processing/p5.js.git /tmp/p5.js
+
+      - name: Generate docs (skip if requested)
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          P5_NVIM_TOKEN: ${{ secrets.P5NVIM_PUSH_TOKEN }}
+          DEBUG: ${{ github.event.inputs.force }}
+        run: |
+          # Skip docs if explicitly requested
+          if [ "${{ github.event.inputs.skip_docs }}" = "true" ] || [ "${{ github.event.inputs.types_only }}" = "true" ] || [ "${{ github.event.inputs.modules_only }}" = "true" ]; then
+            echo "⏭️ Skipping documentation generation as requested"
+            exit 0
+          fi
+          
+          echo "🚀 Starting documentation generation..."
+          # Only generate docs (skip types and modules)
+          node src/index.js --skip-types --skip-modules
+
+      - name: Clone p5.nvim repository
+        if: github.event.inputs.skip_docs != 'true' && github.event.inputs.types_only != 'true' && github.event.inputs.modules_only != 'true'
+        run: |
+          echo "📥 Cloning p5.nvim repository..."
+          git clone https://x-access-token:${{ secrets.P5NVIM_PUSH_TOKEN }}@github.com/prjctimg/p5.nvim.git /tmp/p5.nvim
+
+      - name: Commit and push docs to p5.nvim
+        if: github.event.inputs.skip_docs != 'true' && github.event.inputs.types_only != 'true' && github.event.inputs.modules_only != 'true'
+        run: |
+          echo "📝 Committing documentation to p5.nvim..."
+          cd /tmp/p5.nvim
+
+          # Copy generated docs
+          cp -r /home/runner/work/automata/automata/doc/* doc/ || true
+
+          # Configure git
+          git config user.name "iseeheaven"
+          git config user.email "xml-wizard@outlook.com"
+
+          # Add and commit changes
+          git add doc/
+          git diff --staged --quiet || git commit -m "Update p5.js documentation ($(date +'%Y-%m-%d %H:%M:%S'))"
+
+          # Push changes
+          git push origin main
+
+      - name: Upload docs
+        if: always() && github.event.inputs.skip_docs != 'true' && github.event.inputs.types_only != 'true' && github.event.inputs.modules_only != 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: p5-documentation
+          path: doc/

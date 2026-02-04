@@ -1,0 +1,88 @@
+name: p5.js Documentation Sync
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+    inputs:
+      force:
+        description: "Force regeneration regardless of releases"
+        required: false
+        default: false
+        type: boolean
+
+env:
+  NODE_VERSION: "24"
+
+jobs:
+  generate-docs:
+    runs-on: ubuntu-latest
+    name: Generate and Sync
+
+    permissions:
+      contents: write
+      pull-requests: write
+
+    steps:
+      - name: Checkout this repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Clone p5.js
+        run: |
+          echo "📥 Cloning p5.js repository..."
+          git clone --depth 1 https://github.com/processing/p5.js.git /tmp/p5.js
+
+      - name: Generate docs
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          P5_NVIM_TOKEN: ${{ secrets.P5NVIM_PUSH_TOKEN }}
+          DEBUG: ${{ github.event.inputs.force }}
+        run: |
+          echo "🚀 Starting documentation generation..."
+          # Use dedicated p5.js documentation script
+          node scripts/p5/generate-docs.js
+
+      - name: Clone p5.nvim repository
+        run: |
+          echo "📥 Cloning p5.nvim repository..."
+          git clone https://x-access-token:${{ secrets.P5NVIM_PUSH_TOKEN }}@github.com/prjctimg/p5.nvim.git /tmp/p5.nvim
+
+      - name: Commit and push docs to p5.nvim
+        run: |
+          echo "📝 Committing documentation to p5.nvim..."
+          cd /tmp/p5.nvim
+
+          # Copy generated docs
+          cp -r /home/runner/work/automata/automata/doc/* doc/ || true
+
+          # Configure git
+          git config user.name "iseeheaven"
+          git config user.email "xml-wizard@outlook.com"
+
+          # Add and commit changes
+          git add doc/
+          git diff --staged --quiet || git commit -m "docs: updated manpages"
+
+          # Push changes
+          git push origin main
+
+      - name: Upload docs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: p5-documentation
+          path: doc/
+
+      - name: Summary
+        run: |
+          echo "## Documentation Generation Complete 🎉" >> $GITHUB_STEP_SUMMARY
+          echo "- Created tags file" >> $GITHUB_STEP_SUMMARY
+          echo "- Updated p5.nvim repository" >> $GITHUB_STEP_SUMMARY
