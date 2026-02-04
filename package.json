@@ -1,0 +1,17 @@
+{
+  "name": "automata",
+  "version": "1.0.0",
+  "description": "Automated manpage generation repository for p5.nvim",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "automation",
+    "p5.js",
+    "neovim"
+  ],
+  "author": "iseeheaven",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {}
+}
