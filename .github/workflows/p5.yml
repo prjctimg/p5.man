@@ -48,7 +48,7 @@ jobs:
         run: |
           echo "🚀 Starting documentation generation..."
           # Use dedicated p5.js documentation script
-          node scripts/p5/generate-docs.js
+          node scripts/p5/docs.js
 
       - name: Clone p5.nvim repository
         run: |

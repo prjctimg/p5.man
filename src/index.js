@@ -32,7 +32,7 @@ try {
   if (!skipDocs) {
     console.log('📖 Generating documentation...');
     const { execSync } = require('child_process');
-    execSync('node scripts/p5/generate-docs.js', { stdio: 'inherit' });
+    execSync('node scripts/p5/docs.js', { stdio: 'inherit' });
   }
 
   console.log('✅ All tasks completed successfully!');
