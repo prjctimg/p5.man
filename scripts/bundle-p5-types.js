@@ -3,7 +3,7 @@
 const fs = require('fs');
 const path = require('path');
 
-console.log('🚀 Starting p5 type bundling...');
+console.log('🚀 Starting p5 type bundling... 📝✨');
 
 const outputDir = 'assets/types';
 const outputFile = path.join(outputDir, 'p5.d.ts');
@@ -46,13 +46,13 @@ function resolveReferences(content, basePath) {
 }
 
 try {
-  console.log('📖 Reading p5 type files...');
+  console.log('📖 Reading p5 type files... 📚🔍');
   
   // Step 1: Read and resolve all references in the main index.d.ts
   const indexPath = 'node_modules/@types/p5/index.d.ts';
   let indexContent = fs.readFileSync(indexPath, 'utf8');
   
-  console.log('🔗 Resolving type references...');
+  console.log('🔗 Resolving type references... ⛓️🔧');
   const resolvedIndexContent = resolveReferences(indexContent, path.dirname(indexPath));
   
   // Step 2: Read global declarations
@@ -64,7 +64,7 @@ try {
   const cleanIndexContent = resolvedIndexContent.replace(/import\s+p5\s*=\s*require\("\.\/index"\);?/, '');
   
   // Step 4: Create combined output with both global and namespace support
-  console.log('🔗 Combining global and namespace types...');
+  console.log('🔗 Combining global and namespace types... 🔗🎯');
   
   const combinedContent = `// Generated p5.js Type Definitions
 // This file provides both global and p5 namespace support
@@ -96,15 +96,15 @@ export = p5;
   // Step 5: Write the final combined file
   fs.writeFileSync(outputFile, combinedContent);
   
-  console.log('✅ Type bundling complete!');
-  console.log(`📁 Output written to: ${outputFile}`);
+  console.log('✅ Type bundling complete! 🎉📝');
+  console.log(`📁 Output written to: ${outputFile} 📂💾`);
   
   // Verify file exists and has content
   const stats = fs.statSync(outputFile);
-  console.log(`📊 File size: ${stats.size} bytes`);
-  console.log(`📝 Lines of code: ${combinedContent.split('\n').length}`);
+  console.log(`📊 File size: ${stats.size} bytes 📏`);
+  console.log(`📝 Lines of code: ${combinedContent.split('\n').length} 📄`);
   
 } catch (error) {
-  console.error('❌ Error bundling types:', error.message);
+  console.error('❌ Error bundling types:', error.message, ' 💥🚨');
   process.exit(1);
 }

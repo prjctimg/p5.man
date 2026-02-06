@@ -4,7 +4,7 @@ p5-typography📝.txt    p5.js typography documentation    p5
 p5.js Typography Module    *p5-typography*
 
 p5.js Version: 1.7.7~
-Last Updated: 2026-02-06 16:28:07~
+Last Updated: 2026-02-06 18:38:12~
 
 ==============================================================================
 CONTENTS                                                    *p5-typography-contents*

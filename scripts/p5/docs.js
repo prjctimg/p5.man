@@ -4,20 +4,22 @@ const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
-console.log('🚀 Starting p5.js module-specific documentation generation...');
+console.log('🚀 Starting p5.js module-specific documentation generation... 📚✨');
 
 const outputDir = 'doc';
 const assetsDir = 'assets';
 
-// Ensure output directories exist
+// Ensure output directories exist 📁🏗️
 if (!fs.existsSync(outputDir)) {
   fs.mkdirSync(outputDir, { recursive: true });
+  console.log(`📁 Created output directory: ${outputDir} 🆕`);
 }
 if (!fs.existsSync(assetsDir)) {
   fs.mkdirSync(assetsDir, { recursive: true });
+  console.log(`📁 Created assets directory: ${assetsDir} 🆕`);
 }
 
-// Module emoji mapping
+// Module emoji mapping 🎨🌈
 const moduleEmojis = {
   'accessibility': '♿',
   'color': '🎨',
@@ -34,7 +36,7 @@ const moduleEmojis = {
 };
 
 try {
-  console.log('📖 Extracting documentation from @types/p5...');
+  console.log('📖 Extracting documentation from @types/p5... 🔍📦');
   
   // Get p5 version from package.json
   const p5PackageJson = JSON.parse(fs.readFileSync('node_modules/@types/p5/package.json', 'utf8'));
@@ -45,13 +47,13 @@ try {
   const timestamp = now.toISOString().replace(/T/, ' ').replace(/\..+/, '');
   const formattedTimestamp = now.toISOString().slice(0, 19).replace(/[-:]/g, '').replace('T', '-');
   
-  console.log(`📦 p5.js version: ${p5Version}`);
-  console.log(`📅 Last updated: ${timestamp}`);
+  console.log(`📦 p5.js version: ${p5Version} 🎯`);
+  console.log(`📅 Last updated: ${timestamp} ⏰`);
   
   // Read the bundled TypeScript definitions
   const typesFile = 'assets/types/p5.d.ts';
   if (!fs.existsSync(typesFile)) {
-    console.error('❌ TypeScript definitions not found. Run types generation first.');
+    console.error('❌ TypeScript definitions not found. Run types generation first. 📂❌');
     process.exit(1);
   }
   
@@ -60,11 +62,11 @@ try {
   // Parse modules from the TypeScript definitions
   const modules = parseModulesFromTypes(typesContent);
   
-  console.log(`📚 Found ${Object.keys(modules).length} modules`);
+  console.log(`📚 Found ${Object.keys(modules).length} modules 🎊📋`);
   
   // Generate documentation for each module
   for (const [moduleName, moduleData] of Object.entries(modules)) {
-    console.log(`📝 Generating documentation for ${moduleName}...`);
+    console.log(`📝 Generating documentation for ${moduleName}... ✍️🎨`);
     
     // Generate markdown for this module
     const markdown = generateModuleMarkdown(moduleName, moduleData, p5Version, timestamp);
@@ -75,23 +77,24 @@ try {
     // Convert to Vimdoc using pandoc
     const vimdoc = convertToVimdoc(cleanMarkdown, moduleName, p5Version, timestamp);
     
-    // Save as p5-[module][emoji].txt
+    // Save as p5-[module][emoji].txt 📝💾
     const emoji = moduleEmojis[moduleName] || '📄';
     const filename = `p5-${moduleName}${emoji}.txt`;
     const filepath = path.join(outputDir, filename);
     
     fs.writeFileSync(filepath, vimdoc);
-    console.log(`✅ Generated ${filename}`);
+    console.log(`✅ Generated ${filename} 🎉📄💾`);
   }
   
-  // Generate a master index file
+  // Generate a master index file 📋🗂️
   generateMasterIndex(modules, p5Version, timestamp);
   
-  console.log('✅ Module-specific documentation generation complete!');
-  console.log(`📁 Generated ${Object.keys(modules).length} manpages in ${outputDir}/`);
+  console.log('✅ Module-specific documentation generation complete! 🎊🏆🎯');
+  console.log(`📁 Generated ${Object.keys(modules).length} manpages in ${outputDir}/ 📂✨🌟`);
+  console.log(`🎉 All modules documented with emojis and proper Vim formatting! 🎨📚`);
   
 } catch (error) {
-  console.error('❌ Error generating documentation:', error.message);
+  console.error('❌ Error generating documentation:', error.message, ' 💥🚨');
   process.exit(1);
 }
 
@@ -388,5 +391,5 @@ vim:tw=78:ts=8:ft=help:norl:
 `;
 
   fs.writeFileSync(path.join(outputDir, 'p5-index.txt'), index);
-  console.log('✅ Generated master index: p5-index.txt');
+  console.log('✅ Generated master index: p5-index.txt 📋🗂️');
 }

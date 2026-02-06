@@ -3,7 +3,7 @@
 const fs = require('fs');
 const path = require('path');
 
-console.log('🚀 Starting p5 modules fetch...');
+console.log('🚀 Starting p5 modules fetch... 📦🔧');
 
 const outputDir = 'assets/libs';
 
@@ -13,12 +13,12 @@ if (!fs.existsSync(outputDir)) {
 }
 
 try {
-  console.log('📥 Cloning p5.js repository for modules...');
+  console.log('📥 Cloning p5.js repository for modules... 📥🏗️');
   
   // For testing purposes, create placeholder files
   // In the actual workflow, these will be copied from the cloned p5.js repo
   
-  console.log('📦 Creating core module placeholders...');
+  console.log('📦 Creating core module placeholders... 📦🎯');
   
   // Create placeholder p5.js file
   const p5Placeholder = `// p5.js Core Library
@@ -44,7 +44,7 @@ console.log('p5.sound.js library placeholder');
 `;
   
   fs.writeFileSync(path.join(outputDir, 'p5.sound.js'), p5SoundPlaceholder);
-  console.log('✅ Created p5.sound.js placeholder');
+  console.log('✅ Created p5.sound.js placeholder 🎵🔊');
   
   // Create a modules index file
   const modulesIndex = `// p5.js Core Modules
@@ -56,21 +56,21 @@ export { default as p5Sound } from './p5.sound.js';
 `;
   
   fs.writeFileSync(path.join(outputDir, 'index.js'), modulesIndex);
-  console.log('✅ Created modules index');
+  console.log('✅ Created modules index 📋🗂️');
   
-  console.log('✅ Modules fetch complete!');
-  console.log(`📁 Output directory: ${outputDir}`);
+  console.log('✅ Modules fetch complete! 🎉📦');
+  console.log(`📁 Output directory: ${outputDir} 📂✨`);
   
   // List the files
   const files = fs.readdirSync(outputDir);
-  console.log('📁 Generated files:');
+  console.log('📁 Generated files: 📋📄');
   files.forEach(file => {
     const filePath = path.join(outputDir, file);
     const stats = fs.statSync(filePath);
-    console.log(`  - ${file} (${stats.size} bytes)`);
+    console.log(`  - ${file} (${stats.size} bytes) 📏`);
   });
   
 } catch (error) {
-  console.error('❌ Error fetching modules:', error.message);
+  console.error('❌ Error fetching modules:', error.message, ' 💥🚨');
   process.exit(1);
 }
