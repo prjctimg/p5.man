@@ -207,51 +207,62 @@ function cleanJSDoc(jsdoc) {
 }
 
 function generateModuleMarkdown(moduleName, moduleData, p5Version, timestamp) {
-  let markdown = `# ${moduleName.charAt(0).toUpperCase() + moduleName.slice(1)} Module
+  let markdown = `*p5-${moduleName}*                             p5.js ${moduleName} docs
 
-**p5.js Version:** ${p5Version}  
-**Last Updated:** ${timestamp}
-
----
-
-## Table of Contents
+==============================================================================
+Table of Contents                      *p5-${moduleName}-table-of-contents*
 
 `;
 
-  // Add TOC for functions with emojis 🔧
+  let tocNumber = 1;
+  
+  // Add TOC for functions with proper Vimdoc links
   if (moduleData.functions.length > 0) {
-    markdown += '### 🔧 Functions\n\n';
+    markdown += `${tocNumber}. Functions                                           |p5-${moduleName}-functions|\n`;
+    tocNumber++;
     moduleData.functions.forEach(func => {
-      markdown += `- [${func.name}](#${func.name.toLowerCase()}) 🔧\n`;
+      markdown += `  - ${func.name}()             |p5-${moduleName}-${func.name}|\n`;
     });
     markdown += '\n';
   }
 
-  // Add TOC for classes with emojis 🏗️
+  // Add TOC for classes with proper Vimdoc links
   if (moduleData.classes.length > 0) {
-    markdown += '### 🏗️ Classes\n\n';
+    markdown += `${tocNumber}. Classes                                           |p5-${moduleName}-classes|\n`;
+    tocNumber++;
     moduleData.classes.forEach(cls => {
-      markdown += `- [${cls.name}](#${cls.name.toLowerCase()}) 🏗️\n`;
+      markdown += `  - ${cls.name}()     |p5-${moduleName}-${cls.name}|\n`;
     });
     markdown += '\n';
   }
 
-  // Add TOC for variables with emojis 📊
+  // Add TOC for variables with proper Vimdoc links
   if (moduleData.variables.length > 0) {
-    markdown += '### 📊 Variables\n\n';
+    markdown += `${tocNumber}. Variables                                           |p5-${moduleName}-variables|\n`;
+    tocNumber++;
     moduleData.variables.forEach(variable => {
-      markdown += `- [${variable.name}](#${variable.name.toLowerCase()}) 📊\n`;
+      markdown += `  - ${variable.name}     |p5-${moduleName}-${variable.name}|\n`;
     });
     markdown += '\n';
   }
 
-  markdown += '---\n\n';
+  // Add module description
+  const emoji = moduleEmojis[moduleName] || '📄';
+  markdown += `${emoji} ${moduleName.charAt(0).toUpperCase() + moduleName.slice(1)} module for p5.js
 
-  // Add function documentation with emojis 🔧
+📦 p5.js Version: ${p5Version}~
+⏰ Last Updated: ${timestamp}~
+
+`;
+
+  // Add function documentation
   if (moduleData.functions.length > 0) {
-    markdown += '## 🔧 Functions\n\n';
+    markdown += `==============================================================================
+${tocNumber}. Functions                                           |p5-${moduleName}-functions|
+
+`;
     moduleData.functions.forEach(func => {
-      markdown += `### 🔧 ${func.name}\n\n`;
+      markdown += `\`${func.name}()\`                                          |p5-${moduleName}-${func.name}|\n\n`;
       if (func.description) {
         markdown += `${func.description}\n\n`;
       }
@@ -262,11 +273,14 @@ function generateModuleMarkdown(moduleName, moduleData, p5Version, timestamp) {
     });
   }
 
-  // Add class documentation with emojis 🏗️
+  // Add class documentation
   if (moduleData.classes.length > 0) {
-    markdown += '## 🏗️ Classes\n\n';
+    markdown += `==============================================================================
+${tocNumber}. Classes                                           |p5-${moduleName}-classes|
+
+`;
     moduleData.classes.forEach(cls => {
-      markdown += `### 🏗️ ${cls.name}\n\n`;
+      markdown += `\`${cls.name}()\`                                          |p5-${moduleName}-${cls.name}|\n\n`;
       markdown += `🏷️ **Type:** ${cls.type}\n\n`;
       if (cls.description) {
         markdown += `${cls.description}\n\n`;
@@ -278,11 +292,14 @@ function generateModuleMarkdown(moduleName, moduleData, p5Version, timestamp) {
     });
   }
 
-  // Add variable documentation with emojis 📊
+  // Add variable documentation
   if (moduleData.variables.length > 0) {
-    markdown += '## 📊 Variables\n\n';
+    markdown += `==============================================================================
+${tocNumber}. Variables                                           |p5-${moduleName}-variables|
+
+`;
     moduleData.variables.forEach(variable => {
-      markdown += `### 📊 ${variable.name}\n\n`;
+      markdown += `\`${variable.name}\`                                          |p5-${moduleName}-${variable.name}|\n\n`;
       if (variable.description) {
         markdown += `${variable.description}\n\n`;
       }
@@ -292,6 +309,12 @@ function generateModuleMarkdown(moduleName, moduleData, p5Version, timestamp) {
       markdown += '---\n\n';
     });
   }
+
+  markdown += `==============================================================================
+Generated by p5.nvim documentation generator <https://github.com/prjctimg/p5.nvim>
+
+vim:tw=78:ts=8:ft=help:norl:
+`;
 
   return markdown;
 }
@@ -304,55 +327,8 @@ function removeInternalLinks(markdown) {
 }
 
 function convertToVimdoc(markdown, moduleName, p5Version, timestamp) {
-  const emoji = moduleEmojis[moduleName] || '📄';
-  const title = `p5-${moduleName}`;
-  
-  // Convert markdown to Vimdoc format with section emojis 📚✨
-  let vimdoc = `${title}.txt    p5.js ${moduleName} documentation    p5
-
-==============================================================================
-${emoji} p5.js ${moduleName.charAt(0).toUpperCase() + moduleName.slice(1)} Module ${emoji}    *p5-${moduleName}*
-
-📦 p5.js Version: ${p5Version}~
-⏰ Last Updated: ${timestamp}~
-
-==============================================================================
-📋 CONTENTS                                                    *p5-${moduleName}-contents*
-
-`;
-
-  // Convert markdown headers to Vimdoc with section emojis 🎨📝
-  vimdoc = vimdoc.replace(/^# (.+)$/gm, '==============================================================================\n📚 $1 📚                                            *p5-${moduleName}-$1*\n');
-  vimdoc = vimdoc.replace(/^## (.+)$/gm, '\n🔧 $1 🔧~\n');
-  vimdoc = vimdoc.replace(/^### (.+)$/gm, '\n📝 $1 📝~\n');
-  
-  // Convert bold text
-  vimdoc = vimdoc.replace(/\*\*(.+?)\*\*/g, '$1');
-  
-  // Convert code blocks
-  vimdoc = vimdoc.replace(/```(\w+)?\n([\s\S]*?)```/g, '\n$2\n');
-  
-  // Convert inline code
-  vimdoc = vimdoc.replace(/`([^`]+)`/g, '$1');
-  
-  // Convert lists
-  vimdoc = vimdoc.replace(/^- (.+)$/gm, '    $1');
-  
-  // Convert horizontal rules
-  vimdoc = vimdoc.replace(/^---$/gm, '==============================================================================');
-  
-  // Add the rest of the content
-  const contentStart = markdown.indexOf('\n---\n\n## Table of Contents');
-  if (contentStart > -1) {
-    const content = markdown.substring(contentStart + 5);
-    vimdoc += content;
-  }
-  
-  vimdoc += `\n\n==============================================================================
-vim:tw=78:ts=8:ft=help:norl:
-`;
-  
-  return vimdoc;
+  // The markdown is already in proper Vimdoc format, just return it
+  return markdown;
 }
 
 function generateMasterIndex(modules, p5Version, timestamp) {

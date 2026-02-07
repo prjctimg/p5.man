@@ -13,40 +13,76 @@ if (!fs.existsSync(outputDir)) {
 }
 
 try {
-  console.log('📥 Cloning p5.js repository for modules... 📥🏗️');
+  console.log('📥 Fetching latest p5.js release modules... 📥🏗️');
   
-  // For testing purposes, create placeholder files
-  // In the actual workflow, these will be copied from the cloned p5.js repo
+  // Clone the latest release to get the actual source files
+  const { execSync } = require('child_process');
   
-  console.log('📦 Creating core module placeholders... 📦🎯');
-  
-  // Create placeholder p5.js file
-  const p5Placeholder = `// p5.js Core Library
-// This is a placeholder - in the actual workflow this will be the unminified p5.js
+  try {
+    // Get latest release tag
+    const latestRelease = execSync('git ls-remote --tags https://github.com/processing/p5.js.git | sort -V | tail -n1', { encoding: 'utf8' }).trim();
+    const releaseTag = latestRelease.split('\t')[1].replace('refs/tags/', '');
+    console.log(`📦 Using latest release: ${releaseTag} 🎯`);
+    
+    // Clone the repository at the specific release tag
+    const tempRepo = '/tmp/p5-latest';
+    if (fs.existsSync(tempRepo)) {
+      execSync(`rm -rf ${tempRepo}`, { stdio: 'inherit' });
+    }
+    
+    console.log('📥 Cloning p5.js repository...');
+    execSync(`git clone --depth 1 --branch ${releaseTag} https://github.com/processing/p5.js.git ${tempRepo}`, { stdio: 'inherit' });
+    
+    // Copy the unminified core files - p5.js is now modular, so we'll create a bundled version
+    const p5Source = path.join(tempRepo, 'src', 'app.js');
+    const p5SoundSource = path.join(tempRepo, 'lib', 'addons', 'p5.sound.js');
+    
+    if (fs.existsSync(p5Source)) {
+      fs.copyFileSync(p5Source, path.join(outputDir, 'p5.js'));
+      console.log('✅ Copied p5.js from latest release 🎉');
+    } else {
+      console.warn('⚠️ p5.js not found in expected location');
+    }
+    
+    if (fs.existsSync(p5SoundSource)) {
+      fs.copyFileSync(p5SoundSource, path.join(outputDir, 'p5.sound.js'));
+      console.log('✅ Copied p5.sound.js from latest release 🎵🔊');
+    } else {
+      console.warn('⚠️ p5.sound.js not found in expected location');
+    }
+    
+    // Clean up
+    execSync(`rm -rf ${tempRepo}`, { stdio: 'inherit' });
+    console.log('✅ Core modules fetched from latest release! 🎊');
+    
+  } catch (error) {
+    console.warn('⚠️ Could not fetch from latest release, using fallback:', error.message);
+    
+    // Fallback to placeholder files
+    console.log('📦 Creating core module placeholders... 📦🎯');
+    
+    const p5Placeholder = `// p5.js Core Library
+// Fallback - could not fetch latest release: ${releaseTag || 'unknown'}
 // Generated: ${new Date().toISOString()}
 // Source: https://github.com/processing/p5.js
 
-// Placeholder content - will be replaced with actual p5.js library
 console.log('p5.js library placeholder');
 `;
-  
-  fs.writeFileSync(path.join(outputDir, 'p5.js'), p5Placeholder);
-  console.log('✅ Created p5.js placeholder');
-  
-  // Create placeholder p5.sound.js file
-  const p5SoundPlaceholder = `// p5.sound.js Library
-// This is a placeholder - in the actual workflow this will be the unminified p5.sound.js
+    
+    fs.writeFileSync(path.join(outputDir, 'p5.js'), p5Placeholder);
+    console.log('✅ Created p5.js placeholder');
+    
+    const p5SoundPlaceholder = `// p5.sound.js Library
+// Fallback - could not fetch latest release: ${releaseTag || 'unknown'}
 // Generated: ${new Date().toISOString()}
 // Source: https://github.com/processing/p5.js
 
-// Placeholder content - will be replaced with actual p5.sound.js library
 console.log('p5.sound.js library placeholder');
 `;
-  
-  fs.writeFileSync(path.join(outputDir, 'p5.sound.js'), p5SoundPlaceholder);
-  console.log('✅ Created p5.sound.js placeholder 🎵🔊');
-  
-  // Note: index.js file removed as requested - modules are directly available
+    
+    fs.writeFileSync(path.join(outputDir, 'p5.sound.js'), p5SoundPlaceholder);
+    console.log('✅ Created p5.sound.js placeholder 🎵🔊');
+  }
   
   console.log('✅ Modules fetch complete! 🎉📦');
   console.log(`📁 Output directory: ${outputDir} 📂✨`);
