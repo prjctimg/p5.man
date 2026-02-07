@@ -1,72 +1,72 @@
-p5-utilities🛠️.txt    p5.js utilities documentation    p5
+p5-utilities.txt    p5.js utilities documentation    p5
 
 ==============================================================================
-p5.js Utilities Module    *p5-utilities*
+🛠️ p5.js Utilities Module 🛠️    *p5-utilities*
 
-p5.js Version: 1.7.7~
-Last Updated: 2026-02-06 18:38:12~
+📦 p5.js Version: 1.7.7~
+⏰ Last Updated: 2026-02-07 02:20:06~
 
 ==============================================================================
-CONTENTS                                                    *p5-utilities-contents*
+📋 CONTENTS                                                    *p5-utilities-contents*
 
 
 ## Table of Contents
 
-### Functions
+### 🔧 Functions
 
-- push
-- array
-- array
-- concat
-- reverse
-- pop
-- shuffle
-- sort
-- splice
-- subset
-- NaN
-- to
-- to
-- str
-- boolean
-- byte
-- byte
-- char
-- char
-- unchar
-- unchar
-- hex
-- hex
-- unhex
-- unhex
-- character
-- groups
-- groups
-- nf
-- nf
-- nfc
-- nfc
-- nf
-- nf
-- nf
-- nf
-- split
-- splitTokens
-- trim
-- trim
-- day
-- hour
-- minute
-- milliseconds
-- month
-- second
-- year
+- push 🔧
+- array 🔧
+- array 🔧
+- concat 🔧
+- reverse 🔧
+- pop 🔧
+- shuffle 🔧
+- sort 🔧
+- splice 🔧
+- subset 🔧
+- NaN 🔧
+- to 🔧
+- to 🔧
+- str 🔧
+- boolean 🔧
+- byte 🔧
+- byte 🔧
+- char 🔧
+- char 🔧
+- unchar 🔧
+- unchar 🔧
+- hex 🔧
+- hex 🔧
+- unhex 🔧
+- unhex 🔧
+- character 🔧
+- groups 🔧
+- groups 🔧
+- nf 🔧
+- nf 🔧
+- nfc 🔧
+- nfc 🔧
+- nf 🔧
+- nf 🔧
+- nf 🔧
+- nf 🔧
+- split 🔧
+- splitTokens 🔧
+- trim 🔧
+- trim 🔧
+- day 🔧
+- hour 🔧
+- minute 🔧
+- milliseconds 🔧
+- month 🔧
+- second 🔧
+- year 🔧
 
 ---
 
-## Functions
+## 🔧 Functions
 
-### push
+### 🔧 push
 
 *   Adds a value to the end of an array. Extends the
   length of the array by one. Maps to Array.push().
@@ -74,11 +74,11 @@ CONTENTS                                                    *p5-utilities-conten
   - **value**: to be added to the Array
   - **Returns**: the array that was appended to
 
-*Sub-module: array_functions*
+📂 *Sub-module: array_functions*
 
 ---
 
-### array
+### 🔧 array
 
 *   Copies an array (or part of an array) to another
   array. The src array is copied to the dst array,
@@ -105,11 +105,11 @@ CONTENTS                                                    *p5-utilities-conten
   - **length**: number of Array elements to be
   copied
 
-*Sub-module: array_functions*
+📂 *Sub-module: array_functions*
 
 ---
 
-### array
+### 🔧 array
 
 *   Copies an array (or part of an array) to another
   array. The src array is copied to the dst array,
@@ -132,11 +132,11 @@ CONTENTS                                                    *p5-utilities-conten
   @param [length] number of Array elements to be
   copied
 
-*Sub-module: array_functions*
+📂 *Sub-module: array_functions*
 
 ---
 
-### concat
+### 🔧 concat
 
 *   Concatenates two arrays, maps to Array.concat().
   Does not modify the input arrays.
@@ -144,33 +144,33 @@ CONTENTS                                                    *p5-utilities-conten
   - **b**: second Array to concatenate
   - **Returns**: concatenated array
 
-*Sub-module: array_functions*
+📂 *Sub-module: array_functions*
 
 ---
 
-### reverse
+### 🔧 reverse
 
 *   Reverses the order of an array, maps to
   Array.reverse()
   - **list**: Array to reverse
   - **Returns**: the reversed list
 
-*Sub-module: array_functions*
+📂 *Sub-module: array_functions*
 
 ---
 
-### pop
+### 🔧 pop
 
 *   Decreases an array by one element and returns the
   shortened array, maps to Array.pop().
   - **list**: Array to shorten
   - **Returns**: shortened Array
 
-*Sub-module: array_functions*
+📂 *Sub-module: array_functions*
 
 ---
 
-### shuffle
+### 🔧 shuffle
 
 *   Randomizes the order of the elements of an array.
   Implements  Fisher-Yates Shuffle Algorithm.
@@ -178,11 +178,11 @@ CONTENTS                                                    *p5-utilities-conten
   @param [bool] modify passed array
   - **Returns**: shuffled Array
 
-*Sub-module: array_functions*
+📂 *Sub-module: array_functions*
 
 ---
 
-### sort
+### 🔧 sort
 
 *   Sorts an array of numbers from smallest to
   largest, or puts an array of words in alphabetical
@@ -197,11 +197,11 @@ CONTENTS                                                    *p5-utilities-conten
   starting from 0
   - **Returns**: the sorted list
 
-*Sub-module: array_functions*
+📂 *Sub-module: array_functions*
 
 ---
 
-### splice
+### 🔧 splice
 
 *   Inserts a value or an array of values into an
   existing array. The first parameter specifies the
@@ -218,11 +218,11 @@ CONTENTS                                                    *p5-utilities-conten
   data
   - **Returns**: the list
 
-*Sub-module: array_functions*
+📂 *Sub-module: array_functions*
 
 ---
 
-### subset
+### 🔧 subset
 
 *   Extracts an array of elements from an existing
   array. The list parameter defines the array from
@@ -238,11 +238,11 @@ CONTENTS                                                    *p5-utilities-conten
   @param [count] number of values to extract
   - **Returns**: Array of extracted elements
 
-*Sub-module: array_functions*
+📂 *Sub-module: array_functions*
 
 ---
 
-### NaN
+### 🔧 NaN
 
 *   Converts a string to its floating point
   representation. The contents of a string must
@@ -254,11 +254,11 @@ CONTENTS                                                    *p5-utilities-conten
   - **str**: float string to parse
   - **Returns**: floating point representation of string
 
-*Sub-module: conversion*
+📂 *Sub-module: conversion*
 
 ---
 
-### to
+### 🔧 to
 
 *   Converts a boolean, string, or float to its
   integer representation. When an array of values is
@@ -269,11 +269,11 @@ CONTENTS                                                    *p5-utilities-conten
   10)
   - **Returns**: integer representation of value
 
-*Sub-module: conversion*
+📂 *Sub-module: conversion*
 
 ---
 
-### to
+### 🔧 to
 
 *   Converts a boolean, string, or float to its
   integer representation. When an array of values is
@@ -284,11 +284,11 @@ CONTENTS                                                    *p5-utilities-conten
   10)
   - **Returns**: integer representation of values
 
-*Sub-module: conversion*
+📂 *Sub-module: conversion*
 
 ---
 
-### str
+### 🔧 str
 
 *   Converts a boolean, string or number to its string
   representation. When an array of values is passed
@@ -297,11 +297,11 @@ CONTENTS                                                    *p5-utilities-conten
   - **n**: value to parse
   - **Returns**: string representation of value
 
-*Sub-module: conversion*
+📂 *Sub-module: conversion*
 
 ---
 
-### boolean
+### 🔧 boolean
 
 *   Converts a number or string to its boolean
   representation. For a number, any non-zero value
@@ -314,11 +314,11 @@ CONTENTS                                                    *p5-utilities-conten
   - **n**: value to parse
   - **Returns**: boolean representation of value
 
-*Sub-module: conversion*
+📂 *Sub-module: conversion*
 
 ---
 
-### byte
+### 🔧 byte
 
 *   Converts a number, string representation of a
   number, or boolean to its byte representation. A
@@ -331,11 +331,11 @@ CONTENTS                                                    *p5-utilities-conten
   - **n**: value to parse
   - **Returns**: byte representation of value
 
-*Sub-module: conversion*
+📂 *Sub-module: conversion*
 
 ---
 
-### byte
+### 🔧 byte
 
 *   Converts a number, string representation of a
   number, or boolean to its byte representation. A
@@ -348,11 +348,11 @@ CONTENTS                                                    *p5-utilities-conten
   - **ns**: values to parse
   - **Returns**: array of byte representation of values
 
-*Sub-module: conversion*
+📂 *Sub-module: conversion*
 
 ---
 
-### char
+### 🔧 char
 
 *   Converts a number or string to its corresponding
   single-character string representation. If a
@@ -365,11 +365,11 @@ CONTENTS                                                    *p5-utilities-conten
   - **n**: value to parse
   - **Returns**: string representation of value
 
-*Sub-module: conversion*
+📂 *Sub-module: conversion*
 
 ---
 
-### char
+### 🔧 char
 
 *   Converts a number or string to its corresponding
   single-character string representation. If a
@@ -382,11 +382,11 @@ CONTENTS                                                    *p5-utilities-conten
   - **ns**: values to parse
   - **Returns**: array of string representation of values
 
-*Sub-module: conversion*
+📂 *Sub-module: conversion*
 
 ---
 
-### unchar
+### 🔧 unchar
 
 *   Converts a single-character string to its
   corresponding integer representation. When an
@@ -396,11 +396,11 @@ CONTENTS                                                    *p5-utilities-conten
   - **n**: value to parse
   - **Returns**: integer representation of value
 
-*Sub-module: conversion*
+📂 *Sub-module: conversion*
 
 ---
 
-### unchar
+### 🔧 unchar
 
 *   Converts a single-character string to its
   corresponding integer representation. When an
@@ -410,11 +410,11 @@ CONTENTS                                                    *p5-utilities-conten
   - **ns**: values to parse
   - **Returns**: integer representation of values
 
-*Sub-module: conversion*
+📂 *Sub-module: conversion*
 
 ---
 
-### hex
+### 🔧 hex
 
 *   Converts a number to a string in its equivalent
   hexadecimal notation. If a second parameter is
@@ -426,11 +426,11 @@ CONTENTS                                                    *p5-utilities-conten
   - **n**: value to parse
   - **Returns**: hexadecimal string representation of value
 
-*Sub-module: conversion*
+📂 *Sub-module: conversion*
 
 ---
 
-### hex
+### 🔧 hex
 
 *   Converts a number to a string in its equivalent
   hexadecimal notation. If a second parameter is
@@ -443,11 +443,11 @@ CONTENTS                                                    *p5-utilities-conten
   - **Returns**: hexadecimal string representation of
   values
 
-*Sub-module: conversion*
+📂 *Sub-module: conversion*
 
 ---
 
-### unhex
+### 🔧 unhex
 
 *   Converts a string representation of a hexadecimal
   number to its equivalent integer value. When an
@@ -458,11 +458,11 @@ CONTENTS                                                    *p5-utilities-conten
   - **Returns**: integer representation of hexadecimal
   value
 
-*Sub-module: conversion*
+📂 *Sub-module: conversion*
 
 ---
 
-### unhex
+### 🔧 unhex
 
 *   Converts a string representation of a hexadecimal
   number to its equivalent integer value. When an
@@ -473,11 +473,11 @@ CONTENTS                                                    *p5-utilities-conten
   - **Returns**: integer representations of hexadecimal
   value
 
-*Sub-module: conversion*
+📂 *Sub-module: conversion*
 
 ---
 
-### character
+### 🔧 character
 
 *   Combines an array of Strings into one String, each
   separated by the character(s) used for the
@@ -489,11 +489,11 @@ CONTENTS                                                    *p5-utilities-conten
   item
   - **Returns**: joined String
 
-*Sub-module: string_functions*
+📂 *Sub-module: string_functions*
 
 ---
 
-### groups
+### 🔧 groups
 
 *   This function is used to apply a regular
   expression to a piece of text, and return matching
@@ -518,11 +518,11 @@ CONTENTS                                                    *p5-utilities-conten
   - **regexp**: the regexp to be used for matching
   - **Returns**: Array of Strings found
 
-*Sub-module: string_functions*
+📂 *Sub-module: string_functions*
 
 ---
 
-### groups
+### 🔧 groups
 
 *   This function is used to apply a regular
   expression to a piece of text, and return a list
@@ -549,11 +549,11 @@ CONTENTS                                                    *p5-utilities-conten
   - **regexp**: the regexp to be used for matching
   - **Returns**: 2d Array of Strings found
 
-*Sub-module: string_functions*
+📂 *Sub-module: string_functions*
 
 ---
 
-### nf
+### 🔧 nf
 
 *   Utility function for formatting numbers into
   strings. There are two versions: one for
@@ -576,11 +576,11 @@ CONTENTS                                                    *p5-utilities-conten
   the decimal point
   - **Returns**: formatted String
 
-*Sub-module: string_functions*
+📂 *Sub-module: string_functions*
 
 ---
 
-### nf
+### 🔧 nf
 
 *   Utility function for formatting numbers into
   strings. There are two versions: one for
@@ -603,11 +603,11 @@ CONTENTS                                                    *p5-utilities-conten
   the decimal point
   - **Returns**: formatted Strings
 
-*Sub-module: string_functions*
+📂 *Sub-module: string_functions*
 
 ---
 
-### nfc
+### 🔧 nfc
 
 *   Utility function for formatting numbers into
   strings and placing appropriate commas to mark
@@ -620,11 +620,11 @@ CONTENTS                                                    *p5-utilities-conten
   the decimal point
   - **Returns**: formatted String
 
-*Sub-module: string_functions*
+📂 *Sub-module: string_functions*
 
 ---
 
-### nfc
+### 🔧 nfc
 
 *   Utility function for formatting numbers into
   strings and placing appropriate commas to mark
@@ -637,11 +637,11 @@ CONTENTS                                                    *p5-utilities-conten
   the decimal point
   - **Returns**: formatted Strings
 
-*Sub-module: string_functions*
+📂 *Sub-module: string_functions*
 
 ---
 
-### nf
+### 🔧 nf
 
 *   Utility function for formatting numbers into
   strings. Similar to nf() but puts a "+" in front
@@ -657,11 +657,11 @@ CONTENTS                                                    *p5-utilities-conten
   the decimal point
   - **Returns**: formatted String
 
-*Sub-module: string_functions*
+📂 *Sub-module: string_functions*
 
 ---
 
-### nf
+### 🔧 nf
 
 *   Utility function for formatting numbers into
   strings. Similar to nf() but puts a "+" in front
@@ -677,11 +677,11 @@ CONTENTS                                                    *p5-utilities-conten
   the decimal point
   - **Returns**: formatted Strings
 
-*Sub-module: string_functions*
+📂 *Sub-module: string_functions*
 
 ---
 
-### nf
+### 🔧 nf
 
 *   Utility function for formatting numbers into
   strings. Similar to nf() but puts an additional
@@ -714,11 +714,11 @@ CONTENTS                                                    *p5-utilities-conten
   the decimal point
   - **Returns**: formatted String
 
-*Sub-module: string_functions*
+📂 *Sub-module: string_functions*
 
 ---
 
-### nf
+### 🔧 nf
 
 *   Utility function for formatting numbers into
   strings. Similar to nf() but puts an additional
@@ -751,11 +751,11 @@ CONTENTS                                                    *p5-utilities-conten
   the decimal point
   - **Returns**: formatted Strings
 
-*Sub-module: string_functions*
+📂 *Sub-module: string_functions*
 
 ---
 
-### split
+### 🔧 split
 
 *   The split() function maps to String.split(), it
   breaks a String into pieces using a character or
@@ -771,11 +771,11 @@ CONTENTS                                                    *p5-utilities-conten
   - **delim**: the String used to separate the data
   - **Returns**: Array of Strings
 
-*Sub-module: string_functions*
+📂 *Sub-module: string_functions*
 
 ---
 
-### splitTokens
+### 🔧 splitTokens
 
 *   The splitTokens() function splits a String at one
   or many character delimiters or "tokens." The
@@ -790,11 +790,11 @@ CONTENTS                                                    *p5-utilities-conten
   will be used as separators
   - **Returns**: Array of Strings
 
-*Sub-module: string_functions*
+📂 *Sub-module: string_functions*
 
 ---
 
-### trim
+### 🔧 trim
 
 *   Removes whitespace characters from the beginning
   and end of a String. In addition to standard
@@ -804,11 +804,11 @@ CONTENTS                                                    *p5-utilities-conten
   - **str**: a String to be trimmed
   - **Returns**: a trimmed String
 
-*Sub-module: string_functions*
+📂 *Sub-module: string_functions*
 
 ---
 
-### trim
+### 🔧 trim
 
 *   Removes whitespace characters from the beginning
   and end of a String. In addition to standard
@@ -818,44 +818,44 @@ CONTENTS                                                    *p5-utilities-conten
   - **strs**: an Array of Strings to be trimmed
   - **Returns**: an Array of trimmed Strings
 
-*Sub-module: string_functions*
+📂 *Sub-module: string_functions*
 
 ---
 
-### day
+### 🔧 day
 
 *   p5.js communicates with the clock on your
   computer. The day() function returns the current
   day as a value from 1 - 31.
   - **Returns**: the current day
 
-*Sub-module: time_date*
+📂 *Sub-module: time_date*
 
 ---
 
-### hour
+### 🔧 hour
 
 *   p5.js communicates with the clock on your
   computer. The hour() function returns the current
   hour as a value from 0 - 23.
   - **Returns**: the current hour
 
-*Sub-module: time_date*
+📂 *Sub-module: time_date*
 
 ---
 
-### minute
+### 🔧 minute
 
 *   p5.js communicates with the clock on your
   computer. The minute() function returns the
   current minute as a value from 0 - 59.
   - **Returns**: the current minute
 
-*Sub-module: time_date*
+📂 *Sub-module: time_date*
 
 ---
 
-### milliseconds
+### 🔧 milliseconds
 
 *   Returns the number of milliseconds (thousandths of
   a second) since starting the sketch (when setup()
@@ -864,40 +864,40 @@ CONTENTS                                                    *p5-utilities-conten
   - **Returns**: the number of milliseconds since starting
   the sketch
 
-*Sub-module: time_date*
+📂 *Sub-module: time_date*
 
 ---
 
-### month
+### 🔧 month
 
 *   p5.js communicates with the clock on your
   computer. The month() function returns the current
   month as a value from 1 - 12.
   - **Returns**: the current month
 
-*Sub-module: time_date*
+📂 *Sub-module: time_date*
 
 ---
 
-### second
+### 🔧 second
 
 *   p5.js communicates with the clock on your
   computer. The second() function returns the
   current second as a value from 0 - 59.
   - **Returns**: the current second
 
-*Sub-module: time_date*
+📂 *Sub-module: time_date*
 
 ---
 
-### year
+### 🔧 year
 
 *   p5.js communicates with the clock on your
   computer. The year() function returns the current
   year as an integer (2014, 2015, 2016, etc).
   - **Returns**: the current year
 
-*Sub-module: time_date*
+📂 *Sub-module: time_date*
 
 ---
 

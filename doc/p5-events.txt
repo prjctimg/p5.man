@@ -1,101 +1,101 @@
-p5-events🖱️.txt    p5.js events documentation    p5
+p5-events.txt    p5.js events documentation    p5
 
 ==============================================================================
-p5.js Events Module    *p5-events*
+🖱️ p5.js Events Module 🖱️    *p5-events*
 
-p5.js Version: 1.7.7~
-Last Updated: 2026-02-06 18:38:12~
+📦 p5.js Version: 1.7.7~
+⏰ Last Updated: 2026-02-07 02:20:06~
 
 ==============================================================================
-CONTENTS                                                    *p5-events-contents*
+📋 CONTENTS                                                    *p5-events-contents*
 
 
 ## Table of Contents
 
-### Functions
+### 🔧 Functions
 
-- setMoveThreshold
-- setShakeThreshold
-- deviceMoved
-- deviceTurned
-- deviceShaken
-- keyPressed
-- keyReleased
-- keyTyped
-- keyIsDown
-- mouseMoved
-- mouseDragged
-- mousePressed
-- mouseReleased
-- mouseClicked
-- doubleClicked
-- mouseWheel
-- requestPointerLock
-- exitPointerLock
-- touchStarted
-- touchMoved
-- touchEnded
+- setMoveThreshold 🔧
+- setShakeThreshold 🔧
+- deviceMoved 🔧
+- deviceTurned 🔧
+- deviceShaken 🔧
+- keyPressed 🔧
+- keyReleased 🔧
+- keyTyped 🔧
+- keyIsDown 🔧
+- mouseMoved 🔧
+- mouseDragged 🔧
+- mousePressed 🔧
+- mouseReleased 🔧
+- mouseClicked 🔧
+- doubleClicked 🔧
+- mouseWheel 🔧
+- requestPointerLock 🔧
+- exitPointerLock 🔧
+- touchStarted 🔧
+- touchMoved 🔧
+- touchEnded 🔧
 
-### Variables
+### 📊 Variables
 
-- value
-- accelerationX
-- accelerationY
-- accelerationZ
-- pAccelerationX
-- pAccelerationY
-- pAccelerationZ
-- Note
-- Note
-- Note
-- pRotationX
-- pRotationY
-- pRotationZ
-- turnAxis
-- code
-- key
-- this
-- here
-- movedY
-- mouseX
-- mouseY
-- Note
-- Note
-- winMouseX
-- winMouseY
-- Note
-- Note
-- Warning
-- mouseIsPressed
-- touches
+- value 📊
+- accelerationX 📊
+- accelerationY 📊
+- accelerationZ 📊
+- pAccelerationX 📊
+- pAccelerationY 📊
+- pAccelerationZ 📊
+- Note 📊
+- Note 📊
+- Note 📊
+- pRotationX 📊
+- pRotationY 📊
+- pRotationZ 📊
+- turnAxis 📊
+- code 📊
+- key 📊
+- this 📊
+- here 📊
+- movedY 📊
+- mouseX 📊
+- mouseY 📊
+- Note 📊
+- Note 📊
+- winMouseX 📊
+- winMouseY 📊
+- Note 📊
+- Note 📊
+- Warning 📊
+- mouseIsPressed 📊
+- touches 📊
 
 ---
 
-## Functions
+## 🔧 Functions
 
-### setMoveThreshold
+### 🔧 setMoveThreshold
 
 *   The setMoveThreshold() function is used to set the
   movement threshold for the deviceMoved() function.
   The default threshold is set to 0.5.
   - **value**: The threshold value
 
-*Sub-module: acceleration*
+📂 *Sub-module: acceleration*
 
 ---
 
-### setShakeThreshold
+### 🔧 setShakeThreshold
 
 *   The setShakeThreshold() function is used to set
   the movement threshold for the deviceShaken()
   function. The default threshold is set to 30.
   - **value**: The threshold value
 
-*Sub-module: acceleration*
+📂 *Sub-module: acceleration*
 
 ---
 
-### deviceMoved
+### 🔧 deviceMoved
 
 *   The deviceMoved() function is called when the
   device is moved by more than the threshold value
@@ -103,11 +103,11 @@ CONTENTS                                                    *p5-events-contents*
   to 0.5. The threshold value can be changed using
   setMoveThreshold().
 
-*Sub-module: acceleration*
+📂 *Sub-module: acceleration*
 
 ---
 
-### deviceTurned
+### 🔧 deviceTurned
 
 *   The deviceTurned() function is called when the
   device rotates by more than 90 degrees
@@ -117,11 +117,11 @@ CONTENTS                                                    *p5-events-contents*
   to trigger on any axis: X, Y or Z by comparing the
   turnAxis variable to 'X', 'Y' or 'Z'.
 
-*Sub-module: acceleration*
+📂 *Sub-module: acceleration*
 
 ---
 
-### deviceShaken
+### 🔧 deviceShaken
 
 *   The deviceShaken() function is called when the
   device total acceleration changes of accelerationX
@@ -130,11 +130,11 @@ CONTENTS                                                    *p5-events-contents*
   30. The threshold value can be changed using
   setShakeThreshold().
 
-*Sub-module: acceleration*
+📂 *Sub-module: acceleration*
 
 ---
 
-### keyPressed
+### 🔧 keyPressed
 
 *   The keyPressed() function is called once every
   time a key is pressed. The keyCode for the key
@@ -163,11 +163,11 @@ CONTENTS                                                    *p5-events-contents*
   @param [event] optional KeyboardEvent callback
   argument.
 
-*Sub-module: keyboard*
+📂 *Sub-module: keyboard*
 
 ---
 
-### keyReleased
+### 🔧 keyReleased
 
 *   The keyReleased() function is called once every
   time a key is released. See key and keyCode for
@@ -178,11 +178,11 @@ CONTENTS                                                    *p5-events-contents*
   @param [event] optional KeyboardEvent callback
   argument.
 
-*Sub-module: keyboard*
+📂 *Sub-module: keyboard*
 
 ---
 
-### keyTyped
+### 🔧 keyTyped
 
 *   The keyTyped() function is called once every time
   a key is pressed, but action keys such as
@@ -204,11 +204,11 @@ CONTENTS                                                    *p5-events-contents*
   @param [event] optional KeyboardEvent callback
   argument.
 
-*Sub-module: keyboard*
+📂 *Sub-module: keyboard*
 
 ---
 
-### keyIsDown
+### 🔧 keyIsDown
 
 *   The keyIsDown() function checks if the key is
   currently down, i.e. pressed. It can be used if
@@ -221,11 +221,11 @@ CONTENTS                                                    *p5-events-contents*
   - **code**: The key to check for.
   - **Returns**: whether key is down or not
 
-*Sub-module: keyboard*
+📂 *Sub-module: keyboard*
 
 ---
 
-### mouseMoved
+### 🔧 mouseMoved
 
 *   The mouseMoved() function is called every time the
   mouse moves and a mouse button is not pressed.
@@ -236,11 +236,11 @@ CONTENTS                                                    *p5-events-contents*
   @param [event] optional MouseEvent callback
   argument.
 
-*Sub-module: mouse*
+📂 *Sub-module: mouse*
 
 ---
 
-### mouseDragged
+### 🔧 mouseDragged
 
 *   The mouseDragged() function is called once every
   time the mouse moves and a mouse button is
@@ -254,11 +254,11 @@ CONTENTS                                                    *p5-events-contents*
   @param [event] optional MouseEvent callback
   argument.
 
-*Sub-module: mouse*
+📂 *Sub-module: mouse*
 
 ---
 
-### mousePressed
+### 🔧 mousePressed
 
 *   The mousePressed() function is called once after
   every time a mouse button is pressed. The
@@ -274,11 +274,11 @@ CONTENTS                                                    *p5-events-contents*
   @param [event] optional MouseEvent callback
   argument.
 
-*Sub-module: mouse*
+📂 *Sub-module: mouse*
 
 ---
 
-### mouseReleased
+### 🔧 mouseReleased
 
 *   The mouseReleased() function is called every time
   a mouse button is released. If no mouseReleased()
@@ -291,11 +291,11 @@ CONTENTS                                                    *p5-events-contents*
   @param [event] optional MouseEvent callback
   argument.
 
-*Sub-module: mouse*
+📂 *Sub-module: mouse*
 
 ---
 
-### mouseClicked
+### 🔧 mouseClicked
 
 *   The mouseClicked() function is called once after a
   mouse button has been pressed and then released.
@@ -312,11 +312,11 @@ CONTENTS                                                    *p5-events-contents*
   @param [event] optional MouseEvent callback
   argument.
 
-*Sub-module: mouse*
+📂 *Sub-module: mouse*
 
 ---
 
-### doubleClicked
+### 🔧 doubleClicked
 
 *   The doubleClicked() function is executed every
   time a event listener has detected a dblclick
@@ -330,11 +330,11 @@ CONTENTS                                                    *p5-events-contents*
   @param [event] optional MouseEvent callback
   argument.
 
-*Sub-module: mouse*
+📂 *Sub-module: mouse*
 
 ---
 
-### mouseWheel
+### 🔧 mouseWheel
 
 *   The function mouseWheel() is executed every time a
   vertical mouse wheel event is detected either
@@ -356,11 +356,11 @@ CONTENTS                                                    *p5-events-contents*
   @param [event] optional WheelEvent callback
   argument.
 
-*Sub-module: mouse*
+📂 *Sub-module: mouse*
 
 ---
 
-### requestPointerLock
+### 🔧 requestPointerLock
 
 *   The function requestPointerLock() locks the
   pointer to its current position and makes it
@@ -373,21 +373,21 @@ CONTENTS                                                    *p5-events-contents*
   direction. For example, a first person perspective
   experience.
 
-*Sub-module: mouse*
+📂 *Sub-module: mouse*
 
 ---
 
-### exitPointerLock
+### 🔧 exitPointerLock
 
 *   The function exitPointerLock() exits a previously
   triggered pointer Lock for example to make ui
   elements usable etc
 
-*Sub-module: mouse*
+📂 *Sub-module: mouse*
 
 ---
 
-### touchStarted
+### 🔧 touchStarted
 
 *   The touchStarted() function is called once after
   every time a touch is registered. If no
@@ -400,11 +400,11 @@ CONTENTS                                                    *p5-events-contents*
   @param [event] optional TouchEvent callback
   argument.
 
-*Sub-module: touch*
+📂 *Sub-module: touch*
 
 ---
 
-### touchMoved
+### 🔧 touchMoved
 
 *   The touchMoved() function is called every time a
   touch move is registered. If no touchMoved()
@@ -417,11 +417,11 @@ CONTENTS                                                    *p5-events-contents*
   @param [event] optional TouchEvent callback
   argument.
 
-*Sub-module: touch*
+📂 *Sub-module: touch*
 
 ---
 
-### touchEnded
+### 🔧 touchEnded
 
 *   The touchEnded() function is called every time a
   touch ends. If no touchEnded() function is
@@ -434,87 +434,87 @@ CONTENTS                                                    *p5-events-contents*
   @param [event] optional TouchEvent callback
   argument.
 
-*Sub-module: touch*
+📂 *Sub-module: touch*
 
 ---
 
-## Variables
+## 📊 Variables
 
-### value
+### 📊 value
 
 *   The setMoveThreshold() function is used to set the
   movement threshold for the deviceMoved() function.
   The default threshold is set to 0.5.
   - **value**: The threshold value
 
-*Sub-module: acceleration*
+📂 *Sub-module: acceleration*
 
 ---
 
-### accelerationX
+### 📊 accelerationX
 
 *   The system variable accelerationX always contains
   the acceleration of the device along the x axis.
   Value is represented as meters per second squared.
 
-*Sub-module: acceleration*
+📂 *Sub-module: acceleration*
 
 ---
 
-### accelerationY
+### 📊 accelerationY
 
 *   The system variable accelerationY always contains
   the acceleration of the device along the y axis.
   Value is represented as meters per second squared.
 
-*Sub-module: acceleration*
+📂 *Sub-module: acceleration*
 
 ---
 
-### accelerationZ
+### 📊 accelerationZ
 
 *   The system variable accelerationZ always contains
   the acceleration of the device along the z axis.
   Value is represented as meters per second squared.
 
-*Sub-module: acceleration*
+📂 *Sub-module: acceleration*
 
 ---
 
-### pAccelerationX
+### 📊 pAccelerationX
 
 *   The system variable pAccelerationX always contains
   the acceleration of the device along the x axis in
   the frame previous to the current frame. Value is
   represented as meters per second squared.
 
-*Sub-module: acceleration*
+📂 *Sub-module: acceleration*
 
 ---
 
-### pAccelerationY
+### 📊 pAccelerationY
 
 *   The system variable pAccelerationY always contains
   the acceleration of the device along the y axis in
   the frame previous to the current frame. Value is
   represented as meters per second squared.
 
-*Sub-module: acceleration*
+📂 *Sub-module: acceleration*
 
 ---
 
-### pAccelerationZ
+### 📊 pAccelerationZ
 
 *   The system variable pAccelerationZ always contains
   the acceleration of the device along the z axis in
   the frame previous to the current frame. Value is
   represented as meters per second squared.
 
-*Sub-module: acceleration*
+📂 *Sub-module: acceleration*
 
 ---
 
-### Note
+### 📊 Note
 
 *   The system variable rotationX always contains the
   rotation of the device along the x axis. If the
@@ -525,11 +525,11 @@ CONTENTS                                                    *p5-events-contents*
   together, it must be called in the order Z-X-Y or
   there might be unexpected behaviour.
 
-*Sub-module: acceleration*
+📂 *Sub-module: acceleration*
 
 ---
 
-### Note
+### 📊 Note
 
 *   The system variable rotationY always contains the
   rotation of the device along the y axis. If the
@@ -540,11 +540,11 @@ CONTENTS                                                    *p5-events-contents*
   together, it must be called in the order Z-X-Y or
   there might be unexpected behaviour.
 
-*Sub-module: acceleration*
+📂 *Sub-module: acceleration*
 
 ---
 
-### Note
+### 📊 Note
 
 *   The system variable rotationZ always contains the
   rotation of the device along the z axis. If the
@@ -558,11 +558,11 @@ CONTENTS                                                    *p5-events-contents*
   in the order Z-X-Y or there might be unexpected
   behaviour.
 
-*Sub-module: acceleration*
+📂 *Sub-module: acceleration*
 
 ---
 
-### pRotationX
+### 📊 pRotationX
 
 *   The system variable pRotationX always contains the
   rotation of the device along the x axis in the
@@ -573,11 +573,11 @@ CONTENTS                                                    *p5-events-contents*
   with rotationX to determine the rotate direction
   of the device along the X-axis.
 
-*Sub-module: acceleration*
+📂 *Sub-module: acceleration*
 
 ---
 
-### pRotationY
+### 📊 pRotationY
 
 *   The system variable pRotationY always contains the
   rotation of the device along the y axis in the
@@ -588,11 +588,11 @@ CONTENTS                                                    *p5-events-contents*
   rotationY to determine the rotate direction of the
   device along the Y-axis.
 
-*Sub-module: acceleration*
+📂 *Sub-module: acceleration*
 
 ---
 
-### pRotationZ
+### 📊 pRotationZ
 
 *   The system variable pRotationZ always contains the
   rotation of the device along the z axis in the
@@ -603,22 +603,22 @@ CONTENTS                                                    *p5-events-contents*
   rotationZ to determine the rotate direction of the
   device along the Z-axis.
 
-*Sub-module: acceleration*
+📂 *Sub-module: acceleration*
 
 ---
 
-### turnAxis
+### 📊 turnAxis
 
 *   When a device is rotated, the axis that triggers
   the deviceTurned() method is stored in the
   turnAxis variable. The turnAxis variable is only
   defined within the scope of deviceTurned().
 
-*Sub-module: acceleration*
+📂 *Sub-module: acceleration*
 
 ---
 
-### code
+### 📊 code
 
 *   The keyPressed() function is called once every
   time a key is pressed. The keyCode for the key
@@ -647,11 +647,11 @@ CONTENTS                                                    *p5-events-contents*
   @param [event] optional KeyboardEvent callback
   argument.
 
-*Sub-module: keyboard*
+📂 *Sub-module: keyboard*
 
 ---
 
-### key
+### 📊 key
 
 *   The system variable key always contains the value
   of the most recent key on the keyboard that was
@@ -659,11 +659,11 @@ CONTENTS                                                    *p5-events-contents*
   best to use it within keyTyped(). For non-ASCII
   keys, use the keyCode variable.
 
-*Sub-module: keyboard*
+📂 *Sub-module: keyboard*
 
 ---
 
-### this
+### 📊 this
 
 *   The variable keyCode is used to detect special
   keys such as BACKSPACE, DELETE, ENTER, RETURN,
@@ -673,11 +673,11 @@ CONTENTS                                                    *p5-events-contents*
   keyCode of any key on a site like this:
   keycode.info.
 
-*Sub-module: keyboard*
+📂 *Sub-module: keyboard*
 
 ---
 
-### here
+### 📊 here
 
 *   The mouseMoved() function is called every time the
   mouse moves and a mouse button is not pressed.
@@ -688,20 +688,20 @@ CONTENTS                                                    *p5-events-contents*
   @param [event] optional MouseEvent callback
   argument.
 
-*Sub-module: mouse*
+📂 *Sub-module: mouse*
 
 ---
 
-### movedY
+### 📊 movedY
 
 *   The variable movedY contains the vertical movement
   of the mouse since the last frame
 
-*Sub-module: mouse*
+📂 *Sub-module: mouse*
 
 ---
 
-### mouseX
+### 📊 mouseX
 
 *   The system variable mouseX always contains the
   current horizontal position of the mouse, relative
@@ -711,11 +711,11 @@ CONTENTS                                                    *p5-events-contents*
   input, mouseX will hold the x value of the most
   recent touch point.
 
-*Sub-module: mouse*
+📂 *Sub-module: mouse*
 
 ---
 
-### mouseY
+### 📊 mouseY
 
 *   The system variable mouseY always contains the
   current vertical position of the mouse, relative
@@ -725,11 +725,11 @@ CONTENTS                                                    *p5-events-contents*
   input, mouseY will hold the y value of the most
   recent touch point.
 
-*Sub-module: mouse*
+📂 *Sub-module: mouse*
 
 ---
 
-### Note
+### 📊 Note
 
 *   The system variable pmouseX always contains the
   horizontal position of the mouse or finger in the
@@ -740,11 +740,11 @@ CONTENTS                                                    *p5-events-contents*
   current mouseX value at the start of each touch
   event.
 
-*Sub-module: mouse*
+📂 *Sub-module: mouse*
 
 ---
 
-### Note
+### 📊 Note
 
 *   The system variable pmouseY always contains the
   vertical position of the mouse or finger in the
@@ -755,31 +755,31 @@ CONTENTS                                                    *p5-events-contents*
   current mouseY value at the start of each touch
   event.
 
-*Sub-module: mouse*
+📂 *Sub-module: mouse*
 
 ---
 
-### winMouseX
+### 📊 winMouseX
 
 *   The system variable winMouseX always contains the
   current horizontal position of the mouse, relative
   to (0, 0) of the window.
 
-*Sub-module: mouse*
+📂 *Sub-module: mouse*
 
 ---
 
-### winMouseY
+### 📊 winMouseY
 
 *   The system variable winMouseY always contains the
   current vertical position of the mouse, relative
   to (0, 0) of the window.
 
-*Sub-module: mouse*
+📂 *Sub-module: mouse*
 
 ---
 
-### Note
+### 📊 Note
 
 *   The system variable pwinMouseX always contains the
   horizontal position of the mouse in the frame
@@ -788,11 +788,11 @@ CONTENTS                                                    *p5-events-contents*
   the current winMouseX value at the start of each
   touch event.
 
-*Sub-module: mouse*
+📂 *Sub-module: mouse*
 
 ---
 
-### Note
+### 📊 Note
 
 *   The system variable pwinMouseY always contains the
   vertical position of the mouse in the frame
@@ -801,11 +801,11 @@ CONTENTS                                                    *p5-events-contents*
   the current winMouseY value at the start of each
   touch event.
 
-*Sub-module: mouse*
+📂 *Sub-module: mouse*
 
 ---
 
-### Warning
+### 📊 Warning
 
 *   p5 automatically tracks if the mouse button is
   pressed and which button is pressed. The value of
@@ -814,20 +814,20 @@ CONTENTS                                                    *p5-events-contents*
   pressed last. Warning: different browsers may
   track mouseButton differently.
 
-*Sub-module: mouse*
+📂 *Sub-module: mouse*
 
 ---
 
-### mouseIsPressed
+### 📊 mouseIsPressed
 
 *   The boolean system variable mouseIsPressed is true
   if the mouse is pressed and false if not.
 
-*Sub-module: mouse*
+📂 *Sub-module: mouse*
 
 ---
 
-### touches
+### 📊 touches
 
 *   The touchStarted() function is called once after
   every time a touch is registered. If no
@@ -840,7 +840,7 @@ CONTENTS                                                    *p5-events-contents*
   @param [event] optional TouchEvent callback
   argument.
 
-*Sub-module: touch*
+📂 *Sub-module: touch*
 
 ---
 

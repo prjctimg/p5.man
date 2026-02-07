@@ -46,17 +46,7 @@ console.log('p5.sound.js library placeholder');
   fs.writeFileSync(path.join(outputDir, 'p5.sound.js'), p5SoundPlaceholder);
   console.log('✅ Created p5.sound.js placeholder 🎵🔊');
   
-  // Create a modules index file
-  const modulesIndex = `// p5.js Core Modules
-// Generated: ${new Date().toISOString()}
-// Source: https://github.com/processing/p5.js
-
-export { default as p5 } from './p5.js';
-export { default as p5Sound } from './p5.sound.js';
-`;
-  
-  fs.writeFileSync(path.join(outputDir, 'index.js'), modulesIndex);
-  console.log('✅ Created modules index 📋🗂️');
+  // Note: index.js file removed as requested - modules are directly available
   
   console.log('✅ Modules fetch complete! 🎉📦');
   console.log(`📁 Output directory: ${outputDir} 📂✨`);

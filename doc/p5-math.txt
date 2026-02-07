@@ -1,109 +1,109 @@
-p5-math🔢.txt    p5.js math documentation    p5
+p5-math.txt    p5.js math documentation    p5
 
 ==============================================================================
-p5.js Math Module    *p5-math*
+🔢 p5.js Math Module 🔢    *p5-math*
 
-p5.js Version: 1.7.7~
-Last Updated: 2026-02-06 18:38:12~
+📦 p5.js Version: 1.7.7~
+⏰ Last Updated: 2026-02-07 02:20:06~
 
 ==============================================================================
-CONTENTS                                                    *p5-math-contents*
+📋 CONTENTS                                                    *p5-math-contents*
 
 
 ## Table of Contents
 
-### Functions
+### 🔧 Functions
 
-- value
-- ceil
-- constrain
-- dist
-- dist
-- e
-- floor
-- lerp
-- logarithm
-- magnitude
-- window
-- max
-- max
-- min
-- min
-- map
-- pow
-- round
-- number
-- sqrt
-- fract
-- Vector
-- random
-- impact
-- noise
-- random
-- to
-- to
-- randomGaussian
-- cos
-- sin
-- tan
-- angle
-- cos
-- sin
-- tan
-- angleMode
-- radians
-- angleMode
-- angleMode
-- Euclidean
-- set
-- set
-- copy
-- add
-- add
-- rem
-- rem
-- sub
-- sub
-- other
-- other
-- other
-- other
-- div
-- div
-- div
-- div
-- magnitude
-- magSq
-- dot
-- dot
-- cross
-- points
-- 1
-- limit
-- setMag
-- createVector
-- angle
-- angle
-- angleBetween
-- 0
-- 0
-- 0
-- reflect
-- copy
-- equals
-- equals
+- value 🔧
+- ceil 🔧
+- constrain 🔧
+- dist 🔧
+- dist 🔧
+- e 🔧
+- floor 🔧
+- lerp 🔧
+- logarithm 🔧
+- magnitude 🔧
+- window 🔧
+- max 🔧
+- max 🔧
+- min 🔧
+- min 🔧
+- map 🔧
+- pow 🔧
+- round 🔧
+- number 🔧
+- sqrt 🔧
+- fract 🔧
+- Vector 🔧
+- random 🔧
+- impact 🔧
+- noise 🔧
+- random 🔧
+- to 🔧
+- to 🔧
+- randomGaussian 🔧
+- cos 🔧
+- sin 🔧
+- tan 🔧
+- angle 🔧
+- cos 🔧
+- sin 🔧
+- tan 🔧
+- angleMode 🔧
+- radians 🔧
+- angleMode 🔧
+- angleMode 🔧
+- Euclidean 🔧
+- set 🔧
+- set 🔧
+- copy 🔧
+- add 🔧
+- add 🔧
+- rem 🔧
+- rem 🔧
+- sub 🔧
+- sub 🔧
+- other 🔧
+- other 🔧
+- other 🔧
+- other 🔧
+- div 🔧
+- div 🔧
+- div 🔧
+- div 🔧
+- magnitude 🔧
+- magSq 🔧
+- dot 🔧
+- dot 🔧
+- cross 🔧
+- points 🔧
+- 1 🔧
+- limit 🔧
+- setMag 🔧
+- createVector 🔧
+- angle 🔧
+- angle 🔧
+- angleBetween 🔧
+- 0 🔧
+- 0 🔧
+- 0 🔧
+- reflect 🔧
+- copy 🔧
+- equals 🔧
+- equals 🔧
 
-### Variables
+### 📊 Variables
 
-- v
-- y
-- z
+- v 📊
+- y 📊
+- z 📊
 
 ---
 
-## Functions
+## 🔧 Functions
 
-### value
+### 🔧 value
 
 *   Calculates the absolute value (magnitude) of a
   number. Maps to Math.abs(). The absolute value of
@@ -111,11 +111,11 @@ CONTENTS                                                    *p5-math-contents*
   - **n**: number to compute
   - **Returns**: absolute value of given number
 
-*Sub-module: calculation*
+📂 *Sub-module: calculation*
 
 ---
 
-### ceil
+### 🔧 ceil
 
 *   Calculates the closest int value that is greater
   than or equal to the value of the parameter. Maps
@@ -124,11 +124,11 @@ CONTENTS                                                    *p5-math-contents*
   - **n**: number to round up
   - **Returns**: rounded up number
 
-*Sub-module: calculation*
+📂 *Sub-module: calculation*
 
 ---
 
-### constrain
+### 🔧 constrain
 
 *   Constrains a value between a minimum and maximum
   value.
@@ -137,11 +137,11 @@ CONTENTS                                                    *p5-math-contents*
   - **high**: maximum limit
   - **Returns**: constrained number
 
-*Sub-module: calculation*
+📂 *Sub-module: calculation*
 
 ---
 
-### dist
+### 🔧 dist
 
 *   Calculates the distance between two points, in
   either two or three dimensions. If you looking for
@@ -152,11 +152,11 @@ CONTENTS                                                    *p5-math-contents*
   - **y2**: y-coordinate of the second point
   - **Returns**: distance between the two points
 
-*Sub-module: calculation*
+📂 *Sub-module: calculation*
 
 ---
 
-### dist
+### 🔧 dist
 
 *   Calculates the distance between two points, in
   either two or three dimensions. If you looking for
@@ -169,22 +169,22 @@ CONTENTS                                                    *p5-math-contents*
   - **z2**: z-coordinate of the second point
   - **Returns**: distance between the two points
 
-*Sub-module: calculation*
+📂 *Sub-module: calculation*
 
 ---
 
-### e
+### 🔧 e
 
 *   Returns Euler's number e (2.71828...) raised to
   the power of the n parameter. Maps to Math.exp().
   - **n**: exponent to raise
   - **Returns**: e^n
 
-*Sub-module: calculation*
+📂 *Sub-module: calculation*
 
 ---
 
-### floor
+### 🔧 floor
 
 *   Calculates the closest int value that is less than
   or equal to the value of the parameter. Maps to
@@ -192,11 +192,11 @@ CONTENTS                                                    *p5-math-contents*
   - **n**: number to round down
   - **Returns**: rounded down number
 
-*Sub-module: calculation*
+📂 *Sub-module: calculation*
 
 ---
 
-### lerp
+### 🔧 lerp
 
 *   Calculates a number between two numbers at a
   specific increment. The amt parameter is the
@@ -214,11 +214,11 @@ CONTENTS                                                    *p5-math-contents*
   - **amt**: number
   - **Returns**: lerped value
 
-*Sub-module: calculation*
+📂 *Sub-module: calculation*
 
 ---
 
-### logarithm
+### 🔧 logarithm
 
 *   Calculates the natural logarithm (the base-e
   logarithm) of a number. This function expects the
@@ -227,11 +227,11 @@ CONTENTS                                                    *p5-math-contents*
   - **n**: number greater than 0
   - **Returns**: natural logarithm of n
 
-*Sub-module: calculation*
+📂 *Sub-module: calculation*
 
 ---
 
-### magnitude
+### 🔧 magnitude
 
 *   Calculates the magnitude (or length) of a vector.
   A vector is a direction in space commonly used in
@@ -244,11 +244,11 @@ CONTENTS                                                    *p5-math-contents*
   - **b**: second value
   - **Returns**: magnitude of vector from (0,0) to (a,b)
 
-*Sub-module: calculation*
+📂 *Sub-module: calculation*
 
 ---
 
-### window
+### 🔧 window
 
 *   Re-maps a number from one range to another. In the
   first example above, the number 25 is converted
@@ -268,11 +268,11 @@ CONTENTS                                                    *p5-math-contents*
   newly mapped range
   - **Returns**: remapped number
 
-*Sub-module: calculation*
+📂 *Sub-module: calculation*
 
 ---
 
-### max
+### 🔧 max
 
 *   Determines the largest value in a sequence of
   numbers, and then returns that value. max()
@@ -282,11 +282,11 @@ CONTENTS                                                    *p5-math-contents*
   - **n1**: Number to compare
   - **Returns**: maximum Number
 
-*Sub-module: calculation*
+📂 *Sub-module: calculation*
 
 ---
 
-### max
+### 🔧 max
 
 *   Determines the largest value in a sequence of
   numbers, and then returns that value. max()
@@ -294,11 +294,11 @@ CONTENTS                                                    *p5-math-contents*
   Array of any length.
   - **nums**: Numbers to compare
 
-*Sub-module: calculation*
+📂 *Sub-module: calculation*
 
 ---
 
-### min
+### 🔧 min
 
 *   Determines the smallest value in a sequence of
   numbers, and then returns that value. min()
@@ -308,11 +308,11 @@ CONTENTS                                                    *p5-math-contents*
   - **n1**: Number to compare
   - **Returns**: minimum Number
 
-*Sub-module: calculation*
+📂 *Sub-module: calculation*
 
 ---
 
-### min
+### 🔧 min
 
 *   Determines the smallest value in a sequence of
   numbers, and then returns that value. min()
@@ -320,11 +320,11 @@ CONTENTS                                                    *p5-math-contents*
   Array of any length.
   - **nums**: Numbers to compare
 
-*Sub-module: calculation*
+📂 *Sub-module: calculation*
 
 ---
 
-### map
+### 🔧 map
 
 *   Normalizes a number from another range into a
   value between 0 and 1. Identical to map(value,
@@ -339,11 +339,11 @@ CONTENTS                                                    *p5-math-contents*
   range
   - **Returns**: normalized number
 
-*Sub-module: calculation*
+📂 *Sub-module: calculation*
 
 ---
 
-### pow
+### 🔧 pow
 
 *   Facilitates exponential expressions. The pow()
   function is an efficient way of multiplying
@@ -356,11 +356,11 @@ CONTENTS                                                    *p5-math-contents*
   - **e**: power by which to raise the base
   - **Returns**: n^e
 
-*Sub-module: calculation*
+📂 *Sub-module: calculation*
 
 ---
 
-### round
+### 🔧 round
 
 *   Calculates the integer closest to the n parameter.
   For example, round(133.8) returns the value 134.
@@ -370,11 +370,11 @@ CONTENTS                                                    *p5-math-contents*
   round to, default is 0
   - **Returns**: rounded number
 
-*Sub-module: calculation*
+📂 *Sub-module: calculation*
 
 ---
 
-### number
+### 🔧 number
 
 *   Squares a number (multiplies a number by itself).
   The result is always a positive number, as
@@ -383,11 +383,11 @@ CONTENTS                                                    *p5-math-contents*
   - **n**: number to square
   - **Returns**: squared number
 
-*Sub-module: calculation*
+📂 *Sub-module: calculation*
 
 ---
 
-### sqrt
+### 🔧 sqrt
 
 *   Calculates the square root of a number. The square
   root of a number is always positive, even though
@@ -397,22 +397,22 @@ CONTENTS                                                    *p5-math-contents*
   - **n**: non-negative number to square root
   - **Returns**: square root of number
 
-*Sub-module: calculation*
+📂 *Sub-module: calculation*
 
 ---
 
-### fract
+### 🔧 fract
 
 *   Calculates the fractional part of a number.
   - **num**: Number whose fractional part needs to
   be found out
   - **Returns**: fractional part of x, i.e, {x}
 
-*Sub-module: calculation*
+📂 *Sub-module: calculation*
 
 ---
 
-### Vector
+### 🔧 Vector
 
 *   Creates a new p5.Vector (the datatype for storing
   vectors). This provides a two or three-dimensional
@@ -423,11 +423,11 @@ CONTENTS                                                    *p5-math-contents*
   @param [y] y component of the vector
   @param [z] z component of the vector
 
-*Sub-module: math*
+📂 *Sub-module: math*
 
 ---
 
-### random
+### 🔧 random
 
 *   Returns the Perlin noise value at specified
   coordinates. Perlin noise is a random sequence
@@ -473,11 +473,11 @@ CONTENTS                                                    *p5-math-contents*
   - **Returns**: Perlin noise value (between 0 and 1) at
   specified coordinates
 
-*Sub-module: noise*
+📂 *Sub-module: noise*
 
 ---
 
-### impact
+### 🔧 impact
 
 *   Adjusts the character and level of detail produced
   by the Perlin noise function. Similar to harmonics
@@ -504,11 +504,11 @@ CONTENTS                                                    *p5-math-contents*
   noise
   - **falloff**: falloff factor for each octave
 
-*Sub-module: noise*
+📂 *Sub-module: noise*
 
 ---
 
-### noise
+### 🔧 noise
 
 *   Sets the seed value for noise(). By default,
   noise() produces different results each time the
@@ -517,11 +517,11 @@ CONTENTS                                                    *p5-math-contents*
   each time the software is run.
   - **seed**: the seed value
 
-*Sub-module: noise*
+📂 *Sub-module: noise*
 
 ---
 
-### random
+### 🔧 random
 
 *   Sets the seed value for random(). By default,
   random() produces different results each time the
@@ -530,11 +530,11 @@ CONTENTS                                                    *p5-math-contents*
   each time the software is run.
   - **seed**: the seed value
 
-*Sub-module: random*
+📂 *Sub-module: random*
 
 ---
 
-### to
+### 🔧 to
 
 *   Return a random floating-point number. Takes
   either 0, 1 or 2 arguments.
@@ -552,11 +552,11 @@ CONTENTS                                                    *p5-math-contents*
   @param [max] the upper bound (exclusive)
   - **Returns**: the random number
 
-*Sub-module: random*
+📂 *Sub-module: random*
 
 ---
 
-### to
+### 🔧 to
 
 *   Return a random floating-point number. Takes
   either 0, 1 or 2 arguments.
@@ -573,11 +573,11 @@ CONTENTS                                                    *p5-math-contents*
   - **choices**: the array to choose from
   - **Returns**: the random element from the array
 
-*Sub-module: random*
+📂 *Sub-module: random*
 
 ---
 
-### randomGaussian
+### 🔧 randomGaussian
 
 *   Returns a random number fitting a Gaussian, or
   normal, distribution. There is theoretically no
@@ -596,11 +596,11 @@ CONTENTS                                                    *p5-math-contents*
   @param [sd] the standard deviation
   - **Returns**: the random number
 
-*Sub-module: random*
+📂 *Sub-module: random*
 
 ---
 
-### cos
+### 🔧 cos
 
 *   The inverse of cos(), returns the arc cosine of a
   value. This function expects the values in the
@@ -611,11 +611,11 @@ CONTENTS                                                    *p5-math-contents*
   returned
   - **Returns**: the arc cosine of the given value
 
-*Sub-module: trigonometry*
+📂 *Sub-module: trigonometry*
 
 ---
 
-### sin
+### 🔧 sin
 
 *   The inverse of sin(), returns the arc sine of a
   value. This function expects the values in the
@@ -626,11 +626,11 @@ CONTENTS                                                    *p5-math-contents*
   returned
   - **Returns**: the arc sine of the given value
 
-*Sub-module: trigonometry*
+📂 *Sub-module: trigonometry*
 
 ---
 
-### tan
+### 🔧 tan
 
 *   The inverse of tan(), returns the arc tangent of a
   value. This function expects the values in the
@@ -642,11 +642,11 @@ CONTENTS                                                    *p5-math-contents*
   returned
   - **Returns**: the arc tangent of the given value
 
-*Sub-module: trigonometry*
+📂 *Sub-module: trigonometry*
 
 ---
 
-### angle
+### 🔧 angle
 
 *   Calculates the angle (in radians) from a specified
   point to the coordinate origin as measured from
@@ -663,11 +663,11 @@ CONTENTS                                                    *p5-math-contents*
   - **x**: x-coordinate of the point
   - **Returns**: the arc tangent of the given point
 
-*Sub-module: trigonometry*
+📂 *Sub-module: trigonometry*
 
 ---
 
-### cos
+### 🔧 cos
 
 *   Calculates the cosine of an angle. This function
   takes into account the current angleMode. Values
@@ -675,11 +675,11 @@ CONTENTS                                                    *p5-math-contents*
   - **angle**: the angle
   - **Returns**: the cosine of the angle
 
-*Sub-module: trigonometry*
+📂 *Sub-module: trigonometry*
 
 ---
 
-### sin
+### 🔧 sin
 
 *   Calculates the sine of an angle. This function
   takes into account the current angleMode. Values
@@ -687,11 +687,11 @@ CONTENTS                                                    *p5-math-contents*
   - **angle**: the angle
   - **Returns**: the sine of the angle
 
-*Sub-module: trigonometry*
+📂 *Sub-module: trigonometry*
 
 ---
 
-### tan
+### 🔧 tan
 
 *   Calculates the tangent of an angle. This function
   takes into account the current angleMode. Values
@@ -699,11 +699,11 @@ CONTENTS                                                    *p5-math-contents*
   - **angle**: the angle
   - **Returns**: the tangent of the angle
 
-*Sub-module: trigonometry*
+📂 *Sub-module: trigonometry*
 
 ---
 
-### angleMode
+### 🔧 angleMode
 
 *   Converts a radian measurement to its corresponding
   value in degrees. Radians and degrees are two ways
@@ -716,11 +716,11 @@ CONTENTS                                                    *p5-math-contents*
   degrees
   - **Returns**: the converted angle
 
-*Sub-module: trigonometry*
+📂 *Sub-module: trigonometry*
 
 ---
 
-### radians
+### 🔧 radians
 
 *   Converts a degree measurement to its corresponding
   value in radians. Radians and degrees are two ways
@@ -732,33 +732,33 @@ CONTENTS                                                    *p5-math-contents*
   radians
   - **Returns**: the converted angle
 
-*Sub-module: trigonometry*
+📂 *Sub-module: trigonometry*
 
 ---
 
-### angleMode
+### 🔧 angleMode
 
 *   Sets the current mode of p5 to the given mode.
   Default mode is RADIANS. Calling angleMode() with
   no arguments returns current anglemode.
   - **mode**: either RADIANS or DEGREES
 
-*Sub-module: trigonometry*
+📂 *Sub-module: trigonometry*
 
 ---
 
-### angleMode
+### 🔧 angleMode
 
 *   Sets the current mode of p5 to the given mode.
   Default mode is RADIANS. Calling angleMode() with
   no arguments returns current anglemode.
   - **Returns**: mode either RADIANS or DEGREES
 
-*Sub-module: trigonometry*
+📂 *Sub-module: trigonometry*
 
 ---
 
-### Euclidean
+### 🔧 Euclidean
 
 *   A class to describe a two or three-dimensional
   vector, specifically a Euclidean (also known as
@@ -787,11 +787,11 @@ CONTENTS                                                    *p5-math-contents*
   @param [y] y component of the vector
   @param [z] z component of the vector
 
-*Sub-module: p5.Vector*
+📂 *Sub-module: p5.Vector*
 
 ---
 
-### set
+### 🔧 set
 
 *   Sets the x, y, and z components of the vector
   using two or three separate variables, the data
@@ -802,11 +802,11 @@ CONTENTS                                                    *p5-math-contents*
   @param [z] The z component of the vector
   @chainable
 
-*Sub-module: p5.Vector*
+📂 *Sub-module: p5.Vector*
 
 ---
 
-### set
+### 🔧 set
 
 *   Sets the x, y, and z components of the vector
   using two or three separate variables, the data
@@ -815,21 +815,21 @@ CONTENTS                                                    *p5-math-contents*
   - **value**: The vector to set
   @chainable
 
-*Sub-module: p5.Vector*
+📂 *Sub-module: p5.Vector*
 
 ---
 
-### copy
+### 🔧 copy
 
 *   Gets a copy of the vector, returns a p5.Vector
   object.
   - **Returns**: A copy of the p5.Vector object
 
-*Sub-module: p5.Vector*
+📂 *Sub-module: p5.Vector*
 
 ---
 
-### add
+### 🔧 add
 
 *   Adds x, y, and z components to a vector, adds one
   vector to another, or adds two independent vectors
@@ -846,11 +846,11 @@ CONTENTS                                                    *p5-math-contents*
   added
   @chainable
 
-*Sub-module: p5.Vector*
+📂 *Sub-module: p5.Vector*
 
 ---
 
-### add
+### 🔧 add
 
 *   Adds x, y, and z components to a vector, adds one
   vector to another, or adds two independent vectors
@@ -863,11 +863,11 @@ CONTENTS                                                    *p5-math-contents*
   - **value**: The vector to add
   @chainable
 
-*Sub-module: p5.Vector*
+📂 *Sub-module: p5.Vector*
 
 ---
 
-### rem
+### 🔧 rem
 
 *   Gives the remainder of a vector when it is divided
   by another vector. See examples for more context.
@@ -876,22 +876,22 @@ CONTENTS                                                    *p5-math-contents*
   - **z**: The z component of divisor vector
   @chainable
 
-*Sub-module: p5.Vector*
+📂 *Sub-module: p5.Vector*
 
 ---
 
-### rem
+### 🔧 rem
 
 *   Gives the remainder of a vector when it is divided
   by another vector. See examples for more context.
   - **value**: The divisor vector
   @chainable
 
-*Sub-module: p5.Vector*
+📂 *Sub-module: p5.Vector*
 
 ---
 
-### sub
+### 🔧 sub
 
 *   Subtracts x, y, and z components from a vector,
   subtracts one vector from another, or subtracts
@@ -908,11 +908,11 @@ CONTENTS                                                    *p5-math-contents*
   subtract
   @chainable
 
-*Sub-module: p5.Vector*
+📂 *Sub-module: p5.Vector*
 
 ---
 
-### sub
+### 🔧 sub
 
 *   Subtracts x, y, and z components from a vector,
   subtracts one vector from another, or subtracts
@@ -925,11 +925,11 @@ CONTENTS                                                    *p5-math-contents*
   - **value**: the vector to subtract
   @chainable
 
-*Sub-module: p5.Vector*
+📂 *Sub-module: p5.Vector*
 
 ---
 
-### other
+### 🔧 other
 
 *   Multiplies the vector by a scalar, multiplies the
   x, y, and z components from a vector, or
@@ -949,11 +949,11 @@ CONTENTS                                                    *p5-math-contents*
   - **n**: The number to multiply with the vector
   @chainable
 
-*Sub-module: p5.Vector*
+📂 *Sub-module: p5.Vector*
 
 ---
 
-### other
+### 🔧 other
 
 *   Multiplies the vector by a scalar, multiplies the
   x, y, and z components from a vector, or
@@ -978,11 +978,11 @@ CONTENTS                                                    *p5-math-contents*
   component of the vector
   @chainable
 
-*Sub-module: p5.Vector*
+📂 *Sub-module: p5.Vector*
 
 ---
 
-### other
+### 🔧 other
 
 *   Multiplies the vector by a scalar, multiplies the
   x, y, and z components from a vector, or
@@ -1003,11 +1003,11 @@ CONTENTS                                                    *p5-math-contents*
   components of the vector
   @chainable
 
-*Sub-module: p5.Vector*
+📂 *Sub-module: p5.Vector*
 
 ---
 
-### other
+### 🔧 other
 
 *   Multiplies the vector by a scalar, multiplies the
   x, y, and z components from a vector, or
@@ -1028,11 +1028,11 @@ CONTENTS                                                    *p5-math-contents*
   components of the original vector
   @chainable
 
-*Sub-module: p5.Vector*
+📂 *Sub-module: p5.Vector*
 
 ---
 
-### div
+### 🔧 div
 
 *   Divides the vector by a scalar, divides a vector
   by the x, y, and z arguments, or divides the x, y,
@@ -1057,11 +1057,11 @@ CONTENTS                                                    *p5-math-contents*
   - **n**: The number to divide the vector by
   @chainable
 
-*Sub-module: p5.Vector*
+📂 *Sub-module: p5.Vector*
 
 ---
 
-### div
+### 🔧 div
 
 *   Divides the vector by a scalar, divides a vector
   by the x, y, and z arguments, or divides the x, y,
@@ -1091,11 +1091,11 @@ CONTENTS                                                    *p5-math-contents*
   component of the vector
   @chainable
 
-*Sub-module: p5.Vector*
+📂 *Sub-module: p5.Vector*
 
 ---
 
-### div
+### 🔧 div
 
 *   Divides the vector by a scalar, divides a vector
   by the x, y, and z arguments, or divides the x, y,
@@ -1121,11 +1121,11 @@ CONTENTS                                                    *p5-math-contents*
   the vector by
   @chainable
 
-*Sub-module: p5.Vector*
+📂 *Sub-module: p5.Vector*
 
 ---
 
-### div
+### 🔧 div
 
 *   Divides the vector by a scalar, divides a vector
   by the x, y, and z arguments, or divides the x, y,
@@ -1151,22 +1151,22 @@ CONTENTS                                                    *p5-math-contents*
   the original vector by
   @chainable
 
-*Sub-module: p5.Vector*
+📂 *Sub-module: p5.Vector*
 
 ---
 
-### magnitude
+### 🔧 magnitude
 
 *   Calculates the magnitude (length) of the vector
   and returns the result as a float. (This is simply
   the equation sqrt(x*x + y*y + z*z).)
   - **Returns**: The magnitude of the vector
 
-*Sub-module: p5.Vector*
+📂 *Sub-module: p5.Vector*
 
 ---
 
-### magSq
+### 🔧 magSq
 
 *   Calculates the squared magnitude of the vector and
   returns the result as a float. (This is simply the
@@ -1175,11 +1175,11 @@ CONTENTS                                                    *p5-math-contents*
   vectors, etc.
   - **Returns**: The squared magnitude of the vector
 
-*Sub-module: p5.Vector*
+📂 *Sub-module: p5.Vector*
 
 ---
 
-### dot
+### 🔧 dot
 
 *   Calculates the dot product of two vectors. The
   version of the method that computes the dot
@@ -1190,11 +1190,11 @@ CONTENTS                                                    *p5-math-contents*
   @param [z] The z component of the vector
   - **Returns**: The dot product
 
-*Sub-module: p5.Vector*
+📂 *Sub-module: p5.Vector*
 
 ---
 
-### dot
+### 🔧 dot
 
 *   Calculates the dot product of two vectors. The
   version of the method that computes the dot
@@ -1203,11 +1203,11 @@ CONTENTS                                                    *p5-math-contents*
   - **value**: value component of the vector or a
   p5.Vector
 
-*Sub-module: p5.Vector*
+📂 *Sub-module: p5.Vector*
 
 ---
 
-### cross
+### 🔧 cross
 
 *   Calculates and returns a vector composed of the
   cross product between two vectors. Both the static
@@ -1216,11 +1216,11 @@ CONTENTS                                                    *p5-math-contents*
   - **v**: p5.Vector to be crossed
   - **Returns**: p5.Vector composed of cross product
 
-*Sub-module: p5.Vector*
+📂 *Sub-module: p5.Vector*
 
 ---
 
-### points
+### 🔧 points
 
 *   Calculates the Euclidean distance between two
   points (considering a point as a vector object).
@@ -1230,43 +1230,43 @@ CONTENTS                                                    *p5-math-contents*
   p5.Vector
   - **Returns**: The distance
 
-*Sub-module: p5.Vector*
+📂 *Sub-module: p5.Vector*
 
 ---
 
-### 1
+### 🔧 1
 
 *   Normalize the vector to length 1 (make it a unit
   vector).
   - **Returns**: The normalized p5.Vector
 
-*Sub-module: p5.Vector*
+📂 *Sub-module: p5.Vector*
 
 ---
 
-### limit
+### 🔧 limit
 
 *   Limit the magnitude of this vector to the value
   used for the max parameter.
   - **max**: The maximum magnitude for the vector
   @chainable
 
-*Sub-module: p5.Vector*
+📂 *Sub-module: p5.Vector*
 
 ---
 
-### setMag
+### 🔧 setMag
 
 *   Set the magnitude of this vector to the value used
   for the len parameter.
   - **len**: The new length for this vector
   @chainable
 
-*Sub-module: p5.Vector*
+📂 *Sub-module: p5.Vector*
 
 ---
 
-### createVector
+### 🔧 createVector
 
 *   Calculate the angle of rotation for this vector
   (only 2D vectors). p5.Vectors created using
@@ -1275,33 +1275,33 @@ CONTENTS                                                    *p5-math-contents*
   or degrees accordingly.
   - **Returns**: The angle of rotation
 
-*Sub-module: p5.Vector*
+📂 *Sub-module: p5.Vector*
 
 ---
 
-### angle
+### 🔧 angle
 
 *   Rotate the vector to a specific angle (only 2D
   vectors); magnitude remains the same.
   - **angle**: The angle of rotation
   @chainable
 
-*Sub-module: p5.Vector*
+📂 *Sub-module: p5.Vector*
 
 ---
 
-### angle
+### 🔧 angle
 
 *   Rotate the vector by an angle (only 2D vectors);
   magnitude remains the same.
   - **angle**: The angle of rotation
   @chainable
 
-*Sub-module: p5.Vector*
+📂 *Sub-module: p5.Vector*
 
 ---
 
-### angleBetween
+### 🔧 angleBetween
 
 *   Calculates and returns the angle between two
   vectors. This method will take the current
@@ -1311,11 +1311,11 @@ CONTENTS                                                    *p5-math-contents*
   p5.Vector
   - **Returns**: The angle between
 
-*Sub-module: p5.Vector*
+📂 *Sub-module: p5.Vector*
 
 ---
 
-### 0
+### 🔧 0
 
 *   Linear interpolate the vector to another vector.
   - **x**: The x component
@@ -1327,11 +1327,11 @@ CONTENTS                                                    *p5-math-contents*
   between.
   @chainable
 
-*Sub-module: p5.Vector*
+📂 *Sub-module: p5.Vector*
 
 ---
 
-### 0
+### 🔧 0
 
 *   Linear interpolate the vector to another vector.
   - **v**: The p5.Vector to lerp to
@@ -1341,11 +1341,11 @@ CONTENTS                                                    *p5-math-contents*
   between.
   @chainable
 
-*Sub-module: p5.Vector*
+📂 *Sub-module: p5.Vector*
 
 ---
 
-### 0
+### 🔧 0
 
 *   Performs spherical linear interpolation with the
   other vector and returns the resulting vector.
@@ -1358,11 +1358,11 @@ CONTENTS                                                    *p5-math-contents*
   is very near the new vector. 0.5 is halfway in
   between.
 
-*Sub-module: p5.Vector*
+📂 *Sub-module: p5.Vector*
 
 ---
 
-### reflect
+### 🔧 reflect
 
 *   Reflect a vector about a normal to a line in 2D,
   or about a normal to a plane in 3D.
@@ -1370,11 +1370,11 @@ CONTENTS                                                    *p5-math-contents*
   about.
   @chainable
 
-*Sub-module: p5.Vector*
+📂 *Sub-module: p5.Vector*
 
 ---
 
-### copy
+### 🔧 copy
 
 *   Return a representation of this vector as a float
   array. This is only for temporary use. If used in
@@ -1383,11 +1383,11 @@ CONTENTS                                                    *p5-math-contents*
   your own vector.
   - **Returns**: An Array with the 3 values
 
-*Sub-module: p5.Vector*
+📂 *Sub-module: p5.Vector*
 
 ---
 
-### equals
+### 🔧 equals
 
 *   Equality check against a p5.Vector.
   @param [x] The x component of the vector
@@ -1395,22 +1395,22 @@ CONTENTS                                                    *p5-math-contents*
   @param [z] The z component of the vector
   - **Returns**: Whether the vectors are equal
 
-*Sub-module: p5.Vector*
+📂 *Sub-module: p5.Vector*
 
 ---
 
-### equals
+### 🔧 equals
 
 *   Equality check against a p5.Vector.
   - **value**: The vector to compare
 
-*Sub-module: p5.Vector*
+📂 *Sub-module: p5.Vector*
 
 ---
 
-## Variables
+## 📊 Variables
 
-### v
+### 📊 v
 
 *   A class to describe a two or three-dimensional
   vector, specifically a Euclidean (also known as
@@ -1439,23 +1439,23 @@ CONTENTS                                                    *p5-math-contents*
   @param [y] y component of the vector
   @param [z] z component of the vector
 
-*Sub-module: p5.Vector*
+📂 *Sub-module: p5.Vector*
 
 ---
 
-### y
+### 📊 y
 
 *   The y component of the vector
 
-*Sub-module: p5.Vector*
+📂 *Sub-module: p5.Vector*
 
 ---
 
-### z
+### 📊 z
 
 *   The z component of the vector
 
-*Sub-module: p5.Vector*
+📂 *Sub-module: p5.Vector*
 
 ---
 

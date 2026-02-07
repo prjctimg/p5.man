@@ -1,137 +1,137 @@
-p5-webgl🎮.txt    p5.js webgl documentation    p5
+p5-webgl.txt    p5.js webgl documentation    p5
 
 ==============================================================================
-p5.js Webgl Module    *p5-webgl*
+🎮 p5.js Webgl Module 🎮    *p5-webgl*
 
-p5.js Version: 1.7.7~
-Last Updated: 2026-02-06 18:38:12~
+📦 p5.js Version: 1.7.7~
+⏰ Last Updated: 2026-02-07 02:20:06~
 
 ==============================================================================
-CONTENTS                                                    *p5-webgl-contents*
+📋 CONTENTS                                                    *p5-webgl-contents*
 
 
 ## Table of Contents
 
-### Functions
+### 🔧 Functions
 
-- plane
-- box
-- sphere
-- cylinder
-- cone
-- ellipsoid
-- torus
-- wheel
-- debugMode
-- debugMode
-- debugMode
-- debugMode
-- debugMode
-- debugMode
-- called
-- called
-- called
-- called
-- called
-- light
-- light
-- light
-- light
-- light
-- as
-- as
-- as
-- as
-- point
-- point
-- point
-- point
-- ambientLight
-- pointLight
-- pointLight
-- pointLight
-- pointLight
-- pointLight
-- pointLight
-- pointLight
-- pointLight
-- pointLight
-- functions
-- loadModel
-- preload
-- createShader
-- resetShader
-- beginShape
-- points
-- size
-- normalMaterial
-- ambientMaterial
-- ambientMaterial
-- ambientMaterial
-- range
-- emissiveMaterial
-- emissiveMaterial
-- reflective
-- reflective
-- reflective
-- gloss
-- perspective
-- ortho
-- frustum
-- counterclockwise
-- counterclockwise
-- lookAt
-- camera
-- move
-- setPosition
-- set
-- orbitControl
-- sketch
-- frustum
-- ortho
-- perspective
-- current
-- current
-- vertexNormal
-- false
-- false
-- constructor
-- pixelDensity
-- autoSized
-- createCamera
-- remove
-- end
-- begin
-- begin
-- imageMode
-- imageMode
-- constructor
-- computeNormals
-- averageNormals
-- averagePoleNormals
-- normalize
-- programs
+- plane 🔧
+- box 🔧
+- sphere 🔧
+- cylinder 🔧
+- cone 🔧
+- ellipsoid 🔧
+- torus 🔧
+- wheel 🔧
+- debugMode 🔧
+- debugMode 🔧
+- debugMode 🔧
+- debugMode 🔧
+- debugMode 🔧
+- debugMode 🔧
+- called 🔧
+- called 🔧
+- called 🔧
+- called 🔧
+- called 🔧
+- light 🔧
+- light 🔧
+- light 🔧
+- light 🔧
+- light 🔧
+- as 🔧
+- as 🔧
+- as 🔧
+- as 🔧
+- point 🔧
+- point 🔧
+- point 🔧
+- point 🔧
+- ambientLight 🔧
+- pointLight 🔧
+- pointLight 🔧
+- pointLight 🔧
+- pointLight 🔧
+- pointLight 🔧
+- pointLight 🔧
+- pointLight 🔧
+- pointLight 🔧
+- pointLight 🔧
+- functions 🔧
+- loadModel 🔧
+- preload 🔧
+- createShader 🔧
+- resetShader 🔧
+- beginShape 🔧
+- points 🔧
+- size 🔧
+- normalMaterial 🔧
+- ambientMaterial 🔧
+- ambientMaterial 🔧
+- ambientMaterial 🔧
+- range 🔧
+- emissiveMaterial 🔧
+- emissiveMaterial 🔧
+- reflective 🔧
+- reflective 🔧
+- reflective 🔧
+- gloss 🔧
+- perspective 🔧
+- ortho 🔧
+- frustum 🔧
+- counterclockwise 🔧
+- counterclockwise 🔧
+- lookAt 🔧
+- camera 🔧
+- move 🔧
+- setPosition 🔧
+- set 🔧
+- orbitControl 🔧
+- sketch 🔧
+- frustum 🔧
+- ortho 🔧
+- perspective 🔧
+- current 🔧
+- current 🔧
+- vertexNormal 🔧
+- false 🔧
+- false 🔧
+- constructor 🔧
+- pixelDensity 🔧
+- autoSized 🔧
+- createCamera 🔧
+- remove 🔧
+- end 🔧
+- begin 🔧
+- begin 🔧
+- imageMode 🔧
+- imageMode 🔧
+- constructor 🔧
+- computeNormals 🔧
+- averageNormals 🔧
+- averagePoleNormals 🔧
+- normalize 🔧
+- programs 🔧
 
-### Variables
+### 📊 Variables
 
-- angle
-- eyeY
-- eyeZ
-- centerX
-- centerY
-- centerZ
-- upX
-- upY
-- upZ
-- target
-- color
-- depth
+- angle 📊
+- eyeY 📊
+- eyeZ 📊
+- centerX 📊
+- centerY 📊
+- centerZ 📊
+- upX 📊
+- upY 📊
+- upZ 📊
+- target 📊
+- color 📊
+- depth 📊
 
 ---
 
-## Functions
+## 🔧 Functions
 
-### plane
+### 🔧 plane
 
 *   Draw a plane with given a width and height
   @param [width] width of the plane
@@ -142,11 +142,11 @@ CONTENTS                                                    *p5-webgl-contents*
   subdivisions in y-dimension
   @chainable
 
-*Sub-module: 3d_primitives*
+📂 *Sub-module: 3d_primitives*
 
 ---
 
-### box
+### 🔧 box
 
 *   Draw a box with given width, height and depth
   @param [width] width of the box
@@ -158,11 +158,11 @@ CONTENTS                                                    *p5-webgl-contents*
   subdivisions in y-dimension
   @chainable
 
-*Sub-module: 3d_primitives*
+📂 *Sub-module: 3d_primitives*
 
 ---
 
-### sphere
+### 🔧 sphere
 
 *   Draw a sphere with given radius. DetailX and
   detailY determines the number of subdivisions in
@@ -178,11 +178,11 @@ CONTENTS                                                    *p5-webgl-contents*
   in y-dimension
   @chainable
 
-*Sub-module: 3d_primitives*
+📂 *Sub-module: 3d_primitives*
 
 ---
 
-### cylinder
+### 🔧 cylinder
 
 *   Draw a cylinder with given radius and height
   DetailX and detailY determines the number of
@@ -204,11 +204,11 @@ CONTENTS                                                    *p5-webgl-contents*
   cylinder
   @chainable
 
-*Sub-module: 3d_primitives*
+📂 *Sub-module: 3d_primitives*
 
 ---
 
-### cone
+### 🔧 cone
 
 *   Draw a cone with given radius and height DetailX
   and detailY determine the number of subdivisions
@@ -226,11 +226,11 @@ CONTENTS                                                    *p5-webgl-contents*
   @param [cap] whether to draw the base of the cone
   @chainable
 
-*Sub-module: 3d_primitives*
+📂 *Sub-module: 3d_primitives*
 
 ---
 
-### ellipsoid
+### 🔧 ellipsoid
 
 *   Draw an ellipsoid with given radius DetailX and
   detailY determine the number of subdivisions in
@@ -251,11 +251,11 @@ CONTENTS                                                    *p5-webgl-contents*
   browser.
   @chainable
 
-*Sub-module: 3d_primitives*
+📂 *Sub-module: 3d_primitives*
 
 ---
 
-### torus
+### 🔧 torus
 
 *   Draw a torus with given radius and tube radius
   DetailX and detailY determine the number of
@@ -276,11 +276,11 @@ CONTENTS                                                    *p5-webgl-contents*
   geometry default is 16
   @chainable
 
-*Sub-module: 3d_primitives*
+📂 *Sub-module: 3d_primitives*
 
 ---
 
-### wheel
+### 🔧 wheel
 
 *   Allows movement around a 3D sketch using a mouse
   or trackpad or touch. Left-clicking and dragging
@@ -321,11 +321,11 @@ CONTENTS                                                    *p5-webgl-contents*
   regardless of true/false.
   @chainable
 
-*Sub-module: interaction*
+📂 *Sub-module: interaction*
 
 ---
 
-### debugMode
+### 🔧 debugMode
 
 *   debugMode() helps visualize 3D space by adding a
   grid to indicate where the ‘ground’ is in a sketch
@@ -348,11 +348,11 @@ CONTENTS                                                    *p5-webgl-contents*
   along with orbitControl to allow full view of the
   grid.
 
-*Sub-module: interaction*
+📂 *Sub-module: interaction*
 
 ---
 
-### debugMode
+### 🔧 debugMode
 
 *   debugMode() helps visualize 3D space by adding a
   grid to indicate where the ‘ground’ is in a sketch
@@ -376,11 +376,11 @@ CONTENTS                                                    *p5-webgl-contents*
   grid.
   - **mode**: either GRID or AXES
 
-*Sub-module: interaction*
+📂 *Sub-module: interaction*
 
 ---
 
-### debugMode
+### 🔧 debugMode
 
 *   debugMode() helps visualize 3D space by adding a
   grid to indicate where the ‘ground’ is in a sketch
@@ -410,11 +410,11 @@ CONTENTS                                                    *p5-webgl-contents*
   @param [yOff] Y axis offset from origin (0,0,0)
   @param [zOff] Z axis offset from origin (0,0,0)
 
-*Sub-module: interaction*
+📂 *Sub-module: interaction*
 
 ---
 
-### debugMode
+### 🔧 debugMode
 
 *   debugMode() helps visualize 3D space by adding a
   grid to indicate where the ‘ground’ is in a sketch
@@ -442,11 +442,11 @@ CONTENTS                                                    *p5-webgl-contents*
   @param [yOff] Y axis offset from origin (0,0,0)
   @param [zOff] Z axis offset from origin (0,0,0)
 
-*Sub-module: interaction*
+📂 *Sub-module: interaction*
 
 ---
 
-### debugMode
+### 🔧 debugMode
 
 *   debugMode() helps visualize 3D space by adding a
   grid to indicate where the ‘ground’ is in a sketch
@@ -473,19 +473,19 @@ CONTENTS                                                    *p5-webgl-contents*
   grid
   @param [axesSize] size of axes icon
 
-*Sub-module: interaction*
+📂 *Sub-module: interaction*
 
 ---
 
-### debugMode
+### 🔧 debugMode
 
 *   Turns off debugMode() in a 3D sketch.
 
-*Sub-module: interaction*
+📂 *Sub-module: interaction*
 
 ---
 
-### called
+### 🔧 called
 
 *   Creates an ambient light with the given color.
   Ambient light does not come from a specific
@@ -507,11 +507,11 @@ CONTENTS                                                    *p5-webgl-contents*
   color range (default is 0-255)
   @chainable
 
-*Sub-module: light*
+📂 *Sub-module: light*
 
 ---
 
-### called
+### 🔧 called
 
 *   Creates an ambient light with the given color.
   Ambient light does not come from a specific
@@ -529,11 +529,11 @@ CONTENTS                                                    *p5-webgl-contents*
   color range (default is 0-255)
   @chainable
 
-*Sub-module: light*
+📂 *Sub-module: light*
 
 ---
 
-### called
+### 🔧 called
 
 *   Creates an ambient light with the given color.
   Ambient light does not come from a specific
@@ -548,11 +548,11 @@ CONTENTS                                                    *p5-webgl-contents*
   - **value**: a color string
   @chainable
 
-*Sub-module: light*
+📂 *Sub-module: light*
 
 ---
 
-### called
+### 🔧 called
 
 *   Creates an ambient light with the given color.
   Ambient light does not come from a specific
@@ -568,11 +568,11 @@ CONTENTS                                                    *p5-webgl-contents*
   red,green,blue & and alpha components of the color
   @chainable
 
-*Sub-module: light*
+📂 *Sub-module: light*
 
 ---
 
-### called
+### 🔧 called
 
 *   Creates an ambient light with the given color.
   Ambient light does not come from a specific
@@ -587,11 +587,11 @@ CONTENTS                                                    *p5-webgl-contents*
   - **color**: color as a p5.Color
   @chainable
 
-*Sub-module: light*
+📂 *Sub-module: light*
 
 ---
 
-### light
+### 🔧 light
 
 *   Sets the color of the specular highlight of a
   non-ambient light (i.e. all lights except
@@ -614,11 +614,11 @@ CONTENTS                                                    *p5-webgl-contents*
   current color range
   @chainable
 
-*Sub-module: light*
+📂 *Sub-module: light*
 
 ---
 
-### light
+### 🔧 light
 
 *   Sets the color of the specular highlight of a
   non-ambient light (i.e. all lights except
@@ -637,11 +637,11 @@ CONTENTS                                                    *p5-webgl-contents*
   and black
   @chainable
 
-*Sub-module: light*
+📂 *Sub-module: light*
 
 ---
 
-### light
+### 🔧 light
 
 *   Sets the color of the specular highlight of a
   non-ambient light (i.e. all lights except
@@ -659,11 +659,11 @@ CONTENTS                                                    *p5-webgl-contents*
   - **value**: color as a CSS string
   @chainable
 
-*Sub-module: light*
+📂 *Sub-module: light*
 
 ---
 
-### light
+### 🔧 light
 
 *   Sets the color of the specular highlight of a
   non-ambient light (i.e. all lights except
@@ -682,11 +682,11 @@ CONTENTS                                                    *p5-webgl-contents*
   red, green, and blue components
   @chainable
 
-*Sub-module: light*
+📂 *Sub-module: light*
 
 ---
 
-### light
+### 🔧 light
 
 *   Sets the color of the specular highlight of a
   non-ambient light (i.e. all lights except
@@ -704,11 +704,11 @@ CONTENTS                                                    *p5-webgl-contents*
   - **color**: color as a p5.Color
   @chainable
 
-*Sub-module: light*
+📂 *Sub-module: light*
 
 ---
 
-### as
+### 🔧 as
 
 *   Creates a directional light with the given color
   and direction. Directional light comes from one
@@ -744,11 +744,11 @@ CONTENTS                                                    *p5-webgl-contents*
   of -1 to 1)
   @chainable
 
-*Sub-module: light*
+📂 *Sub-module: light*
 
 ---
 
-### as
+### 🔧 as
 
 *   Creates a directional light with the given color
   and direction. Directional light comes from one
@@ -779,11 +779,11 @@ CONTENTS                                                    *p5-webgl-contents*
   - **direction**: direction of light as a p5.Vector
   @chainable
 
-*Sub-module: light*
+📂 *Sub-module: light*
 
 ---
 
-### as
+### 🔧 as
 
 *   Creates a directional light with the given color
   and direction. Directional light comes from one
@@ -815,11 +815,11 @@ CONTENTS                                                    *p5-webgl-contents*
   of -1 to 1)
   @chainable
 
-*Sub-module: light*
+📂 *Sub-module: light*
 
 ---
 
-### as
+### 🔧 as
 
 *   Creates a directional light with the given color
   and direction. Directional light comes from one
@@ -846,11 +846,11 @@ CONTENTS                                                    *p5-webgl-contents*
   - **direction**: direction of light as a p5.Vector
   @chainable
 
-*Sub-module: light*
+📂 *Sub-module: light*
 
 ---
 
-### point
+### 🔧 point
 
 *   Creates a point light with the given color and
   position. A point light emits light from a single
@@ -875,11 +875,11 @@ CONTENTS                                                    *p5-webgl-contents*
   - **z**: z component of position
   @chainable
 
-*Sub-module: light*
+📂 *Sub-module: light*
 
 ---
 
-### point
+### 🔧 point
 
 *   Creates a point light with the given color and
   position. A point light emits light from a single
@@ -902,11 +902,11 @@ CONTENTS                                                    *p5-webgl-contents*
   - **position**: of light as a p5.Vector
   @chainable
 
-*Sub-module: light*
+📂 *Sub-module: light*
 
 ---
 
-### point
+### 🔧 point
 
 *   Creates a point light with the given color and
   position. A point light emits light from a single
@@ -927,11 +927,11 @@ CONTENTS                                                    *p5-webgl-contents*
   - **z**: z component of position
   @chainable
 
-*Sub-module: light*
+📂 *Sub-module: light*
 
 ---
 
-### point
+### 🔧 point
 
 *   Creates a point light with the given color and
   position. A point light emits light from a single
@@ -950,11 +950,11 @@ CONTENTS                                                    *p5-webgl-contents*
   - **position**: of light as a p5.Vector
   @chainable
 
-*Sub-module: light*
+📂 *Sub-module: light*
 
 ---
 
-### ambientLight
+### 🔧 ambientLight
 
 *   Places an ambient and directional light in the
   scene. The lights are set to ambientLight(128,
@@ -966,11 +966,11 @@ CONTENTS                                                    *p5-webgl-contents*
   first time through the loop.
   @chainable
 
-*Sub-module: light*
+📂 *Sub-module: light*
 
 ---
 
-### pointLight
+### 🔧 pointLight
 
 *   Sets the falloff rate for pointLight() and
   spotLight(). lightFalloff() affects only the
@@ -988,11 +988,11 @@ CONTENTS                                                    *p5-webgl-contents*
   falloff
   @chainable
 
-*Sub-module: light*
+📂 *Sub-module: light*
 
 ---
 
-### pointLight
+### 🔧 pointLight
 
 *   Creates a spot light with the given color,
   position, light direction, angle, and
@@ -1037,11 +1037,11 @@ CONTENTS                                                    *p5-webgl-contents*
   Defaults to 100
   @chainable
 
-*Sub-module: light*
+📂 *Sub-module: light*
 
 ---
 
-### pointLight
+### 🔧 pointLight
 
 *   Creates a spot light with the given color,
   position, light direction, angle, and
@@ -1074,11 +1074,11 @@ CONTENTS                                                    *p5-webgl-contents*
   @param [concentration] concentration of cone.
   Defaults to 100
 
-*Sub-module: light*
+📂 *Sub-module: light*
 
 ---
 
-### pointLight
+### 🔧 pointLight
 
 *   Creates a spot light with the given color,
   position, light direction, angle, and
@@ -1115,11 +1115,11 @@ CONTENTS                                                    *p5-webgl-contents*
   @param [concentration] concentration of cone.
   Defaults to 100
 
-*Sub-module: light*
+📂 *Sub-module: light*
 
 ---
 
-### pointLight
+### 🔧 pointLight
 
 *   Creates a spot light with the given color,
   position, light direction, angle, and
@@ -1154,11 +1154,11 @@ CONTENTS                                                    *p5-webgl-contents*
   @param [concentration] concentration of cone.
   Defaults to 100
 
-*Sub-module: light*
+📂 *Sub-module: light*
 
 ---
 
-### pointLight
+### 🔧 pointLight
 
 *   Creates a spot light with the given color,
   position, light direction, angle, and
@@ -1196,11 +1196,11 @@ CONTENTS                                                    *p5-webgl-contents*
   @param [concentration] concentration of cone.
   Defaults to 100
 
-*Sub-module: light*
+📂 *Sub-module: light*
 
 ---
 
-### pointLight
+### 🔧 pointLight
 
 *   Creates a spot light with the given color,
   position, light direction, angle, and
@@ -1239,11 +1239,11 @@ CONTENTS                                                    *p5-webgl-contents*
   @param [concentration] concentration of cone.
   Defaults to 100
 
-*Sub-module: light*
+📂 *Sub-module: light*
 
 ---
 
-### pointLight
+### 🔧 pointLight
 
 *   Creates a spot light with the given color,
   position, light direction, angle, and
@@ -1285,11 +1285,11 @@ CONTENTS                                                    *p5-webgl-contents*
   @param [concentration] concentration of cone.
   Defaults to 100
 
-*Sub-module: light*
+📂 *Sub-module: light*
 
 ---
 
-### pointLight
+### 🔧 pointLight
 
 *   Creates a spot light with the given color,
   position, light direction, angle, and
@@ -1329,11 +1329,11 @@ CONTENTS                                                    *p5-webgl-contents*
   @param [concentration] concentration of cone.
   Defaults to 100
 
-*Sub-module: light*
+📂 *Sub-module: light*
 
 ---
 
-### functions
+### 🔧 functions
 
 *   Removes all lights present in a sketch. All
   subsequent geometry is rendered without lighting
@@ -1343,11 +1343,11 @@ CONTENTS                                                    *p5-webgl-contents*
   spotLight()).
   @chainable
 
-*Sub-module: light*
+📂 *Sub-module: light*
 
 ---
 
-### loadModel
+### 🔧 loadModel
 
 *   Load a 3d model from an OBJ or STL file.
   loadModel() should be placed inside of preload().
@@ -1378,11 +1378,11 @@ CONTENTS                                                    *p5-webgl-contents*
   (.stl, .obj).
   - **Returns**: the p5.Geometry object
 
-*Sub-module: loading*
+📂 *Sub-module: loading*
 
 ---
 
-### preload
+### 🔧 preload
 
 *   Creates a new p5.Shader object from the provided
   vertex and fragment shader files. The shader files
@@ -1402,11 +1402,11 @@ CONTENTS                                                    *p5-webgl-contents*
   - **Returns**: a shader object created from the provided
   vertex and fragment shader files.
 
-*Sub-module: material*
+📂 *Sub-module: material*
 
 ---
 
-### createShader
+### 🔧 createShader
 
 *   Sets the p5.Shader object to be used to render
   subsequent shapes. Custom shaders can be created
@@ -1418,22 +1418,22 @@ CONTENTS                                                    *p5-webgl-contents*
   shapes.
   @chainable
 
-*Sub-module: material*
+📂 *Sub-module: material*
 
 ---
 
-### resetShader
+### 🔧 resetShader
 
 *   Restores the default shaders. Code that runs after
   resetShader() will not be affected by the shader
   previously set by shader()
   @chainable
 
-*Sub-module: material*
+📂 *Sub-module: material*
 
 ---
 
-### beginShape
+### 🔧 beginShape
 
 *   Sets the texture that will be used to render
   subsequent shapes. A texture is like a "skin" that
@@ -1447,11 +1447,11 @@ CONTENTS                                                    *p5-webgl-contents*
   - **tex**: image to use as texture
   @chainable
 
-*Sub-module: material*
+📂 *Sub-module: material*
 
 ---
 
-### points
+### 🔧 points
 
 *   Sets the coordinate space for texture mapping. The
   default mode is IMAGE which refers to the actual
@@ -1464,11 +1464,11 @@ CONTENTS                                                    *p5-webgl-contents*
   (1,1) (0,1).
   - **mode**: either IMAGE or NORMAL
 
-*Sub-module: material*
+📂 *Sub-module: material*
 
 ---
 
-### size
+### 🔧 size
 
 *   Sets the global texture wrapping mode. This
   controls how textures behave when their uv's go
@@ -1490,11 +1490,11 @@ CONTENTS                                                    *p5-webgl-contents*
   - **wrapX**: either CLAMP, REPEAT, or MIRROR
   @param [wrapY] either CLAMP, REPEAT, or MIRROR
 
-*Sub-module: material*
+📂 *Sub-module: material*
 
 ---
 
-### normalMaterial
+### 🔧 normalMaterial
 
 *   Sets the current material as a normal material. A
   normal material is not affected by light. It is
@@ -1506,11 +1506,11 @@ CONTENTS                                                    *p5-webgl-contents*
          *   You can view more materials in this example.
   @chainable
 
-*Sub-module: material*
+📂 *Sub-module: material*
 
 ---
 
-### ambientMaterial
+### 🔧 ambientMaterial
 
 *   Sets the ambient color of the material. The
   ambientMaterial() color represents the components
@@ -1536,11 +1536,11 @@ CONTENTS                                                    *p5-webgl-contents*
   current color range
   @chainable
 
-*Sub-module: material*
+📂 *Sub-module: material*
 
 ---
 
-### ambientMaterial
+### 🔧 ambientMaterial
 
 *   Sets the ambient color of the material. The
   ambientMaterial() color represents the components
@@ -1562,11 +1562,11 @@ CONTENTS                                                    *p5-webgl-contents*
   and black
   @chainable
 
-*Sub-module: material*
+📂 *Sub-module: material*
 
 ---
 
-### ambientMaterial
+### 🔧 ambientMaterial
 
 *   Sets the ambient color of the material. The
   ambientMaterial() color represents the components
@@ -1588,11 +1588,11 @@ CONTENTS                                                    *p5-webgl-contents*
   as a CSS string
   @chainable
 
-*Sub-module: material*
+📂 *Sub-module: material*
 
 ---
 
-### range
+### 🔧 range
 
 *   Sets the emissive color of the material. An
   emissive material will display the emissive color
@@ -1612,11 +1612,11 @@ CONTENTS                                                    *p5-webgl-contents*
   color range (default is 0-255)
   @chainable
 
-*Sub-module: material*
+📂 *Sub-module: material*
 
 ---
 
-### emissiveMaterial
+### 🔧 emissiveMaterial
 
 *   Sets the emissive color of the material. An
   emissive material will display the emissive color
@@ -1630,11 +1630,11 @@ CONTENTS                                                    *p5-webgl-contents*
   and black
   @chainable
 
-*Sub-module: material*
+📂 *Sub-module: material*
 
 ---
 
-### emissiveMaterial
+### 🔧 emissiveMaterial
 
 *   Sets the emissive color of the material. An
   emissive material will display the emissive color
@@ -1648,11 +1648,11 @@ CONTENTS                                                    *p5-webgl-contents*
   as a CSS string
   @chainable
 
-*Sub-module: material*
+📂 *Sub-module: material*
 
 ---
 
-### reflective
+### 🔧 reflective
 
 *   Sets the specular color of the material. A
   specular material is reflective (shiny). The
@@ -1672,11 +1672,11 @@ CONTENTS                                                    *p5-webgl-contents*
   color range (default is 0-255)
   @chainable
 
-*Sub-module: material*
+📂 *Sub-module: material*
 
 ---
 
-### reflective
+### 🔧 reflective
 
 *   Sets the specular color of the material. A
   specular material is reflective (shiny). The
@@ -1700,11 +1700,11 @@ CONTENTS                                                    *p5-webgl-contents*
   color range (default is 0-255)
   @chainable
 
-*Sub-module: material*
+📂 *Sub-module: material*
 
 ---
 
-### reflective
+### 🔧 reflective
 
 *   Sets the specular color of the material. A
   specular material is reflective (shiny). The
@@ -1722,11 +1722,11 @@ CONTENTS                                                    *p5-webgl-contents*
   as a CSS string
   @chainable
 
-*Sub-module: material*
+📂 *Sub-module: material*
 
 ---
 
-### gloss
+### 🔧 gloss
 
 *   Sets the amount of gloss ("shininess") of a
   specularMaterial(). The default and minimum value
@@ -1734,41 +1734,41 @@ CONTENTS                                                    *p5-webgl-contents*
   - **shine**: degree of shininess
   @chainable
 
-*Sub-module: material*
+📂 *Sub-module: material*
 
 ---
 
-### perspective
+### 🔧 perspective
 
 *   Sets a perspective projection. Accepts the same
   parameters as the global perspective(). More
   information on this function can be found there.
 
-*Sub-module: p5.Camera*
+📂 *Sub-module: p5.Camera*
 
 ---
 
-### ortho
+### 🔧 ortho
 
 *   Sets an orthographic projection. Accepts the same
   parameters as the global ortho(). More information
   on this function can be found there.
 
-*Sub-module: p5.Camera*
+📂 *Sub-module: p5.Camera*
 
 ---
 
-### frustum
+### 🔧 frustum
 
 *   Sets the camera's frustum. Accepts the same
   parameters as the global frustum(). More
   information on this function can be found there.
 
-*Sub-module: p5.Camera*
+📂 *Sub-module: p5.Camera*
 
 ---
 
-### counterclockwise
+### 🔧 counterclockwise
 
 *   Panning rotates the camera view to the left and
   right.
@@ -1776,22 +1776,22 @@ CONTENTS                                                    *p5-webgl-contents*
   angleMode units. Greater than 0 values rotate
   counterclockwise (to the left).
 
-*Sub-module: p5.Camera*
+📂 *Sub-module: p5.Camera*
 
 ---
 
-### counterclockwise
+### 🔧 counterclockwise
 
 *   Tilting rotates the camera view up and down.
   - **angle**: amount to rotate camera in current
   angleMode units. Greater than 0 values rotate
   counterclockwise (to the left).
 
-*Sub-module: p5.Camera*
+📂 *Sub-module: p5.Camera*
 
 ---
 
-### lookAt
+### 🔧 lookAt
 
 *   Reorients the camera to look at a position in
   world space.
@@ -1799,22 +1799,22 @@ CONTENTS                                                    *p5-webgl-contents*
   - **y**: y position of a point in world space
   - **z**: z position of a point in world space
 
-*Sub-module: p5.Camera*
+📂 *Sub-module: p5.Camera*
 
 ---
 
-### camera
+### 🔧 camera
 
 *   Sets the camera's position and orientation.
   Accepts the same parameters as the global
   camera(). More information on this function can be
   found there.
 
-*Sub-module: p5.Camera*
+📂 *Sub-module: p5.Camera*
 
 ---
 
-### move
+### 🔧 move
 
 *   Move camera along its local axes while maintaining
   current camera orientation.
@@ -1825,11 +1825,11 @@ CONTENTS                                                    *p5-webgl-contents*
   - **z**: amount to move along camera's
   forward-backward axis
 
-*Sub-module: p5.Camera*
+📂 *Sub-module: p5.Camera*
 
 ---
 
-### setPosition
+### 🔧 setPosition
 
 *   Set camera position in world-space while
   maintaining current camera orientation.
@@ -1837,11 +1837,11 @@ CONTENTS                                                    *p5-webgl-contents*
   - **y**: y position of a point in world space
   - **z**: z position of a point in world space
 
-*Sub-module: p5.Camera*
+📂 *Sub-module: p5.Camera*
 
 ---
 
-### set
+### 🔧 set
 
 *   Copies information about the argument camera's
   view and projection to the target camera. If the
@@ -1849,11 +1849,11 @@ CONTENTS                                                    *p5-webgl-contents*
   the screen.
   - **cam**: source camera
 
-*Sub-module: p5.Camera*
+📂 *Sub-module: p5.Camera*
 
 ---
 
-### orbitControl
+### 🔧 orbitControl
 
 *   For the cameras cam0 and cam1 with the given
   arguments, their view are combined with the
@@ -1878,19 +1878,19 @@ CONTENTS                                                    *p5-webgl-contents*
   - **amt**: amount to use for interpolation during
   slerp
 
-*Sub-module: p5.Camera*
+📂 *Sub-module: p5.Camera*
 
 ---
 
-### sketch
+### 🔧 sketch
 
 *   camera position value on x axis
 
-*Sub-module: p5.Camera*
+📂 *Sub-module: p5.Camera*
 
 ---
 
-### frustum
+### 🔧 frustum
 
 *   Sets a perspective projection for the current
   camera in a 3D sketch. This projection represents
@@ -1914,11 +1914,11 @@ CONTENTS                                                    *p5-webgl-contents*
   @param [far] frustum far plane length
   @chainable
 
-*Sub-module: p5.Camera*
+📂 *Sub-module: p5.Camera*
 
 ---
 
-### ortho
+### 🔧 ortho
 
 *   Sets an orthographic projection for the current
   camera in a 3D sketch and defines a box-shaped
@@ -1942,11 +1942,11 @@ CONTENTS                                                    *p5-webgl-contents*
   @param [far] camera frustum far plane
   @chainable
 
-*Sub-module: p5.Camera*
+📂 *Sub-module: p5.Camera*
 
 ---
 
-### perspective
+### 🔧 perspective
 
 *   Sets the frustum of the current camera as defined
   by the parameters. A frustum is a geometric form:
@@ -1971,11 +1971,11 @@ CONTENTS                                                    *p5-webgl-contents*
   @param [far] camera frustum far plane
   @chainable
 
-*Sub-module: p5.Camera*
+📂 *Sub-module: p5.Camera*
 
 ---
 
-### current
+### 🔧 current
 
 *   Creates a new p5.Camera object and sets it as the
   current (active) camera. The new camera is
@@ -1990,30 +1990,30 @@ CONTENTS                                                    *p5-webgl-contents*
   the scene.
   - **Returns**: The newly created camera object.
 
-*Sub-module: p5.Camera*
+📂 *Sub-module: p5.Camera*
 
 ---
 
-### current
+### 🔧 current
 
 *   Sets the current (active) camera of a 3D sketch.
   Allows for switching between multiple cameras.
   - **cam**: p5.Camera object
 
-*Sub-module: p5.Camera*
+📂 *Sub-module: p5.Camera*
 
 ---
 
-### vertexNormal
+### 🔧 vertexNormal
 
 *   Sets the normal to use for subsequent vertices.
   @chainable
 
-*Sub-module: p5.RendererGL.Immediate*
+📂 *Sub-module: p5.RendererGL.Immediate*
 
 ---
 
-### false
+### 🔧 false
 
 *   Set attributes for the WebGL Drawing context. This
   is a way of adjusting how the WebGL renderer works
@@ -2052,11 +2052,11 @@ CONTENTS                                                    *p5-webgl-contents*
   - **key**: Name of attribute
   - **value**: New value of named attribute
 
-*Sub-module: p5.RendererGL*
+📂 *Sub-module: p5.RendererGL*
 
 ---
 
-### false
+### 🔧 false
 
 *   Set attributes for the WebGL Drawing context. This
   is a way of adjusting how the WebGL renderer works
@@ -2094,11 +2094,11 @@ CONTENTS                                                    *p5-webgl-contents*
   property.
   - **obj**: object with key-value pairs
 
-*Sub-module: p5.RendererGL*
+📂 *Sub-module: p5.RendererGL*
 
 ---
 
-### constructor
+### 🔧 constructor
 
 *   An object that one can draw to and then read as a
   texture. While similar to a p5.Graphics, using a
@@ -2109,11 +2109,11 @@ CONTENTS                                                    *p5-webgl-contents*
          *   - **target**: A p5 global instance or p5.Graphics
   @param [settings] A settings object
 
-*Sub-module: p5.Framebuffer*
+📂 *Sub-module: p5.Framebuffer*
 
 ---
 
-### pixelDensity
+### 🔧 pixelDensity
 
 *   Gets or sets the pixel scaling for high pixel
   density displays. By default, the density will
@@ -2125,11 +2125,11 @@ CONTENTS                                                    *p5-webgl-contents*
   @param [density] A scaling factor for the number
   of pixels per side of the framebuffer
 
-*Sub-module: p5.Framebuffer*
+📂 *Sub-module: p5.Framebuffer*
 
 ---
 
-### autoSized
+### 🔧 autoSized
 
 *   Gets or sets whether or not this framebuffer will
   automatically resize along with the canvas it's
@@ -2141,30 +2141,30 @@ CONTENTS                                                    *p5-webgl-contents*
   should resize along with the canvas it's attached
   to
 
-*Sub-module: p5.Framebuffer*
+📂 *Sub-module: p5.Framebuffer*
 
 ---
 
-### createCamera
+### 🔧 createCamera
 
 *   Creates and returns a new p5.FramebufferCamera to
   be used while drawing to this framebuffer. The
   camera will be set as the currently active camera.
   - **Returns**: A new camera
 
-*Sub-module: p5.Framebuffer*
+📂 *Sub-module: p5.Framebuffer*
 
 ---
 
-### remove
+### 🔧 remove
 
 *   Removes the framebuffer and frees its resources.
 
-*Sub-module: p5.Framebuffer*
+📂 *Sub-module: p5.Framebuffer*
 
 ---
 
-### end
+### 🔧 end
 
 *   Begin drawing to this framebuffer. Subsequent
   drawing functions to the canvas the framebuffer is
@@ -2175,11 +2175,11 @@ CONTENTS                                                    *p5-webgl-contents*
   able to read the contents of the framebuffer's
   texture.
 
-*Sub-module: p5.Framebuffer*
+📂 *Sub-module: p5.Framebuffer*
 
 ---
 
-### begin
+### 🔧 begin
 
 *   After having previously called begin(), this
   method stops drawing functions from going to the
@@ -2187,11 +2187,11 @@ CONTENTS                                                    *p5-webgl-contents*
   to the canvas again. After this, one can read from
   the framebuffer's texture.
 
-*Sub-module: p5.Framebuffer*
+📂 *Sub-module: p5.Framebuffer*
 
 ---
 
-### begin
+### 🔧 begin
 
 *   Run a function while drawing to the framebuffer
   rather than to its canvas. This is equivalent to
@@ -2203,11 +2203,11 @@ CONTENTS                                                    *p5-webgl-contents*
   but it will draw to the framebuffer instead of the
   canvas.
 
-*Sub-module: p5.Framebuffer*
+📂 *Sub-module: p5.Framebuffer*
 
 ---
 
-### imageMode
+### 🔧 imageMode
 
 *   Get a region of pixels from the canvas in the form
   of a p5.Image, or a single pixel as an array of
@@ -2225,11 +2225,11 @@ CONTENTS                                                    *p5-webgl-contents*
   current imageMode().
   - **Returns**: the whole p5.Image
 
-*Sub-module: p5.Framebuffer*
+📂 *Sub-module: p5.Framebuffer*
 
 ---
 
-### imageMode
+### 🔧 imageMode
 
 *   Get a region of pixels from the canvas in the form
   of a p5.Image, or a single pixel as an array of
@@ -2250,11 +2250,11 @@ CONTENTS                                                    *p5-webgl-contents*
   - **Returns**: color of pixel at x,y in array format [R,
   G, B, A]
 
-*Sub-module: p5.Framebuffer*
+📂 *Sub-module: p5.Framebuffer*
 
 ---
 
-### constructor
+### 🔧 constructor
 
 *   p5 Geometry class
          *   @param [detailX] number of vertices along the
@@ -2264,51 +2264,51 @@ CONTENTS                                                    *p5-webgl-contents*
   @param [callback] function to call upon object
   instantiation.
 
-*Sub-module: p5.Geometry*
+📂 *Sub-module: p5.Geometry*
 
 ---
 
-### computeNormals
+### 🔧 computeNormals
 
 *   computes smooth normals per vertex as an average
   of each face.
   @chainable
 
-*Sub-module: p5.Geometry*
+📂 *Sub-module: p5.Geometry*
 
 ---
 
-### averageNormals
+### 🔧 averageNormals
 
 *   Averages the vertex normals. Used in curved
   surfaces
   @chainable
 
-*Sub-module: p5.Geometry*
+📂 *Sub-module: p5.Geometry*
 
 ---
 
-### averagePoleNormals
+### 🔧 averagePoleNormals
 
 *   Averages pole normals. Used in spherical
   primitives
   @chainable
 
-*Sub-module: p5.Geometry*
+📂 *Sub-module: p5.Geometry*
 
 ---
 
-### normalize
+### 🔧 normalize
 
 *   Modifies all vertices to be centered within the
   range -100 to 100.
   @chainable
 
-*Sub-module: p5.Geometry*
+📂 *Sub-module: p5.Geometry*
 
 ---
 
-### programs
+### 🔧 programs
 
 *   Used to set the uniforms of a p5.Shader object.
   Uniforms are used as a way to provide shader
@@ -2324,87 +2324,87 @@ CONTENTS                                                    *p5-webgl-contents*
   p5.Texture)
   @chainable
 
-*Sub-module: p5.Shader*
+📂 *Sub-module: p5.Shader*
 
 ---
 
-## Variables
+## 📊 Variables
 
-### angle
+### 📊 angle
 
 *   Sets a perspective projection. Accepts the same
   parameters as the global perspective(). More
   information on this function can be found there.
 
-*Sub-module: p5.Camera*
+📂 *Sub-module: p5.Camera*
 
 ---
 
-### eyeY
+### 📊 eyeY
 
 *   camera position value on y axis
 
-*Sub-module: p5.Camera*
+📂 *Sub-module: p5.Camera*
 
 ---
 
-### eyeZ
+### 📊 eyeZ
 
 *   camera position value on z axis
 
-*Sub-module: p5.Camera*
+📂 *Sub-module: p5.Camera*
 
 ---
 
-### centerX
+### 📊 centerX
 
 *   x coordinate representing center of the sketch
 
-*Sub-module: p5.Camera*
+📂 *Sub-module: p5.Camera*
 
 ---
 
-### centerY
+### 📊 centerY
 
 *   y coordinate representing center of the sketch
 
-*Sub-module: p5.Camera*
+📂 *Sub-module: p5.Camera*
 
 ---
 
-### centerZ
+### 📊 centerZ
 
 *   z coordinate representing center of the sketch
 
-*Sub-module: p5.Camera*
+📂 *Sub-module: p5.Camera*
 
 ---
 
-### upX
+### 📊 upX
 
 *   x component of direction 'up' from camera
 
-*Sub-module: p5.Camera*
+📂 *Sub-module: p5.Camera*
 
 ---
 
-### upY
+### 📊 upY
 
 *   y component of direction 'up' from camera
 
-*Sub-module: p5.Camera*
+📂 *Sub-module: p5.Camera*
 
 ---
 
-### upZ
+### 📊 upZ
 
 *   z component of direction 'up' from camera
 
-*Sub-module: p5.Camera*
+📂 *Sub-module: p5.Camera*
 
 ---
 
-### target
+### 📊 target
 
 *   An object that one can draw to and then read as a
   texture. While similar to a p5.Graphics, using a
@@ -2415,11 +2415,11 @@ CONTENTS                                                    *p5-webgl-contents*
          *   - **target**: A p5 global instance or p5.Graphics
   @param [settings] A settings object
 
-*Sub-module: p5.Framebuffer*
+📂 *Sub-module: p5.Framebuffer*
 
 ---
 
-### color
+### 📊 color
 
 *   A texture with the color information of the
   framebuffer. Pass this (or the framebuffer itself)
@@ -2432,11 +2432,11 @@ CONTENTS                                                    *p5-webgl-contents*
   vertically, e.g. with plane(framebuffer.width,
   -framebuffer.height).
 
-*Sub-module: p5.Framebuffer*
+📂 *Sub-module: p5.Framebuffer*
 
 ---
 
-### depth
+### 📊 depth
 
 *   A texture with the depth information of the
   framebuffer. If the framebuffer was created with {
@@ -2450,7 +2450,7 @@ CONTENTS                                                    *p5-webgl-contents*
   to flip vertically, e.g. with
   plane(framebuffer.width, -framebuffer.height).
 
-*Sub-module: p5.Framebuffer*
+📂 *Sub-module: p5.Framebuffer*
 
 ---
 

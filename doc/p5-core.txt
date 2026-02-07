@@ -1,97 +1,97 @@
-p5-core⚙️.txt    p5.js core documentation    p5
+p5-core.txt    p5.js core documentation    p5
 
 ==============================================================================
-p5.js Core Module    *p5-core*
+⚙️ p5.js Core Module ⚙️    *p5-core*
 
-p5.js Version: 1.7.7~
-Last Updated: 2026-02-06 18:38:12~
+📦 p5.js Version: 1.7.7~
+⏰ Last Updated: 2026-02-07 02:20:06~
 
 ==============================================================================
-CONTENTS                                                    *p5-core-contents*
+📋 CONTENTS                                                    *p5-core-contents*
 
 
 ## Table of Contents
 
-### Functions
+### 🔧 Functions
 
-- print
-- images
-- frameRate
-- frameRate
-- frameRate
-- noCursor
-- windowResized
-- fullscreen
-- pixelDensity
-- pixelDensity
-- displayDensity
-- getURL
-- getURLPath
-- getURLParams
-- setup
-- setup
-- resizeCanvas
-- noCanvas
-- setAttributes
-- setAttributes
-- canvas
-- pixels
-- draw
-- draw
-- draw
-- push
-- push
-- draw
-- p5
-- length
-- applyMatrix
-- applyMatrix
-- resetMatrix
-- rotate
-- draw
-- draw
-- draw
-- scale
-- scale
-- shearX
-- shearY
-- translate
-- translate
-- createCanvas
-- parent
-- class
-- class
-- class
-- class
-- constructor
-- remove
-- createFramebuffer
-- constructor
-- setup
-- setup
-- remove
+- print 🔧
+- images 🔧
+- frameRate 🔧
+- frameRate 🔧
+- frameRate 🔧
+- noCursor 🔧
+- windowResized 🔧
+- fullscreen 🔧
+- pixelDensity 🔧
+- pixelDensity 🔧
+- displayDensity 🔧
+- getURL 🔧
+- getURLPath 🔧
+- getURLParams 🔧
+- setup 🔧
+- setup 🔧
+- resizeCanvas 🔧
+- noCanvas 🔧
+- setAttributes 🔧
+- setAttributes 🔧
+- canvas 🔧
+- pixels 🔧
+- draw 🔧
+- draw 🔧
+- draw 🔧
+- push 🔧
+- push 🔧
+- draw 🔧
+- p5 🔧
+- length 🔧
+- applyMatrix 🔧
+- applyMatrix 🔧
+- resetMatrix 🔧
+- rotate 🔧
+- draw 🔧
+- draw 🔧
+- draw 🔧
+- scale 🔧
+- scale 🔧
+- shearX 🔧
+- shearY 🔧
+- translate 🔧
+- translate 🔧
+- createCanvas 🔧
+- parent 🔧
+- class 🔧
+- class 🔧
+- class 🔧
+- class 🔧
+- constructor 🔧
+- remove 🔧
+- createFramebuffer 🔧
+- constructor 🔧
+- setup 🔧
+- setup 🔧
+- remove 🔧
 
-### Variables
+### 📊 Variables
 
-- contents
-- deltaTime
-- focused
-- version
-- displayWidth
-- displayHeight
-- windowWidth
-- windowHeight
-- width
-- height
-- note
-- elt
-- elt
+- contents 📊
+- deltaTime 📊
+- focused 📊
+- version 📊
+- displayWidth 📊
+- displayHeight 📊
+- windowWidth 📊
+- windowHeight 📊
+- width 📊
+- height 📊
+- note 📊
+- elt 📊
+- elt 📊
 
 ---
 
-## Functions
+## 🔧 Functions
 
-### print
+### 🔧 print
 
 *   The print() function writes to the console area of
   your browser. This function is often helpful for
@@ -107,11 +107,11 @@ CONTENTS                                                    *p5-core-contents*
   - **contents**: any combination of Number, String,
   Object, Boolean, Array to print
 
-*Sub-module: environment*
+📂 *Sub-module: environment*
 
 ---
 
-### images
+### 🔧 images
 
 *   Sets the cursor to a predefined symbol or an
   image, or makes it visible if already hidden. If
@@ -131,11 +131,11 @@ CONTENTS                                                    *p5-core-contents*
   @param [y] the vertical active spot of the cursor
   (must be less than 32)
 
-*Sub-module: environment*
+📂 *Sub-module: environment*
 
 ---
 
-### frameRate
+### 🔧 frameRate
 
 *   Specifies the number of frames to be displayed
   every second. For example, the function call
@@ -161,11 +161,11 @@ CONTENTS                                                    *p5-core-contents*
   second
   @chainable
 
-*Sub-module: environment*
+📂 *Sub-module: environment*
 
 ---
 
-### frameRate
+### 🔧 frameRate
 
 *   Specifies the number of frames to be displayed
   every second. For example, the function call
@@ -189,11 +189,11 @@ CONTENTS                                                    *p5-core-contents*
   current framerate.
   - **Returns**: current frameRate
 
-*Sub-module: environment*
+📂 *Sub-module: environment*
 
 ---
 
-### frameRate
+### 🔧 frameRate
 
 *   Returns _targetFrameRate variable. The default
   _targetFrameRate is set to 60. This could be
@@ -202,19 +202,19 @@ CONTENTS                                                    *p5-core-contents*
   called, it should return the value that was set.
   - **Returns**: _targetFrameRate
 
-*Sub-module: environment*
+📂 *Sub-module: environment*
 
 ---
 
-### noCursor
+### 🔧 noCursor
 
 *   Hides the cursor from view.
 
-*Sub-module: environment*
+📂 *Sub-module: environment*
 
 ---
 
-### windowResized
+### 🔧 windowResized
 
 *   The windowResized() function is called once every
   time the browser window is resized. This is a good
@@ -222,11 +222,11 @@ CONTENTS                                                    *p5-core-contents*
   adjustments to accommodate the new window size.
   @param [event] optional Event callback argument.
 
-*Sub-module: environment*
+📂 *Sub-module: environment*
 
 ---
 
-### fullscreen
+### 🔧 fullscreen
 
 *   If argument is given, sets the sketch to
   fullscreen or not based on the value of the
@@ -239,11 +239,11 @@ CONTENTS                                                    *p5-core-contents*
   fullscreen mode or not
   - **Returns**: current fullscreen state
 
-*Sub-module: environment*
+📂 *Sub-module: environment*
 
 ---
 
-### pixelDensity
+### 🔧 pixelDensity
 
 *   Sets the pixel scaling for high pixel density
   displays. By default pixel density is set to match
@@ -254,11 +254,11 @@ CONTENTS                                                    *p5-core-contents*
   scale
   @chainable
 
-*Sub-module: environment*
+📂 *Sub-module: environment*
 
 ---
 
-### pixelDensity
+### 🔧 pixelDensity
 
 *   Sets the pixel scaling for high pixel density
   displays. By default pixel density is set to match
@@ -267,21 +267,21 @@ CONTENTS                                                    *p5-core-contents*
   returns the current pixel density of the sketch.
   - **Returns**: current pixel density of the sketch
 
-*Sub-module: environment*
+📂 *Sub-module: environment*
 
 ---
 
-### displayDensity
+### 🔧 displayDensity
 
 *   Returns the pixel density of the current display
   the sketch is running on.
   - **Returns**: current pixel density of the display
 
-*Sub-module: environment*
+📂 *Sub-module: environment*
 
 ---
 
-### getURL
+### 🔧 getURL
 
 *   Gets the current URL. Note: when using the p5
   Editor, this will return an empty object because
@@ -290,11 +290,11 @@ CONTENTS                                                    *p5-core-contents*
   editor's present or share URLs.
   - **Returns**: url
 
-*Sub-module: environment*
+📂 *Sub-module: environment*
 
 ---
 
-### getURLPath
+### 🔧 getURLPath
 
 *   Gets the current URL path as an array. Note: when
   using the p5 Editor, this will return an empty
@@ -303,11 +303,11 @@ CONTENTS                                                    *p5-core-contents*
   sketch using the editor's present or share URLs.
   - **Returns**: path components
 
-*Sub-module: environment*
+📂 *Sub-module: environment*
 
 ---
 
-### getURLParams
+### 🔧 getURLParams
 
 *   Gets the current URL params as an Object. Note:
   when using the p5 Editor, this will return an
@@ -316,11 +316,11 @@ CONTENTS                                                    *p5-core-contents*
   sketch using the editor's present or share URLs.
   - **Returns**: URL params
 
-*Sub-module: environment*
+📂 *Sub-module: environment*
 
 ---
 
-### setup
+### 🔧 setup
 
 *   Creates a canvas element in the document and sets
   its dimensions in pixels. This method should be
@@ -357,11 +357,11 @@ CONTENTS                                                    *p5-core-contents*
   @param [canvas] existing html canvas element
   - **Returns**: pointer to p5.Renderer holding canvas
 
-*Sub-module: rendering*
+📂 *Sub-module: rendering*
 
 ---
 
-### setup
+### 🔧 setup
 
 *   Creates a canvas element in the document and sets
   its dimensions in pixels. This method should be
@@ -397,11 +397,11 @@ CONTENTS                                                    *p5-core-contents*
   @param [canvas] existing html canvas element
   - **Returns**: pointer to p5.Renderer holding canvas
 
-*Sub-module: rendering*
+📂 *Sub-module: rendering*
 
 ---
 
-### resizeCanvas
+### 🔧 resizeCanvas
 
 *   Resizes the canvas to given width and height. The
   canvas will be cleared and draw will be called
@@ -412,20 +412,20 @@ CONTENTS                                                    *p5-core-contents*
   @param [noRedraw] don't redraw the canvas
   immediately
 
-*Sub-module: rendering*
+📂 *Sub-module: rendering*
 
 ---
 
-### noCanvas
+### 🔧 noCanvas
 
 *   Removes the default canvas for a p5 sketch that
   doesn't require a canvas
 
-*Sub-module: rendering*
+📂 *Sub-module: rendering*
 
 ---
 
-### setAttributes
+### 🔧 setAttributes
 
 *   Creates and returns a new p5.Graphics object. Use
   this class if you need to draw into an off-screen
@@ -448,11 +448,11 @@ CONTENTS                                                    *p5-core-contents*
   @param [canvas] existing html canvas element
   - **Returns**: offscreen graphics buffer
 
-*Sub-module: rendering*
+📂 *Sub-module: rendering*
 
 ---
 
-### setAttributes
+### 🔧 setAttributes
 
 *   Creates and returns a new p5.Graphics object. Use
   this class if you need to draw into an off-screen
@@ -473,11 +473,11 @@ CONTENTS                                                    *p5-core-contents*
   @param [canvas] existing html canvas element
   - **Returns**: offscreen graphics buffer
 
-*Sub-module: rendering*
+📂 *Sub-module: rendering*
 
 ---
 
-### canvas
+### 🔧 canvas
 
 *   Creates and returns a new p5.Framebuffer, a
   high-performance WebGL object that you can draw to
@@ -521,11 +521,11 @@ CONTENTS                                                    *p5-core-contents*
   @param [options] An optional object with
   configuration
 
-*Sub-module: rendering*
+📂 *Sub-module: rendering*
 
 ---
 
-### pixels
+### 🔧 pixels
 
 *   Blends the pixels in the display window according
   to the defined mode. There is a choice of the
@@ -572,11 +572,11 @@ CONTENTS                                                    *p5-core-contents*
   EXCLUSION, SCREEN, REPLACE, OVERLAY, HARD_LIGHT,
   SOFT_LIGHT, DODGE, BURN, ADD, REMOVE or SUBTRACT
 
-*Sub-module: rendering*
+📂 *Sub-module: rendering*
 
 ---
 
-### draw
+### 🔧 draw
 
 *   Stops p5.js from continuously executing the code
   within draw(). If loop() is called, the code in
@@ -598,11 +598,11 @@ CONTENTS                                                    *p5-core-contents*
          *   Use isLooping() to check the current state of
   loop().
 
-*Sub-module: structure*
+📂 *Sub-module: structure*
 
 ---
 
-### draw
+### 🔧 draw
 
 *   By default, p5.js loops through draw()
   continuously, executing the code within it.
@@ -613,11 +613,11 @@ CONTENTS                                                    *p5-core-contents*
          *   Use isLooping() to check the current state of
   loop().
 
-*Sub-module: structure*
+📂 *Sub-module: structure*
 
 ---
 
-### draw
+### 🔧 draw
 
 *   By default, p5.js loops through draw()
   continuously, executing the code within it. If the
@@ -625,11 +625,11 @@ CONTENTS                                                    *p5-core-contents*
   loop(), isLooping() returns the current state for
   use within custom event handlers.
 
-*Sub-module: structure*
+📂 *Sub-module: structure*
 
 ---
 
-### push
+### 🔧 push
 
 *   The push() function saves the current drawing
   style settings and transformations, while pop()
@@ -658,11 +658,11 @@ CONTENTS                                                    *p5-core-contents*
   specularMaterial(), shininess(), normalMaterial()
   and shader().
 
-*Sub-module: structure*
+📂 *Sub-module: structure*
 
 ---
 
-### push
+### 🔧 push
 
 *   The push() function saves the current drawing
   style settings and transformations, while pop()
@@ -691,11 +691,11 @@ CONTENTS                                                    *p5-core-contents*
   specularMaterial(), shininess(), normalMaterial()
   and shader().
 
-*Sub-module: structure*
+📂 *Sub-module: structure*
 
 ---
 
-### draw
+### 🔧 draw
 
 *   Executes the code within draw() one time. This
   function allows the program to update the display
@@ -715,11 +715,11 @@ CONTENTS                                                    *p5-core-contents*
   @param [n] Redraw for n-times. The default value
   is 1.
 
-*Sub-module: structure*
+📂 *Sub-module: structure*
 
 ---
 
-### p5
+### 🔧 p5
 
 *   The p5() constructor enables you to activate
   "instance mode" instead of normal "global mode".
@@ -751,11 +751,11 @@ CONTENTS                                                    *p5-core-contents*
   - **node**: ID or pointer to HTML DOM node to
   contain sketch in
 
-*Sub-module: structure*
+📂 *Sub-module: structure*
 
 ---
 
-### length
+### 🔧 length
 
 *   Multiplies the current matrix by the one specified
   through the parameters. This is a powerful
@@ -770,11 +770,11 @@ CONTENTS                                                    *p5-core-contents*
   length (2×3 or 4×4 matrix values)
   @chainable
 
-*Sub-module: transform*
+📂 *Sub-module: transform*
 
 ---
 
-### applyMatrix
+### 🔧 applyMatrix
 
 *   Multiplies the current matrix by the one specified
   through the parameters. This is a powerful
@@ -799,11 +799,11 @@ CONTENTS                                                    *p5-core-contents*
   matrix to be multiplied
   @chainable
 
-*Sub-module: transform*
+📂 *Sub-module: transform*
 
 ---
 
-### applyMatrix
+### 🔧 applyMatrix
 
 *   Multiplies the current matrix by the one specified
   through the parameters. This is a powerful
@@ -848,21 +848,21 @@ CONTENTS                                                    *p5-core-contents*
   multiplied
   @chainable
 
-*Sub-module: transform*
+📂 *Sub-module: transform*
 
 ---
 
-### resetMatrix
+### 🔧 resetMatrix
 
 *   Replaces the current matrix with the identity
   matrix.
   @chainable
 
-*Sub-module: transform*
+📂 *Sub-module: transform*
 
 ---
 
-### rotate
+### 🔧 rotate
 
 *   Rotates a shape by the amount specified by the
   angle parameter. This function accounts for
@@ -885,11 +885,11 @@ CONTENTS                                                    *p5-core-contents*
   @param [axis] (in 3d) the axis to rotate around
   @chainable
 
-*Sub-module: transform*
+📂 *Sub-module: transform*
 
 ---
 
-### draw
+### 🔧 draw
 
 *   Rotates a shape around X axis by the amount
   specified in angle parameter. The angles can be
@@ -902,11 +902,11 @@ CONTENTS                                                    *p5-core-contents*
   radians or degrees, depending on current angleMode
   @chainable
 
-*Sub-module: transform*
+📂 *Sub-module: transform*
 
 ---
 
-### draw
+### 🔧 draw
 
 *   Rotates a shape around Y axis by the amount
   specified in angle parameter. The angles can be
@@ -919,11 +919,11 @@ CONTENTS                                                    *p5-core-contents*
   radians or degrees, depending on current angleMode
   @chainable
 
-*Sub-module: transform*
+📂 *Sub-module: transform*
 
 ---
 
-### draw
+### 🔧 draw
 
 *   Rotates a shape around Z axis by the amount
   specified in angle parameter. The angles can be
@@ -938,11 +938,11 @@ CONTENTS                                                    *p5-core-contents*
   radians or degrees, depending on current angleMode
   @chainable
 
-*Sub-module: transform*
+📂 *Sub-module: transform*
 
 ---
 
-### scale
+### 🔧 scale
 
 *   Increases or decreases the size of a shape by
   expanding or contracting vertices. Objects always
@@ -969,11 +969,11 @@ CONTENTS                                                    *p5-core-contents*
   z-axis (webgl only)
   @chainable
 
-*Sub-module: transform*
+📂 *Sub-module: transform*
 
 ---
 
-### scale
+### 🔧 scale
 
 *   Increases or decreases the size of a shape by
   expanding or contracting vertices. Objects always
@@ -995,11 +995,11 @@ CONTENTS                                                    *p5-core-contents*
   object
   @chainable
 
-*Sub-module: transform*
+📂 *Sub-module: transform*
 
 ---
 
-### shearX
+### 🔧 shearX
 
 *   Shears a shape around the x-axis by the amount
   specified by the angle parameter. Angles should be
@@ -1022,11 +1022,11 @@ CONTENTS                                                    *p5-core-contents*
   or degrees, depending on current angleMode
   @chainable
 
-*Sub-module: transform*
+📂 *Sub-module: transform*
 
 ---
 
-### shearY
+### 🔧 shearY
 
 *   Shears a shape around the y-axis the amount
   specified by the angle parameter. Angles should be
@@ -1049,11 +1049,11 @@ CONTENTS                                                    *p5-core-contents*
   or degrees, depending on current angleMode
   @chainable
 
-*Sub-module: transform*
+📂 *Sub-module: transform*
 
 ---
 
-### translate
+### 🔧 translate
 
 *   Specifies an amount to displace objects within the
   display window. The x parameter specifies
@@ -1073,11 +1073,11 @@ CONTENTS                                                    *p5-core-contents*
   only)
   @chainable
 
-*Sub-module: transform*
+📂 *Sub-module: transform*
 
 ---
 
-### translate
+### 🔧 translate
 
 *   Specifies an amount to displace objects within the
   display window. The x parameter specifies
@@ -1094,11 +1094,11 @@ CONTENTS                                                    *p5-core-contents*
   - **vector**: the vector to translate by
   @chainable
 
-*Sub-module: transform*
+📂 *Sub-module: transform*
 
 ---
 
-### createCanvas
+### 🔧 createCanvas
 
 *   Base class for all elements added to a sketch,
   including canvas, graphics buffers, and other HTML
@@ -1109,11 +1109,11 @@ CONTENTS                                                    *p5-core-contents*
          *   - **elt**: DOM node that is wrapped
   @param [pInst] pointer to p5 instance
 
-*Sub-module: p5.Element*
+📂 *Sub-module: p5.Element*
 
 ---
 
-### parent
+### 🔧 parent
 
 *   Attaches the element to the parent specified. A
   way of setting the container for the element.
@@ -1122,11 +1122,11 @@ CONTENTS                                                    *p5-core-contents*
   is returned. For more ways to position the canvas,
   see the  positioning the canvas wiki page.
 
-*Sub-module: p5.Element*
+📂 *Sub-module: p5.Element*
 
 ---
 
-### class
+### 🔧 class
 
 *   Sets the ID of the element. If no ID argument is
   passed in, it instead returns the current ID of
@@ -1137,11 +1137,11 @@ CONTENTS                                                    *p5-core-contents*
   - **id**: ID of the element
   @chainable
 
-*Sub-module: p5.Element*
+📂 *Sub-module: p5.Element*
 
 ---
 
-### class
+### 🔧 class
 
 *   Sets the ID of the element. If no ID argument is
   passed in, it instead returns the current ID of
@@ -1151,11 +1151,11 @@ CONTENTS                                                    *p5-core-contents*
   class name.
   - **Returns**: the id of the element
 
-*Sub-module: p5.Element*
+📂 *Sub-module: p5.Element*
 
 ---
 
-### class
+### 🔧 class
 
 *   Adds given class to the element. If no class
   argument is passed in, it instead returns a string
@@ -1163,22 +1163,22 @@ CONTENTS                                                    *p5-core-contents*
   - **class**: class to add
   @chainable
 
-*Sub-module: p5.Element*
+📂 *Sub-module: p5.Element*
 
 ---
 
-### class
+### 🔧 class
 
 *   Adds given class to the element. If no class
   argument is passed in, it instead returns a string
   containing the current class(es) of the element.
   - **Returns**: the class of the element
 
-*Sub-module: p5.Element*
+📂 *Sub-module: p5.Element*
 
 ---
 
-### constructor
+### 🔧 constructor
 
 *   Thin wrapper around a renderer, to be used for
   creating a graphics buffer object. Use this class
@@ -1194,31 +1194,31 @@ CONTENTS                                                    *p5-core-contents*
   @param [pInst] pointer to p5 instance
   @param [canvas] existing html canvas element
 
-*Sub-module: p5.Graphics*
+📂 *Sub-module: p5.Graphics*
 
 ---
 
-### remove
+### 🔧 remove
 
 *   Removes a Graphics object from the page and frees
   any resources associated with it.
 
-*Sub-module: p5.Graphics*
+📂 *Sub-module: p5.Graphics*
 
 ---
 
-### createFramebuffer
+### 🔧 createFramebuffer
 
 *   Creates and returns a new p5.Framebuffer inside a
   p5.Graphics WebGL context. This takes the same
   parameters as the global createFramebuffer
   function.
 
-*Sub-module: p5.Graphics*
+📂 *Sub-module: p5.Graphics*
 
 ---
 
-### constructor
+### 🔧 constructor
 
 *   Main graphics and rendering context, as well as
   the base API implementation for p5.js "core". To
@@ -1229,11 +1229,11 @@ CONTENTS                                                    *p5-core-contents*
   @param [isMainCanvas] whether we're using it as
   main canvas
 
-*Sub-module: p5.Renderer*
+📂 *Sub-module: p5.Renderer*
 
 ---
 
-### setup
+### 🔧 setup
 
 *   The setup() function is called once when the
   program starts. It's used to define initial
@@ -1246,11 +1246,11 @@ CONTENTS                                                    *p5-core-contents*
   are not accessible within other functions,
   including draw().
 
-*Sub-module: p5.Renderer*
+📂 *Sub-module: p5.Renderer*
 
 ---
 
-### setup
+### 🔧 setup
 
 *   Called directly after setup(), the draw() function
   continuously executes the lines of code contained
@@ -1283,11 +1283,11 @@ CONTENTS                                                    *p5-core-contents*
   applied (ex: fill, stroke, etc) will remain in
   effect.
 
-*Sub-module: p5.Renderer*
+📂 *Sub-module: p5.Renderer*
 
 ---
 
-### remove
+### 🔧 remove
 
 *   Removes the entire p5 sketch. This will remove the
   canvas and any elements created by p5.js. It will
@@ -1300,13 +1300,13 @@ CONTENTS                                                    *p5-core-contents*
   any other global variables created by your code
   will remain.
 
-*Sub-module: p5.Renderer*
+📂 *Sub-module: p5.Renderer*
 
 ---
 
-## Variables
+## 📊 Variables
 
-### contents
+### 📊 contents
 
 *   The print() function writes to the console area of
   your browser. This function is often helpful for
@@ -1322,11 +1322,11 @@ CONTENTS                                                    *p5-core-contents*
   - **contents**: any combination of Number, String,
   Object, Boolean, Array to print
 
-*Sub-module: environment*
+📂 *Sub-module: environment*
 
 ---
 
-### deltaTime
+### 📊 deltaTime
 
 *   The system variable deltaTime contains the time
   difference between the beginning of the previous
@@ -1336,22 +1336,22 @@ CONTENTS                                                    *p5-core-contents*
   that should stay constant regardless of frame
   rate.
 
-*Sub-module: environment*
+📂 *Sub-module: environment*
 
 ---
 
-### focused
+### 📊 focused
 
 *   Confirms if the window a p5.js program is in is
   "focused," meaning that the sketch will accept
   mouse or keyboard input. This variable is "true"
   if the window is focused and "false" if not.
 
-*Sub-module: environment*
+📂 *Sub-module: environment*
 
 ---
 
-### version
+### 📊 version
 
 *   If the sketch was created in WebGL mode, then
   weglVersion will indicate which version of WebGL
@@ -1362,11 +1362,11 @@ CONTENTS                                                    *p5-core-contents*
   will always be either WEBGL2, WEBGL, or P2D if not
   in WebGL mode.
 
-*Sub-module: environment*
+📂 *Sub-module: environment*
 
 ---
 
-### displayWidth
+### 📊 displayWidth
 
 *   System variable that stores the width of the
   screen display according to The default
@@ -1374,11 +1374,11 @@ CONTENTS                                                    *p5-core-contents*
   program on any display size. To return actual
   screen size, multiply this by pixelDensity.
 
-*Sub-module: environment*
+📂 *Sub-module: environment*
 
 ---
 
-### displayHeight
+### 📊 displayHeight
 
 *   System variable that stores the height of the
   screen display according to The default
@@ -1386,29 +1386,29 @@ CONTENTS                                                    *p5-core-contents*
   program on any display size. To return actual
   screen size, multiply this by pixelDensity.
 
-*Sub-module: environment*
+📂 *Sub-module: environment*
 
 ---
 
-### windowWidth
+### 📊 windowWidth
 
 *   System variable that stores the width of the inner
   window, it maps to window.innerWidth.
 
-*Sub-module: environment*
+📂 *Sub-module: environment*
 
 ---
 
-### windowHeight
+### 📊 windowHeight
 
 *   System variable that stores the height of the
   inner window, it maps to window.innerHeight.
 
-*Sub-module: environment*
+📂 *Sub-module: environment*
 
 ---
 
-### width
+### 📊 width
 
 *   System variable that stores the width of the
   drawing canvas. This value is set by the first
@@ -1418,11 +1418,11 @@ CONTENTS                                                    *p5-core-contents*
   value of width defaults to 100 if createCanvas()
   is not used in a program.
 
-*Sub-module: environment*
+📂 *Sub-module: environment*
 
 ---
 
-### height
+### 📊 height
 
 *   System variable that stores the height of the
   drawing canvas. This value is set by the second
@@ -1432,11 +1432,11 @@ CONTENTS                                                    *p5-core-contents*
   value of height defaults to 100 if createCanvas()
   is not used in a program.
 
-*Sub-module: environment*
+📂 *Sub-module: environment*
 
 ---
 
-### note
+### 📊 note
 
 *   Creates a canvas element in the document and sets
   its dimensions in pixels. This method should be
@@ -1473,11 +1473,11 @@ CONTENTS                                                    *p5-core-contents*
   @param [canvas] existing html canvas element
   - **Returns**: pointer to p5.Renderer holding canvas
 
-*Sub-module: rendering*
+📂 *Sub-module: rendering*
 
 ---
 
-### elt
+### 📊 elt
 
 *   Base class for all elements added to a sketch,
   including canvas, graphics buffers, and other HTML
@@ -1488,11 +1488,11 @@ CONTENTS                                                    *p5-core-contents*
          *   - **elt**: DOM node that is wrapped
   @param [pInst] pointer to p5 instance
 
-*Sub-module: p5.Element*
+📂 *Sub-module: p5.Element*
 
 ---
 
-### elt
+### 📊 elt
 
 *   Main graphics and rendering context, as well as
   the base API implementation for p5.js "core". To
@@ -1503,7 +1503,7 @@ CONTENTS                                                    *p5-core-contents*
   @param [isMainCanvas] whether we're using it as
   main canvas
 
-*Sub-module: p5.Renderer*
+📂 *Sub-module: p5.Renderer*
 
 ---
 

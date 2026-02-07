@@ -1,46 +1,46 @@
-p5-typography📝.txt    p5.js typography documentation    p5
+p5-typography.txt    p5.js typography documentation    p5
 
 ==============================================================================
-p5.js Typography Module    *p5-typography*
+📝 p5.js Typography Module 📝    *p5-typography*
 
-p5.js Version: 1.7.7~
-Last Updated: 2026-02-06 18:38:12~
+📦 p5.js Version: 1.7.7~
+⏰ Last Updated: 2026-02-07 02:20:06~
 
 ==============================================================================
-CONTENTS                                                    *p5-typography-contents*
+📋 CONTENTS                                                    *p5-typography-contents*
 
 
 ## Table of Contents
 
-### Functions
+### 🔧 Functions
 
-- horizAlign
-- horizAlign
-- text
-- text
-- text
-- text
-- fonts
-- fonts
-- textWidth
-- textAscent
-- textDescent
-- text
-- file
-- text
-- text
-- constructor
-- use
+- horizAlign 🔧
+- horizAlign 🔧
+- text 🔧
+- text 🔧
+- text 🔧
+- text 🔧
+- fonts 🔧
+- fonts 🔧
+- textWidth 🔧
+- textAscent 🔧
+- textDescent 🔧
+- text 🔧
+- file 🔧
+- text 🔧
+- text 🔧
+- constructor 🔧
+- use 🔧
 
-### Variables
+### 📊 Variables
 
-- properties
+- properties 📊
 
 ---
 
-## Functions
+## 🔧 Functions
 
-### horizAlign
+### 🔧 horizAlign
 
 *   Sets the current alignment for drawing text.
   Accepts two arguments: horizAlign (LEFT, CENTER,
@@ -60,11 +60,11 @@ CONTENTS                                                    *p5-typography-conte
   BOTTOM, CENTER, or BASELINE
   @chainable
 
-*Sub-module: attributes*
+📂 *Sub-module: attributes*
 
 ---
 
-### horizAlign
+### 🔧 horizAlign
 
 *   Sets the current alignment for drawing text.
   Accepts two arguments: horizAlign (LEFT, CENTER,
@@ -79,11 +79,11 @@ CONTENTS                                                    *p5-typography-conte
   are aligning the right edge of your text to the x
   value and the top edge of the text to the y value.
 
-*Sub-module: attributes*
+📂 *Sub-module: attributes*
 
 ---
 
-### text
+### 🔧 text
 
 *   Sets/gets the spacing, in pixels, between lines of
   text. This setting will be used in all subsequent
@@ -92,21 +92,21 @@ CONTENTS                                                    *p5-typography-conte
   between lines
   @chainable
 
-*Sub-module: attributes*
+📂 *Sub-module: attributes*
 
 ---
 
-### text
+### 🔧 text
 
 *   Sets/gets the spacing, in pixels, between lines of
   text. This setting will be used in all subsequent
   calls to the text() function.
 
-*Sub-module: attributes*
+📂 *Sub-module: attributes*
 
 ---
 
-### text
+### 🔧 text
 
 *   Sets/gets the current font size. This size will be
   used in all subsequent calls to the text()
@@ -115,21 +115,21 @@ CONTENTS                                                    *p5-typography-conte
   pixels
   @chainable
 
-*Sub-module: attributes*
+📂 *Sub-module: attributes*
 
 ---
 
-### text
+### 🔧 text
 
 *   Sets/gets the current font size. This size will be
   used in all subsequent calls to the text()
   function. Font size is measured in pixels.
 
-*Sub-module: attributes*
+📂 *Sub-module: attributes*
 
 ---
 
-### fonts
+### 🔧 fonts
 
 *   Sets/gets the style of the text for system fonts
   to NORMAL, ITALIC, BOLD or BOLDITALIC. Note: this
@@ -140,11 +140,11 @@ CONTENTS                                                    *p5-typography-conte
   ITALIC, BOLD or BOLDITALIC
   @chainable
 
-*Sub-module: attributes*
+📂 *Sub-module: attributes*
 
 ---
 
-### fonts
+### 🔧 fonts
 
 *   Sets/gets the style of the text for system fonts
   to NORMAL, ITALIC, BOLD or BOLDITALIC. Note: this
@@ -152,44 +152,44 @@ CONTENTS                                                    *p5-typography-conte
   non-system fonts (opentype, truetype, etc.) please
   load styled fonts instead.
 
-*Sub-module: attributes*
+📂 *Sub-module: attributes*
 
 ---
 
-### textWidth
+### 🔧 textWidth
 
 *   Calculates and returns the width of any character
   or text string.
   - **theText**: the String of characters to measure
   - **Returns**: the calculated width
 
-*Sub-module: attributes*
+📂 *Sub-module: attributes*
 
 ---
 
-### textAscent
+### 🔧 textAscent
 
 *   Returns the ascent of the current font at its
   current size. The ascent represents the distance,
   in pixels, of the tallest character above the
   baseline.
 
-*Sub-module: attributes*
+📂 *Sub-module: attributes*
 
 ---
 
-### textDescent
+### 🔧 textDescent
 
 *   Returns the descent of the current font at its
   current size. The descent represents the distance,
   in pixels, of the character with the longest
   descender below the baseline.
 
-*Sub-module: attributes*
+📂 *Sub-module: attributes*
 
 ---
 
-### text
+### 🔧 text
 
 *   Specifies how lines of text are wrapped within a
   text box. This requires a max-width set on the
@@ -212,11 +212,11 @@ CONTENTS                                                    *p5-typography-conte
   or CHAR
   - **Returns**: wrapStyle
 
-*Sub-module: attributes*
+📂 *Sub-module: attributes*
 
 ---
 
-### file
+### 🔧 file
 
 *   Loads an opentype font file (.otf, .ttf) from a
   file or a URL, and returns a p5.Font object. This
@@ -234,11 +234,11 @@ CONTENTS                                                    *p5-typography-conte
   error occurs
   - **Returns**: p5.Font object
 
-*Sub-module: loading_displaying*
+📂 *Sub-module: loading_displaying*
 
 ---
 
-### text
+### 🔧 text
 
 *   Sets the current font that will be drawn with the
   text() function. If textFont() is called without
@@ -250,11 +250,11 @@ CONTENTS                                                    *p5-typography-conte
   loadFont() are supported.
   - **Returns**: the current font / p5 Object
 
-*Sub-module: loading_displaying*
+📂 *Sub-module: loading_displaying*
 
 ---
 
-### text
+### 🔧 text
 
 *   Sets the current font that will be drawn with the
   text() function. If textFont() is called without
@@ -270,20 +270,20 @@ CONTENTS                                                    *p5-typography-conte
   @param [size] the font size to use
   @chainable
 
-*Sub-module: loading_displaying*
+📂 *Sub-module: loading_displaying*
 
 ---
 
-### constructor
+### 🔧 constructor
 
 *   Base class for font handling
          *   @param [pInst] pointer to p5 instance
 
-*Sub-module: p5.Font*
+📂 *Sub-module: p5.Font*
 
 ---
 
-### use
+### 🔧 use
 
 *   Computes an array of points following the path for
   specified text
@@ -306,18 +306,18 @@ CONTENTS                                                    *p5-typography-conte
   - **Returns**: an array of points, each with x, y, alpha
   (the path angle)
 
-*Sub-module: p5.Font*
+📂 *Sub-module: p5.Font*
 
 ---
 
-## Variables
+## 📊 Variables
 
-### properties
+### 📊 properties
 
 *   Base class for font handling
          *   @param [pInst] pointer to p5 instance
 
-*Sub-module: p5.Font*
+📂 *Sub-module: p5.Font*
 
 ---
 

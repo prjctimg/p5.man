@@ -1,29 +1,29 @@
-p5-accessibility♿.txt    p5.js accessibility documentation    p5
+p5-accessibility.txt    p5.js accessibility documentation    p5
 
 ==============================================================================
-p5.js Accessibility Module    *p5-accessibility*
+♿ p5.js Accessibility Module ♿    *p5-accessibility*
 
-p5.js Version: 1.7.7~
-Last Updated: 2026-02-06 18:38:12~
+📦 p5.js Version: 1.7.7~
+⏰ Last Updated: 2026-02-07 02:20:06~
 
 ==============================================================================
-CONTENTS                                                    *p5-accessibility-contents*
+📋 CONTENTS                                                    *p5-accessibility-contents*
 
 
 ## Table of Contents
 
-### Functions
+### 🔧 Functions
 
-- describe
-- describeElement
-- textOutput
-- gridOutput
+- describe 🔧
+- describeElement 🔧
+- textOutput 🔧
+- gridOutput 🔧
 
 ---
 
-## Functions
+## 🔧 Functions
 
-### describe
+### 🔧 describe
 
 *   Creates a screen reader accessible description for
   the canvas. The first parameter should be a string
@@ -43,11 +43,11 @@ CONTENTS                                                    *p5-accessibility-co
   - **text**: description of the canvas
   @param [display] either LABEL or FALLBACK
 
-*Sub-module: describe*
+📂 *Sub-module: describe*
 
 ---
 
-### describeElement
+### 🔧 describeElement
 
 *   This function creates a screen-reader accessible
   description for elements —shapes or groups of
@@ -72,11 +72,11 @@ CONTENTS                                                    *p5-accessibility-co
   - **text**: description of the element
   @param [display] either LABEL or FALLBACK
 
-*Sub-module: describe*
+📂 *Sub-module: describe*
 
 ---
 
-### textOutput
+### 🔧 textOutput
 
 *   textOutput() creates a screenreader accessible
   output that describes the shapes present on the
@@ -108,11 +108,11 @@ CONTENTS                                                    *p5-accessibility-co
   users.
   @param [display] either FALLBACK or LABEL
 
-*Sub-module: outputs*
+📂 *Sub-module: outputs*
 
 ---
 
-### gridOutput
+### 🔧 gridOutput
 
 *   gridOutput() lays out the content of the canvas in
   the form of a grid (html table) based on the
@@ -147,7 +147,7 @@ CONTENTS                                                    *p5-accessibility-co
   users.
   @param [display] either FALLBACK or LABEL
 
-*Sub-module: outputs*
+📂 *Sub-module: outputs*
 
 ---
 

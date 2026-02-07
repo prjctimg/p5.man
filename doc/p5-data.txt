@@ -1,52 +1,52 @@
-p5-data📊.txt    p5.js data documentation    p5
+p5-data.txt    p5.js data documentation    p5
 
 ==============================================================================
-p5.js Data Module    *p5-data*
+📊 p5.js Data Module 📊    *p5-data*
 
-p5.js Version: 1.7.7~
-Last Updated: 2026-02-06 18:38:12~
+📦 p5.js Version: 1.7.7~
+⏰ Last Updated: 2026-02-07 02:20:06~
 
 ==============================================================================
-CONTENTS                                                    *p5-data-contents*
+📋 CONTENTS                                                    *p5-data-contents*
 
 
 ## Table of Contents
 
-### Functions
+### 🔧 Functions
 
-- storeItem
-- storeItem
-- storeItem
-- storeItem
-- constructor
-- hasKey
-- get
-- set
-- create
-- create
-- clear
-- remove
-- print
-- saveTable
-- saveJSON
-- constructor
-- sub
-- mult
-- div
-- minValue
-- maxValue
-- minKey
-- maxKey
-- createStringDict
-- createStringDict
-- createNumberDict
-- createNumberDict
+- storeItem 🔧
+- storeItem 🔧
+- storeItem 🔧
+- storeItem 🔧
+- constructor 🔧
+- hasKey 🔧
+- get 🔧
+- set 🔧
+- create 🔧
+- create 🔧
+- clear 🔧
+- remove 🔧
+- print 🔧
+- saveTable 🔧
+- saveJSON 🔧
+- constructor 🔧
+- sub 🔧
+- mult 🔧
+- div 🔧
+- minValue 🔧
+- maxValue 🔧
+- minKey 🔧
+- maxKey 🔧
+- createStringDict 🔧
+- createStringDict 🔧
+- createNumberDict 🔧
+- createNumberDict 🔧
 
 ---
 
-## Functions
+## 🔧 Functions
 
-### storeItem
+### 🔧 storeItem
 
 *   Stores a value in local storage under the key
   name. Local storage is saved in the browser and
@@ -57,11 +57,11 @@ CONTENTS                                                    *p5-data-contents*
   personal information should not be stored in local
   storage.
 
-*Sub-module: local_storage*
+📂 *Sub-module: local_storage*
 
 ---
 
-### storeItem
+### 🔧 storeItem
 
 *   Returns the value of an item that was stored in
   local storage using storeItem()
@@ -69,140 +69,140 @@ CONTENTS                                                    *p5-data-contents*
   local storage
   - **Returns**: Value of stored item
 
-*Sub-module: local_storage*
+📂 *Sub-module: local_storage*
 
 ---
 
-### storeItem
+### 🔧 storeItem
 
 *   Clears all local storage items set with
   storeItem() for the current domain.
 
-*Sub-module: local_storage*
+📂 *Sub-module: local_storage*
 
 ---
 
-### storeItem
+### 🔧 storeItem
 
 *   Removes an item that was stored with storeItem()
 
-*Sub-module: local_storage*
+📂 *Sub-module: local_storage*
 
 ---
 
-### constructor
+### 🔧 constructor
 
 *   Base class for all p5.Dictionary types.
   Specifically typed Dictionary classes inherit from
   this class.
 
-*Sub-module: p5.TypedDict*
+📂 *Sub-module: p5.TypedDict*
 
 ---
 
-### hasKey
+### 🔧 hasKey
 
 *   Returns true if the given key exists in the
   Dictionary, otherwise returns false.
   - **key**: that you want to look up
   - **Returns**: whether that key exists in Dictionary
 
-*Sub-module: p5.TypedDict*
+📂 *Sub-module: p5.TypedDict*
 
 ---
 
-### get
+### 🔧 get
 
 *   Returns the value stored at the given key.
   - **the**: key you want to access
   - **Returns**: the value stored at that key
 
-*Sub-module: p5.TypedDict*
+📂 *Sub-module: p5.TypedDict*
 
 ---
 
-### set
+### 🔧 set
 
 *   Updates the value associated with the given key in
   case it already exists in the Dictionary.
   Otherwise a new key-value pair is added.
 
-*Sub-module: p5.TypedDict*
+📂 *Sub-module: p5.TypedDict*
 
 ---
 
-### create
+### 🔧 create
 
 *   Creates a new key-value pair in the Dictionary.
 
-*Sub-module: p5.TypedDict*
+📂 *Sub-module: p5.TypedDict*
 
 ---
 
-### create
+### 🔧 create
 
 *   Creates a new key-value pair in the Dictionary.
   - **obj**: key/value pair
 
-*Sub-module: p5.TypedDict*
+📂 *Sub-module: p5.TypedDict*
 
 ---
 
-### clear
+### 🔧 clear
 
 *   Removes all previously stored key-value pairs from
   the Dictionary.
 
-*Sub-module: p5.TypedDict*
+📂 *Sub-module: p5.TypedDict*
 
 ---
 
-### remove
+### 🔧 remove
 
 *   Removes the key-value pair stored at the given key
   from the Dictionary.
   - **key**: for the pair to remove
 
-*Sub-module: p5.TypedDict*
+📂 *Sub-module: p5.TypedDict*
 
 ---
 
-### print
+### 🔧 print
 
 *   Logs the set of items currently stored in the
   Dictionary to the console.
 
-*Sub-module: p5.TypedDict*
+📂 *Sub-module: p5.TypedDict*
 
 ---
 
-### saveTable
+### 🔧 saveTable
 
 *   Converts the Dictionary into a CSV file for local
   download.
 
-*Sub-module: p5.TypedDict*
+📂 *Sub-module: p5.TypedDict*
 
 ---
 
-### saveJSON
+### 🔧 saveJSON
 
 *   Converts the Dictionary into a JSON file for local
   download.
 
-*Sub-module: p5.TypedDict*
+📂 *Sub-module: p5.TypedDict*
 
 ---
 
-### constructor
+### 🔧 constructor
 
 *   A simple Dictionary class for Numbers.
 
-*Sub-module: p5.TypedDict*
+📂 *Sub-module: p5.TypedDict*
 
 ---
 
-### sub
+### 🔧 sub
 
 *   Subtract the given number from the value currently
   stored at the given key. The difference then
@@ -211,11 +211,11 @@ CONTENTS                                                    *p5-data-contents*
   - **Key**: for the value you wish to subtract from
   - **Number**: to subtract from the value
 
-*Sub-module: p5.TypedDict*
+📂 *Sub-module: p5.TypedDict*
 
 ---
 
-### mult
+### 🔧 mult
 
 *   Multiply the given number with the value currently
   stored at the given key. The product then replaces
@@ -223,11 +223,11 @@ CONTENTS                                                    *p5-data-contents*
   - **Key**: for value you wish to multiply
   - **Amount**: to multiply the value by
 
-*Sub-module: p5.TypedDict*
+📂 *Sub-module: p5.TypedDict*
 
 ---
 
-### div
+### 🔧 div
 
 *   Divide the given number with the value currently
   stored at the given key. The quotient then
@@ -236,81 +236,81 @@ CONTENTS                                                    *p5-data-contents*
   - **Key**: for value you wish to divide
   - **Amount**: to divide the value by
 
-*Sub-module: p5.TypedDict*
+📂 *Sub-module: p5.TypedDict*
 
 ---
 
-### minValue
+### 🔧 minValue
 
 *   Return the lowest number currently stored in the
   Dictionary.
 
-*Sub-module: p5.TypedDict*
+📂 *Sub-module: p5.TypedDict*
 
 ---
 
-### maxValue
+### 🔧 maxValue
 
 *   Return the highest number currently stored in the
   Dictionary.
 
-*Sub-module: p5.TypedDict*
+📂 *Sub-module: p5.TypedDict*
 
 ---
 
-### minKey
+### 🔧 minKey
 
 *   Return the lowest key currently used in the
   Dictionary.
 
-*Sub-module: p5.TypedDict*
+📂 *Sub-module: p5.TypedDict*
 
 ---
 
-### maxKey
+### 🔧 maxKey
 
 *   Return the highest key currently used in the
   Dictionary.
 
-*Sub-module: p5.TypedDict*
+📂 *Sub-module: p5.TypedDict*
 
 ---
 
-### createStringDict
+### 🔧 createStringDict
 
 *   Creates a new instance of p5.StringDict using the
   key-value pair or the object you provide.
 
-*Sub-module: p5.TypedDict*
+📂 *Sub-module: p5.TypedDict*
 
 ---
 
-### createStringDict
+### 🔧 createStringDict
 
 *   Creates a new instance of p5.StringDict using the
   key-value pair or the object you provide.
   - **object**: object
 
-*Sub-module: p5.TypedDict*
+📂 *Sub-module: p5.TypedDict*
 
 ---
 
-### createNumberDict
+### 🔧 createNumberDict
 
 *   Creates a new instance of p5.NumberDict using the
   key-value pair or object you provide.
 
-*Sub-module: p5.TypedDict*
+📂 *Sub-module: p5.TypedDict*
 
 ---
 
-### createNumberDict
+### 🔧 createNumberDict
 
 *   Creates a new instance of p5.NumberDict using the
   key-value pair or object you provide.
   - **object**: object
 
-*Sub-module: p5.TypedDict*
+📂 *Sub-module: p5.TypedDict*
 
 ---
 

@@ -1,115 +1,115 @@
-p5-color🎨.txt    p5.js color documentation    p5
+p5-color.txt    p5.js color documentation    p5
 
 ==============================================================================
-p5.js Color Module    *p5-color*
+🎨 p5.js Color Module 🎨    *p5-color*
 
-p5.js Version: 1.7.7~
-Last Updated: 2026-02-06 18:38:12~
+📦 p5.js Version: 1.7.7~
+⏰ Last Updated: 2026-02-07 02:20:06~
 
 ==============================================================================
-CONTENTS                                                    *p5-color-contents*
+📋 CONTENTS                                                    *p5-color-contents*
 
 
 ## Table of Contents
 
-### Functions
+### 🔧 Functions
 
-- alpha
-- blue
-- brightness
-- color
-- color
-- color
-- color
-- color
-- green
-- colorMode
-- colorMode
-- lightness
-- red
-- colorMode
-- draw
-- draw
-- draw
-- draw
-- draw
-- draw
-- clear
-- clear
-- fill
-- fill
-- fill
-- fill
-- fill
-- fill
-- fill
-- noStroke
-- stroke
-- stroke
-- stroke
-- stroke
-- stroke
-- stroke
-- erase
-- erase
-- ellipse
-- ellipse
-- ellipse
-- height
-- line
-- line
-- stroke
-- stroke
-- quad
-- quad
-- rectMode
-- rectMode
-- rectMode
-- point
-- ellipseMode
-- jagged
-- rectMode
-- smooth
-- rounded
-- mitered
-- strokeWeight
-- curve
-- curve
-- bezierDetail
-- bezierPoint
-- bezierTangent
-- curve
-- curve
-- curveDetail
-- curve
-- curvePoint
-- curveTangent
-- beginContour
-- beginShape
-- bezierVertex
-- bezierVertex
-- beginShape
-- beginShape
-- beginContour
-- endShape
-- quadraticVertex
-- quadraticVertex
-- vertex
-- vertex
-- vertex
-- vertex
-- vertex
-- rgba
-- colorMode
-- colorMode
-- colorMode
-- alpha
+- alpha 🔧
+- blue 🔧
+- brightness 🔧
+- color 🔧
+- color 🔧
+- color 🔧
+- color 🔧
+- color 🔧
+- green 🔧
+- colorMode 🔧
+- colorMode 🔧
+- lightness 🔧
+- red 🔧
+- colorMode 🔧
+- draw 🔧
+- draw 🔧
+- draw 🔧
+- draw 🔧
+- draw 🔧
+- draw 🔧
+- clear 🔧
+- clear 🔧
+- fill 🔧
+- fill 🔧
+- fill 🔧
+- fill 🔧
+- fill 🔧
+- fill 🔧
+- fill 🔧
+- noStroke 🔧
+- stroke 🔧
+- stroke 🔧
+- stroke 🔧
+- stroke 🔧
+- stroke 🔧
+- stroke 🔧
+- erase 🔧
+- erase 🔧
+- ellipse 🔧
+- ellipse 🔧
+- ellipse 🔧
+- height 🔧
+- line 🔧
+- line 🔧
+- stroke 🔧
+- stroke 🔧
+- quad 🔧
+- quad 🔧
+- rectMode 🔧
+- rectMode 🔧
+- rectMode 🔧
+- point 🔧
+- ellipseMode 🔧
+- jagged 🔧
+- rectMode 🔧
+- smooth 🔧
+- rounded 🔧
+- mitered 🔧
+- strokeWeight 🔧
+- curve 🔧
+- curve 🔧
+- bezierDetail 🔧
+- bezierPoint 🔧
+- bezierTangent 🔧
+- curve 🔧
+- curve 🔧
+- curveDetail 🔧
+- curve 🔧
+- curvePoint 🔧
+- curveTangent 🔧
+- beginContour 🔧
+- beginShape 🔧
+- bezierVertex 🔧
+- bezierVertex 🔧
+- beginShape 🔧
+- beginShape 🔧
+- beginContour 🔧
+- endShape 🔧
+- quadraticVertex 🔧
+- quadraticVertex 🔧
+- vertex 🔧
+- vertex 🔧
+- vertex 🔧
+- vertex 🔧
+- vertex 🔧
+- rgba 🔧
+- colorMode 🔧
+- colorMode 🔧
+- colorMode 🔧
+- alpha 🔧
 
 ---
 
-## Functions
+## 🔧 Functions
 
-### alpha
+### 🔧 alpha
 
 *   Extracts the alpha (transparency) value from a
   p5.Color object, array of color components, or CSS
@@ -118,11 +118,11 @@ CONTENTS                                                    *p5-color-contents*
   components, or CSS color string.
   - **Returns**: the alpha value.
 
-*Sub-module: creating_reading*
+📂 *Sub-module: creating_reading*
 
 ---
 
-### blue
+### 🔧 blue
 
 *   Extracts the blue value from a p5.Color object,
   array of color components, or CSS color string.
@@ -130,11 +130,11 @@ CONTENTS                                                    *p5-color-contents*
   components, or CSS color string.
   - **Returns**: the blue value.
 
-*Sub-module: creating_reading*
+📂 *Sub-module: creating_reading*
 
 ---
 
-### brightness
+### 🔧 brightness
 
 *   Extracts the HSB brightness value from a p5.Color
   object, array of color components, or CSS color
@@ -143,11 +143,11 @@ CONTENTS                                                    *p5-color-contents*
   components, or CSS color string.
   - **Returns**: the brightness value.
 
-*Sub-module: creating_reading*
+📂 *Sub-module: creating_reading*
 
 ---
 
-### color
+### 🔧 color
 
 *   Creates a p5.Color object. By default, the
   parameters are interpreted as RGB values. Calling
@@ -176,11 +176,11 @@ CONTENTS                                                    *p5-color-contents*
   color range (default is 0-255).
   - **Returns**: resulting color.
 
-*Sub-module: creating_reading*
+📂 *Sub-module: creating_reading*
 
 ---
 
-### color
+### 🔧 color
 
 *   Creates a p5.Color object. By default, the
   parameters are interpreted as RGB values. Calling
@@ -212,11 +212,11 @@ CONTENTS                                                    *p5-color-contents*
   @param [alpha] alpha value relative to current
   color range (default is 0-255).
 
-*Sub-module: creating_reading*
+📂 *Sub-module: creating_reading*
 
 ---
 
-### color
+### 🔧 color
 
 *   Creates a p5.Color object. By default, the
   parameters are interpreted as RGB values. Calling
@@ -241,11 +241,11 @@ CONTENTS                                                    *p5-color-contents*
   parameter sets the alpha (transparency) value.
   - **value**: a color string.
 
-*Sub-module: creating_reading*
+📂 *Sub-module: creating_reading*
 
 ---
 
-### color
+### 🔧 color
 
 *   Creates a p5.Color object. By default, the
   parameters are interpreted as RGB values. Calling
@@ -271,11 +271,11 @@ CONTENTS                                                    *p5-color-contents*
   - **values**: an array containing the red, green,
   blue, and alpha components of the color.
 
-*Sub-module: creating_reading*
+📂 *Sub-module: creating_reading*
 
 ---
 
-### color
+### 🔧 color
 
 *   Creates a p5.Color object. By default, the
   parameters are interpreted as RGB values. Calling
@@ -299,11 +299,11 @@ CONTENTS                                                    *p5-color-contents*
   depending on the current colorMode(). The last
   parameter sets the alpha (transparency) value.
 
-*Sub-module: creating_reading*
+📂 *Sub-module: creating_reading*
 
 ---
 
-### green
+### 🔧 green
 
 *   Extracts the green value from a p5.Color object,
   array of color components, or CSS color string.
@@ -311,11 +311,11 @@ CONTENTS                                                    *p5-color-contents*
   components, or CSS color string.
   - **Returns**: the green value.
 
-*Sub-module: creating_reading*
+📂 *Sub-module: creating_reading*
 
 ---
 
-### colorMode
+### 🔧 colorMode
 
 *   Extracts the hue value from a p5.Color object,
   array of color components, or CSS color string.
@@ -328,11 +328,11 @@ CONTENTS                                                    *p5-color-contents*
   components, or CSS color string.
   - **Returns**: the hue
 
-*Sub-module: creating_reading*
+📂 *Sub-module: creating_reading*
 
 ---
 
-### colorMode
+### 🔧 colorMode
 
 *   Blends two colors to find a third color between
   them. The amt parameter specifies the amount to
@@ -351,11 +351,11 @@ CONTENTS                                                    *p5-color-contents*
   - **amt**: number between 0 and 1.
   - **Returns**: interpolated color.
 
-*Sub-module: creating_reading*
+📂 *Sub-module: creating_reading*
 
 ---
 
-### lightness
+### 🔧 lightness
 
 *   Extracts the HSL lightness value from a p5.Color
   object, array of color components, or CSS color
@@ -364,11 +364,11 @@ CONTENTS                                                    *p5-color-contents*
   components, or CSS color string.
   - **Returns**: the lightness
 
-*Sub-module: creating_reading*
+📂 *Sub-module: creating_reading*
 
 ---
 
-### red
+### 🔧 red
 
 *   Extracts the red value from a p5.Color object,
   array of color components, or CSS color string.
@@ -376,11 +376,11 @@ CONTENTS                                                    *p5-color-contents*
   components, or CSS color string.
   - **Returns**: the red value.
 
-*Sub-module: creating_reading*
+📂 *Sub-module: creating_reading*
 
 ---
 
-### colorMode
+### 🔧 colorMode
 
 *   Extracts the saturation value from a p5.Color
   object, array of color components, or CSS color
@@ -392,11 +392,11 @@ CONTENTS                                                    *p5-color-contents*
   components, or CSS color string.
   - **Returns**: the saturation value
 
-*Sub-module: creating_reading*
+📂 *Sub-module: creating_reading*
 
 ---
 
-### draw
+### 🔧 draw
 
 *   Sets the color used for the background of the
   canvas. By default, the background is transparent.
@@ -428,11 +428,11 @@ CONTENTS                                                    *p5-color-contents*
   function
   @chainable
 
-*Sub-module: setting*
+📂 *Sub-module: setting*
 
 ---
 
-### draw
+### 🔧 draw
 
 *   Sets the color used for the background of the
   canvas. By default, the background is transparent.
@@ -467,11 +467,11 @@ CONTENTS                                                    *p5-color-contents*
   current color range (default is 0-255).
   @chainable
 
-*Sub-module: setting*
+📂 *Sub-module: setting*
 
 ---
 
-### draw
+### 🔧 draw
 
 *   Sets the color used for the background of the
   canvas. By default, the background is transparent.
@@ -505,11 +505,11 @@ CONTENTS                                                    *p5-color-contents*
   current color range (default is 0-255).
   @chainable
 
-*Sub-module: setting*
+📂 *Sub-module: setting*
 
 ---
 
-### draw
+### 🔧 draw
 
 *   Sets the color used for the background of the
   canvas. By default, the background is transparent.
@@ -547,11 +547,11 @@ CONTENTS                                                    *p5-color-contents*
   current color range (default is 0-255).
   @chainable
 
-*Sub-module: setting*
+📂 *Sub-module: setting*
 
 ---
 
-### draw
+### 🔧 draw
 
 *   Sets the color used for the background of the
   canvas. By default, the background is transparent.
@@ -583,11 +583,11 @@ CONTENTS                                                    *p5-color-contents*
   blue and alpha components of the color.
   @chainable
 
-*Sub-module: setting*
+📂 *Sub-module: setting*
 
 ---
 
-### draw
+### 🔧 draw
 
 *   Sets the color used for the background of the
   canvas. By default, the background is transparent.
@@ -622,11 +622,11 @@ CONTENTS                                                    *p5-color-contents*
   current color range (default is 0-255).
   @chainable
 
-*Sub-module: setting*
+📂 *Sub-module: setting*
 
 ---
 
-### clear
+### 🔧 clear
 
 *   Clears the pixels on the canvas. This function
   makes every pixel 100% transparent. Calling
@@ -646,11 +646,11 @@ CONTENTS                                                    *p5-color-contents*
   - **a**: normalized alpha value.
   @chainable
 
-*Sub-module: setting*
+📂 *Sub-module: setting*
 
 ---
 
-### clear
+### 🔧 clear
 
 *   Clears the pixels on the canvas. This function
   makes every pixel 100% transparent. Calling
@@ -666,11 +666,11 @@ CONTENTS                                                    *p5-color-contents*
   will have no effect.
   @chainable
 
-*Sub-module: setting*
+📂 *Sub-module: setting*
 
 ---
 
-### fill
+### 🔧 fill
 
 *   Changes the way p5.js interprets color data. By
   default, the numeric parameters for fill(),
@@ -693,11 +693,11 @@ CONTENTS                                                    *p5-color-contents*
   @param [max] range for all values.
   @chainable
 
-*Sub-module: setting*
+📂 *Sub-module: setting*
 
 ---
 
-### fill
+### 🔧 fill
 
 *   Changes the way p5.js interprets color data. By
   default, the numeric parameters for fill(),
@@ -727,11 +727,11 @@ CONTENTS                                                    *p5-color-contents*
   @param [maxA] range for the alpha.
   @chainable
 
-*Sub-module: setting*
+📂 *Sub-module: setting*
 
 ---
 
-### fill
+### 🔧 fill
 
 *   Sets the color used to fill shapes. Calling
   fill(255, 165, 0) or fill('orange') means all
@@ -756,11 +756,11 @@ CONTENTS                                                    *p5-color-contents*
   brightness value if color mode is HSB.
   @chainable
 
-*Sub-module: setting*
+📂 *Sub-module: setting*
 
 ---
 
-### fill
+### 🔧 fill
 
 *   Sets the color used to fill shapes. Calling
   fill(255, 165, 0) or fill('orange') means all
@@ -780,11 +780,11 @@ CONTENTS                                                    *p5-color-contents*
   - **value**: a color string.
   @chainable
 
-*Sub-module: setting*
+📂 *Sub-module: setting*
 
 ---
 
-### fill
+### 🔧 fill
 
 *   Sets the color used to fill shapes. Calling
   fill(255, 165, 0) or fill('orange') means all
@@ -804,11 +804,11 @@ CONTENTS                                                    *p5-color-contents*
   - **gray**: a grayscale value.
   @chainable
 
-*Sub-module: setting*
+📂 *Sub-module: setting*
 
 ---
 
-### fill
+### 🔧 fill
 
 *   Sets the color used to fill shapes. Calling
   fill(255, 165, 0) or fill('orange') means all
@@ -829,11 +829,11 @@ CONTENTS                                                    *p5-color-contents*
   blue & and alpha components of the color.
   @chainable
 
-*Sub-module: setting*
+📂 *Sub-module: setting*
 
 ---
 
-### fill
+### 🔧 fill
 
 *   Sets the color used to fill shapes. Calling
   fill(255, 165, 0) or fill('orange') means all
@@ -853,11 +853,11 @@ CONTENTS                                                    *p5-color-contents*
   - **color**: the fill color.
   @chainable
 
-*Sub-module: setting*
+📂 *Sub-module: setting*
 
 ---
 
-### noStroke
+### 🔧 noStroke
 
 *   Disables setting the interior color of shapes.
   This is the same as making the fill completely
@@ -865,22 +865,22 @@ CONTENTS                                                    *p5-color-contents*
   called, nothing will be drawn to the screen.
   @chainable
 
-*Sub-module: setting*
+📂 *Sub-module: setting*
 
 ---
 
-### stroke
+### 🔧 stroke
 
 *   Disables drawing the stroke (outline). If both
   noStroke() and noFill() are called, nothing will
   be drawn to the screen.
   @chainable
 
-*Sub-module: setting*
+📂 *Sub-module: setting*
 
 ---
 
-### stroke
+### 🔧 stroke
 
 *   Sets the color used to draw lines and borders
   around shapes. Calling stroke(255, 165, 0) or
@@ -913,11 +913,11 @@ CONTENTS                                                    *p5-color-contents*
   brightness value if color mode is HSB.
   @chainable
 
-*Sub-module: setting*
+📂 *Sub-module: setting*
 
 ---
 
-### stroke
+### 🔧 stroke
 
 *   Sets the color used to draw lines and borders
   around shapes. Calling stroke(255, 165, 0) or
@@ -945,11 +945,11 @@ CONTENTS                                                    *p5-color-contents*
   - **value**: a color string.
   @chainable
 
-*Sub-module: setting*
+📂 *Sub-module: setting*
 
 ---
 
-### stroke
+### 🔧 stroke
 
 *   Sets the color used to draw lines and borders
   around shapes. Calling stroke(255, 165, 0) or
@@ -977,11 +977,11 @@ CONTENTS                                                    *p5-color-contents*
   - **gray**: a grayscale value.
   @chainable
 
-*Sub-module: setting*
+📂 *Sub-module: setting*
 
 ---
 
-### stroke
+### 🔧 stroke
 
 *   Sets the color used to draw lines and borders
   around shapes. Calling stroke(255, 165, 0) or
@@ -1010,11 +1010,11 @@ CONTENTS                                                    *p5-color-contents*
   blue, and alpha components of the color.
   @chainable
 
-*Sub-module: setting*
+📂 *Sub-module: setting*
 
 ---
 
-### stroke
+### 🔧 stroke
 
 *   Sets the color used to draw lines and borders
   around shapes. Calling stroke(255, 165, 0) or
@@ -1042,11 +1042,11 @@ CONTENTS                                                    *p5-color-contents*
   - **color**: the stroke color.
   @chainable
 
-*Sub-module: setting*
+📂 *Sub-module: setting*
 
 ---
 
-### erase
+### 🔧 erase
 
 *   All drawing that follows erase() will subtract
   from the canvas, revealing the web page
@@ -1079,22 +1079,22 @@ CONTENTS                                                    *p5-color-contents*
   to 255, which is full strength.
   @chainable
 
-*Sub-module: setting*
+📂 *Sub-module: setting*
 
 ---
 
-### erase
+### 🔧 erase
 
 *   Ends erasing that was started with erase(). The
   fill(), stroke(), and blendMode() settings will
   return to what they were prior to calling erase().
   @chainable
 
-*Sub-module: setting*
+📂 *Sub-module: setting*
 
 ---
 
-### ellipse
+### 🔧 ellipse
 
 *   Draws an arc to the canvas. Arcs are drawn along
   the outer edge of an ellipse (oval) defined by the
@@ -1126,11 +1126,11 @@ CONTENTS                                                    *p5-color-contents*
   more than 50.
   @chainable
 
-*Sub-module: setting*
+📂 *Sub-module: setting*
 
 ---
 
-### ellipse
+### 🔧 ellipse
 
 *   Draws an ellipse (oval) to the canvas. An ellipse
   with equal width and height is a circle. By
@@ -1150,11 +1150,11 @@ CONTENTS                                                    *p5-color-contents*
   @param [h] height of the ellipse.
   @chainable
 
-*Sub-module: setting*
+📂 *Sub-module: setting*
 
 ---
 
-### ellipse
+### 🔧 ellipse
 
 *   Draws an ellipse (oval) to the canvas. An ellipse
   with equal width and height is a circle. By
@@ -1178,11 +1178,11 @@ CONTENTS                                                    *p5-color-contents*
   Default value is 25. Won't draw a stroke for a
   detail of more than 50.
 
-*Sub-module: setting*
+📂 *Sub-module: setting*
 
 ---
 
-### height
+### 🔧 height
 
 *   Draws a circle to the canvas. A circle is a round
   shape. Every point on the edge of a circle is the
@@ -1196,11 +1196,11 @@ CONTENTS                                                    *p5-color-contents*
   - **d**: diameter of the circle.
   @chainable
 
-*Sub-module: setting*
+📂 *Sub-module: setting*
 
 ---
 
-### line
+### 🔧 line
 
 *   Draws a line, a straight path between two points.
   Its default width is one pixel. The version of
@@ -1218,11 +1218,11 @@ CONTENTS                                                    *p5-color-contents*
   - **y2**: the y-coordinate of the second point.
   @chainable
 
-*Sub-module: setting*
+📂 *Sub-module: setting*
 
 ---
 
-### line
+### 🔧 line
 
 *   Draws a line, a straight path between two points.
   Its default width is one pixel. The version of
@@ -1242,11 +1242,11 @@ CONTENTS                                                    *p5-color-contents*
   - **z2**: the z-coordinate of the second point.
   @chainable
 
-*Sub-module: setting*
+📂 *Sub-module: setting*
 
 ---
 
-### stroke
+### 🔧 stroke
 
 *   Draws a point, a single coordinate in space. Its
   default size is one pixel. The first two
@@ -1265,11 +1265,11 @@ CONTENTS                                                    *p5-color-contents*
   @param [z] the z-coordinate (for WebGL mode).
   @chainable
 
-*Sub-module: setting*
+📂 *Sub-module: setting*
 
 ---
 
-### stroke
+### 🔧 stroke
 
 *   Draws a point, a single coordinate in space. Its
   default size is one pixel. The first two
@@ -1286,11 +1286,11 @@ CONTENTS                                                    *p5-color-contents*
   - **coordinateVector**: the coordinate vector.
   @chainable
 
-*Sub-module: setting*
+📂 *Sub-module: setting*
 
 ---
 
-### quad
+### 🔧 quad
 
 *   Draws a quad to the canvas. A quad is a
   quadrilateral, a four-sided polygon. Some examples
@@ -1318,11 +1318,11 @@ CONTENTS                                                    *p5-color-contents*
   y-direction.
   @chainable
 
-*Sub-module: setting*
+📂 *Sub-module: setting*
 
 ---
 
-### quad
+### 🔧 quad
 
 *   Draws a quad to the canvas. A quad is a
   quadrilateral, a four-sided polygon. Some examples
@@ -1354,11 +1354,11 @@ CONTENTS                                                    *p5-color-contents*
   y-direction.
   @chainable
 
-*Sub-module: setting*
+📂 *Sub-module: setting*
 
 ---
 
-### rectMode
+### 🔧 rectMode
 
 *   Draws a rectangle to the canvas. A rectangle is a
   four-sided polygon with every angle at ninety
@@ -1390,11 +1390,11 @@ CONTENTS                                                    *p5-color-contents*
   @param [bl] optional radius of bottom-left corner.
   @chainable
 
-*Sub-module: setting*
+📂 *Sub-module: setting*
 
 ---
 
-### rectMode
+### 🔧 rectMode
 
 *   Draws a rectangle to the canvas. A rectangle is a
   four-sided polygon with every angle at ninety
@@ -1425,11 +1425,11 @@ CONTENTS                                                    *p5-color-contents*
   y-direction (for WebGL mode).
   @chainable
 
-*Sub-module: setting*
+📂 *Sub-module: setting*
 
 ---
 
-### rectMode
+### 🔧 rectMode
 
 *   Draws a square to the canvas. A square is a
   four-sided polygon with every angle at ninety
@@ -1460,11 +1460,11 @@ CONTENTS                                                    *p5-color-contents*
   @param [bl] optional radius of bottom-left corner.
   @chainable
 
-*Sub-module: setting*
+📂 *Sub-module: setting*
 
 ---
 
-### point
+### 🔧 point
 
 *   Draws a triangle to the canvas. A triangle is a
   three-sided polygon. The first two parameters
@@ -1480,11 +1480,11 @@ CONTENTS                                                    *p5-color-contents*
   - **y3**: y-coordinate of the third point.
   @chainable
 
-*Sub-module: setting*
+📂 *Sub-module: setting*
 
 ---
 
-### ellipseMode
+### 🔧 ellipseMode
 
 *   Modifies the location from which ellipses,
   circles, and arcs are drawn. By default, the first
@@ -1512,11 +1512,11 @@ CONTENTS                                                    *p5-color-contents*
   CORNERS
   @chainable
 
-*Sub-module: setting*
+📂 *Sub-module: setting*
 
 ---
 
-### jagged
+### 🔧 jagged
 
 *   Draws all geometry with jagged (aliased) edges.
   smooth() is active by default in 2D mode. It's
@@ -1527,11 +1527,11 @@ CONTENTS                                                    *p5-color-contents*
   (antialiased) edges.
   @chainable
 
-*Sub-module: setting*
+📂 *Sub-module: setting*
 
 ---
 
-### rectMode
+### 🔧 rectMode
 
 *   Modifies the location from which rectangles and
   squares are drawn. By default, the first two
@@ -1558,11 +1558,11 @@ CONTENTS                                                    *p5-color-contents*
   RADIUS
   @chainable
 
-*Sub-module: setting*
+📂 *Sub-module: setting*
 
 ---
 
-### smooth
+### 🔧 smooth
 
 *   Draws all geometry with smooth (anti-aliased)
   edges. smooth() will also improve image quality of
@@ -1574,11 +1574,11 @@ CONTENTS                                                    *p5-color-contents*
   (antialiased) edges.
   @chainable
 
-*Sub-module: setting*
+📂 *Sub-module: setting*
 
 ---
 
-### rounded
+### 🔧 rounded
 
 *   Sets the style for rendering line endings. These
   ends are either rounded (ROUND), squared (SQUARE),
@@ -1590,11 +1590,11 @@ CONTENTS                                                    *p5-color-contents*
   - **cap**: either ROUND, SQUARE, or PROJECT
   @chainable
 
-*Sub-module: setting*
+📂 *Sub-module: setting*
 
 ---
 
-### mitered
+### 🔧 mitered
 
 *   Sets the style of the joints which connect line
   segments. These joints are either mitered (MITER),
@@ -1607,11 +1607,11 @@ CONTENTS                                                    *p5-color-contents*
   - **join**: either MITER, BEVEL, or ROUND
   @chainable
 
-*Sub-module: setting*
+📂 *Sub-module: setting*
 
 ---
 
-### strokeWeight
+### 🔧 strokeWeight
 
 *   Sets the width of the stroke used for lines,
   points, and the border around shapes. All widths
@@ -1622,11 +1622,11 @@ CONTENTS                                                    *p5-color-contents*
   pixels).
   @chainable
 
-*Sub-module: setting*
+📂 *Sub-module: setting*
 
 ---
 
-### curve
+### 🔧 curve
 
 *   Draws a cubic Bezier curve on the screen. These
   curves are defined by a series of anchor and
@@ -1653,11 +1653,11 @@ CONTENTS                                                    *p5-color-contents*
   - **y4**: y-coordinate for the second anchor point
   @chainable
 
-*Sub-module: setting*
+📂 *Sub-module: setting*
 
 ---
 
-### curve
+### 🔧 curve
 
 *   Draws a cubic Bezier curve on the screen. These
   curves are defined by a series of anchor and
@@ -1689,11 +1689,11 @@ CONTENTS                                                    *p5-color-contents*
   - **z4**: z-coordinate for the second anchor point
   @chainable
 
-*Sub-module: setting*
+📂 *Sub-module: setting*
 
 ---
 
-### bezierDetail
+### 🔧 bezierDetail
 
 *   Sets the resolution at which Bezier's curve is
   displayed. The default value is 20. Note, This
@@ -1703,11 +1703,11 @@ CONTENTS                                                    *p5-color-contents*
   - **detail**: resolution of the curves
   @chainable
 
-*Sub-module: setting*
+📂 *Sub-module: setting*
 
 ---
 
-### bezierPoint
+### 🔧 bezierPoint
 
 *   Given the x or y co-ordinate values of control and
   anchor points of a bezier curve, it evaluates the
@@ -1727,11 +1727,11 @@ CONTENTS                                                    *p5-color-contents*
   - **t**: value between 0 and 1
   - **Returns**: the value of the Bezier at position t
 
-*Sub-module: setting*
+📂 *Sub-module: setting*
 
 ---
 
-### bezierTangent
+### 🔧 bezierTangent
 
 *   Evaluates the tangent to the Bezier at position t
   for points a, b, c, d. The parameters a and d are
@@ -1745,11 +1745,11 @@ CONTENTS                                                    *p5-color-contents*
   - **t**: value between 0 and 1
   - **Returns**: the tangent at position t
 
-*Sub-module: setting*
+📂 *Sub-module: setting*
 
 ---
 
-### curve
+### 🔧 curve
 
 *   Draws a curved line on the screen between two
   points, given as the middle four parameters. The
@@ -1777,11 +1777,11 @@ CONTENTS                                                    *p5-color-contents*
   point
   @chainable
 
-*Sub-module: setting*
+📂 *Sub-module: setting*
 
 ---
 
-### curve
+### 🔧 curve
 
 *   Draws a curved line on the screen between two
   points, given as the middle four parameters. The
@@ -1815,11 +1815,11 @@ CONTENTS                                                    *p5-color-contents*
   point
   @chainable
 
-*Sub-module: setting*
+📂 *Sub-module: setting*
 
 ---
 
-### curveDetail
+### 🔧 curveDetail
 
 *   Sets the resolution at which curves display. The
   default value is 20 while the minimum value is 3.
@@ -1829,11 +1829,11 @@ CONTENTS                                                    *p5-color-contents*
   - **resolution**: resolution of the curves
   @chainable
 
-*Sub-module: setting*
+📂 *Sub-module: setting*
 
 ---
 
-### curve
+### 🔧 curve
 
 *   Modifies the quality of forms created with curve()
   and curveVertex().The parameter tightness
@@ -1850,11 +1850,11 @@ CONTENTS                                                    *p5-color-contents*
   original vertices
   @chainable
 
-*Sub-module: setting*
+📂 *Sub-module: setting*
 
 ---
 
-### curvePoint
+### 🔧 curvePoint
 
 *   Evaluates the curve at position t for points a, b,
   c, d. The parameter t varies between 0 and 1, a
@@ -1871,11 +1871,11 @@ CONTENTS                                                    *p5-color-contents*
   - **t**: value between 0 and 1
   - **Returns**: Curve value at position t
 
-*Sub-module: setting*
+📂 *Sub-module: setting*
 
 ---
 
-### curveTangent
+### 🔧 curveTangent
 
 *   Evaluates the tangent to the curve at position t
   for points a, b, c, d. The parameter t varies
@@ -1888,11 +1888,11 @@ CONTENTS                                                    *p5-color-contents*
   - **t**: value between 0 and 1
   - **Returns**: the tangent at position t
 
-*Sub-module: setting*
+📂 *Sub-module: setting*
 
 ---
 
-### beginContour
+### 🔧 beginContour
 
 *   Use the beginContour() and endContour() functions
   to create negative shapes within shapes such as
@@ -1912,11 +1912,11 @@ CONTENTS                                                    *p5-color-contents*
   rect() within.
   @chainable
 
-*Sub-module: setting*
+📂 *Sub-module: setting*
 
 ---
 
-### beginShape
+### 🔧 beginShape
 
 *   Using the beginShape() and endShape() functions
   allow creating more complex forms. beginShape()
@@ -1953,11 +1953,11 @@ CONTENTS                                                    *p5-color-contents*
   TESS
   @chainable
 
-*Sub-module: setting*
+📂 *Sub-module: setting*
 
 ---
 
-### bezierVertex
+### 🔧 bezierVertex
 
 *   Specifies vertex coordinates for Bezier curves.
   Each call to bezierVertex() defines the position
@@ -1983,11 +1983,11 @@ CONTENTS                                                    *p5-color-contents*
   - **y4**: y-coordinate for the anchor point
   @chainable
 
-*Sub-module: setting*
+📂 *Sub-module: setting*
 
 ---
 
-### bezierVertex
+### 🔧 bezierVertex
 
 *   Specifies vertex coordinates for Bezier curves.
   Each call to bezierVertex() defines the position
@@ -2019,11 +2019,11 @@ CONTENTS                                                    *p5-color-contents*
   WebGL mode)
   @chainable
 
-*Sub-module: setting*
+📂 *Sub-module: setting*
 
 ---
 
-### beginShape
+### 🔧 beginShape
 
 *   Specifies vertex coordinates for curves. This
   function may only be used between beginShape() and
@@ -2044,11 +2044,11 @@ CONTENTS                                                    *p5-color-contents*
   - **y**: y-coordinate of the vertex
   @chainable
 
-*Sub-module: setting*
+📂 *Sub-module: setting*
 
 ---
 
-### beginShape
+### 🔧 beginShape
 
 *   Specifies vertex coordinates for curves. This
   function may only be used between beginShape() and
@@ -2071,11 +2071,11 @@ CONTENTS                                                    *p5-color-contents*
   mode)
   @chainable
 
-*Sub-module: setting*
+📂 *Sub-module: setting*
 
 ---
 
-### beginContour
+### 🔧 beginContour
 
 *   Use the beginContour() and endContour() functions
   to create negative shapes within shapes such as
@@ -2095,11 +2095,11 @@ CONTENTS                                                    *p5-color-contents*
   rect() within.
   @chainable
 
-*Sub-module: setting*
+📂 *Sub-module: setting*
 
 ---
 
-### endShape
+### 🔧 endShape
 
 *   The endShape() function is the companion to
   beginShape() and may only be called after
@@ -2112,11 +2112,11 @@ CONTENTS                                                    *p5-color-contents*
   @param [mode] use CLOSE to close the shape
   @chainable
 
-*Sub-module: setting*
+📂 *Sub-module: setting*
 
 ---
 
-### quadraticVertex
+### 🔧 quadraticVertex
 
 *   Specifies vertex coordinates for quadratic Bezier
   curves. Each call to quadraticVertex() defines the
@@ -2138,11 +2138,11 @@ CONTENTS                                                    *p5-color-contents*
   - **y3**: y-coordinate for the anchor point
   @chainable
 
-*Sub-module: setting*
+📂 *Sub-module: setting*
 
 ---
 
-### quadraticVertex
+### 🔧 quadraticVertex
 
 *   Specifies vertex coordinates for quadratic Bezier
   curves. Each call to quadraticVertex() defines the
@@ -2168,11 +2168,11 @@ CONTENTS                                                    *p5-color-contents*
   WebGL mode)
   @chainable
 
-*Sub-module: setting*
+📂 *Sub-module: setting*
 
 ---
 
-### vertex
+### 🔧 vertex
 
 *   All shapes are constructed by connecting a series
   of vertices. vertex() is used to specify the
@@ -2183,11 +2183,11 @@ CONTENTS                                                    *p5-color-contents*
   - **y**: y-coordinate of the vertex
   @chainable
 
-*Sub-module: setting*
+📂 *Sub-module: setting*
 
 ---
 
-### vertex
+### 🔧 vertex
 
 *   All shapes are constructed by connecting a series
   of vertices. vertex() is used to specify the
@@ -2200,11 +2200,11 @@ CONTENTS                                                    *p5-color-contents*
   0 if not specified.
   @chainable
 
-*Sub-module: setting*
+📂 *Sub-module: setting*
 
 ---
 
-### vertex
+### 🔧 vertex
 
 *   All shapes are constructed by connecting a series
   of vertices. vertex() is used to specify the
@@ -2219,11 +2219,11 @@ CONTENTS                                                    *p5-color-contents*
   @param [v] the vertex's texture v-coordinate
   @chainable
 
-*Sub-module: setting*
+📂 *Sub-module: setting*
 
 ---
 
-### vertex
+### 🔧 vertex
 
 *   Sets the 3d vertex normal to use for subsequent
   vertices drawn with vertex(). A normal is a vector
@@ -2234,11 +2234,11 @@ CONTENTS                                                    *p5-color-contents*
   normal.
   @chainable
 
-*Sub-module: setting*
+📂 *Sub-module: setting*
 
 ---
 
-### vertex
+### 🔧 vertex
 
 *   Sets the 3d vertex normal to use for subsequent
   vertices drawn with vertex(). A normal is a vector
@@ -2250,11 +2250,11 @@ CONTENTS                                                    *p5-color-contents*
   - **z**: The z component of the vertex normal.
   @chainable
 
-*Sub-module: setting*
+📂 *Sub-module: setting*
 
 ---
 
-### rgba
+### 🔧 rgba
 
 *   Returns the color formatted as a string. Doing so
   can be useful for debugging, or for using p5.js
@@ -2270,51 +2270,51 @@ CONTENTS                                                    *p5-color-contents*
   'hsla%' format as percentages.
   - **Returns**: the formatted string.
 
-*Sub-module: p5.Color*
+📂 *Sub-module: p5.Color*
 
 ---
 
-### colorMode
+### 🔧 colorMode
 
 *   Sets the red component of a color. The range
   depends on the colorMode(). In the default RGB
   mode it's between 0 and 255.
   - **red**: the new red value.
 
-*Sub-module: p5.Color*
+📂 *Sub-module: p5.Color*
 
 ---
 
-### colorMode
+### 🔧 colorMode
 
 *   Sets the green component of a color. The range
   depends on the colorMode(). In the default RGB
   mode it's between 0 and 255.
   - **green**: the new green value.
 
-*Sub-module: p5.Color*
+📂 *Sub-module: p5.Color*
 
 ---
 
-### colorMode
+### 🔧 colorMode
 
 *   Sets the blue component of a color. The range
   depends on the colorMode(). In the default RGB
   mode it's between 0 and 255.
   - **blue**: the new blue value.
 
-*Sub-module: p5.Color*
+📂 *Sub-module: p5.Color*
 
 ---
 
-### alpha
+### 🔧 alpha
 
 *   Sets the alpha (transparency) value of a color.
   The range depends on the colorMode(). In the
   default RGB mode it's between 0 and 255.
   - **alpha**: the new alpha value.
 
-*Sub-module: p5.Color*
+📂 *Sub-module: p5.Color*
 
 ---
 

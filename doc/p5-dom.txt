@@ -1,97 +1,97 @@
-p5-dom🌐.txt    p5.js dom documentation    p5
+p5-dom.txt    p5.js dom documentation    p5
 
 ==============================================================================
-p5.js Dom Module    *p5-dom*
+🌐 p5.js Dom Module 🌐    *p5-dom*
 
-p5.js Version: 1.7.7~
-Last Updated: 2026-02-06 18:38:12~
+📦 p5.js Version: 1.7.7~
+⏰ Last Updated: 2026-02-07 02:20:06~
 
 ==============================================================================
-CONTENTS                                                    *p5-dom-contents*
+📋 CONTENTS                                                    *p5-dom-contents*
 
 
 ## Table of Contents
 
-### Functions
+### 🔧 Functions
 
-- constructor
-- element
-- pause
-- loop
-- noLoop
-- autoplay
-- volume
-- volume
-- speed
-- speed
-- time
-- to
-- duration
-- onended
-- disconnect
-- showControls
-- hideControls
-- MediaElement
-- clearCues
-- constructor
-- string
-- removeElements
-- changed
-- createP
-- createSpan
-- string
-- string
-- size
-- size
-- checked
-- name
-- name
-- option
-- option
-- option
-- value
-- size
-- size
-- createFileInput
-- addClass
-- removeClass
-- hasClass
-- toggleClass
-- child
-- child
-- center
-- html
-- html
-- to
-- to
-- style
-- style
-- attribute
-- attribute
-- removeAttribute
-- value
-- value
-- show
-- hide
-- size
-- size
-- remove
+- constructor 🔧
+- element 🔧
+- pause 🔧
+- loop 🔧
+- noLoop 🔧
+- autoplay 🔧
+- volume 🔧
+- volume 🔧
+- speed 🔧
+- speed 🔧
+- time 🔧
+- to 🔧
+- duration 🔧
+- onended 🔧
+- disconnect 🔧
+- showControls 🔧
+- hideControls 🔧
+- MediaElement 🔧
+- clearCues 🔧
+- constructor 🔧
+- string 🔧
+- removeElements 🔧
+- changed 🔧
+- createP 🔧
+- createSpan 🔧
+- string 🔧
+- string 🔧
+- size 🔧
+- size 🔧
+- checked 🔧
+- name 🔧
+- name 🔧
+- option 🔧
+- option 🔧
+- option 🔧
+- value 🔧
+- size 🔧
+- size 🔧
+- createFileInput 🔧
+- addClass 🔧
+- removeClass 🔧
+- hasClass 🔧
+- toggleClass 🔧
+- child 🔧
+- child 🔧
+- center 🔧
+- html 🔧
+- html 🔧
+- to 🔧
+- to 🔧
+- style 🔧
+- style 🔧
+- attribute 🔧
+- attribute 🔧
+- removeAttribute 🔧
+- value 🔧
+- value 🔧
+- show 🔧
+- hide 🔧
+- size 🔧
+- size 🔧
+- remove 🔧
 
-### Variables
+### 📊 Variables
 
-- elt
-- file
-- type
-- subtype
-- name
-- size
-- data
+- elt 📊
+- file 📊
+- type 📊
+- subtype 📊
+- name 📊
+- size 📊
+- data 📊
 
 ---
 
-## Functions
+## 🔧 Functions
 
-### constructor
+### 🔧 constructor
 
 *   Extends p5.Element to handle audio and video. In
   addition to the methods of p5.Element, it also
@@ -101,50 +101,50 @@ CONTENTS                                                    *p5-dom-contents*
   createCapture.
          *   - **elt**: DOM node that is wrapped
 
-*Sub-module: dom*
+📂 *Sub-module: dom*
 
 ---
 
-### element
+### 🔧 element
 
 *   Stops an HTML5 media element (sets current time to
   zero).
   @chainable
 
-*Sub-module: dom*
+📂 *Sub-module: dom*
 
 ---
 
-### pause
+### 🔧 pause
 
 *   Pauses an HTML5 media element.
   @chainable
 
-*Sub-module: dom*
+📂 *Sub-module: dom*
 
 ---
 
-### loop
+### 🔧 loop
 
 *   Set 'loop' to true for an HTML5 media element, and
   starts playing.
   @chainable
 
-*Sub-module: dom*
+📂 *Sub-module: dom*
 
 ---
 
-### noLoop
+### 🔧 noLoop
 
 *   Set 'loop' to false for an HTML5 media element.
   Element will stop when it reaches the end.
   @chainable
 
-*Sub-module: dom*
+📂 *Sub-module: dom*
 
 ---
 
-### autoplay
+### 🔧 autoplay
 
 *   Set HTML5 media element to autoplay or not. If no
   argument is specified, by default it will
@@ -153,32 +153,32 @@ CONTENTS                                                    *p5-dom-contents*
   autoplay
   @chainable
 
-*Sub-module: dom*
+📂 *Sub-module: dom*
 
 ---
 
-### volume
+### 🔧 volume
 
 *   Sets volume for this HTML5 media element. If no
   argument is given, returns the current volume.
   - **Returns**: current volume
 
-*Sub-module: dom*
+📂 *Sub-module: dom*
 
 ---
 
-### volume
+### 🔧 volume
 
 *   Sets volume for this HTML5 media element. If no
   argument is given, returns the current volume.
   - **val**: volume between 0.0 and 1.0
   @chainable
 
-*Sub-module: dom*
+📂 *Sub-module: dom*
 
 ---
 
-### speed
+### 🔧 speed
 
 *   If no arguments are given, returns the current
   playback speed of the element. The speed parameter
@@ -190,11 +190,11 @@ CONTENTS                                                    *p5-dom-contents*
   might not be smooth.)
   - **Returns**: current playback speed of the element
 
-*Sub-module: dom*
+📂 *Sub-module: dom*
 
 ---
 
-### speed
+### 🔧 speed
 
 *   If no arguments are given, returns the current
   playback speed of the element. The speed parameter
@@ -207,22 +207,22 @@ CONTENTS                                                    *p5-dom-contents*
   - **speed**: speed multiplier for element playback
   @chainable
 
-*Sub-module: dom*
+📂 *Sub-module: dom*
 
 ---
 
-### time
+### 🔧 time
 
 *   If no arguments are given, returns the current
   time of the element. If an argument is given the
   current time of the element is set to it.
   - **Returns**: current time (in seconds)
 
-*Sub-module: dom*
+📂 *Sub-module: dom*
 
 ---
 
-### to
+### 🔧 to
 
 *   If no arguments are given, returns the current
   time of the element. If an argument is given the
@@ -230,20 +230,20 @@ CONTENTS                                                    *p5-dom-contents*
   - **time**: time to jump to (in seconds)
   @chainable
 
-*Sub-module: dom*
+📂 *Sub-module: dom*
 
 ---
 
-### duration
+### 🔧 duration
 
 *   Returns the duration of the HTML5 media element.
   - **Returns**: duration
 
-*Sub-module: dom*
+📂 *Sub-module: dom*
 
 ---
 
-### onended
+### 🔧 onended
 
 *   Schedule an event to be called when the audio or
   video element reaches the end. If the element is
@@ -254,39 +254,39 @@ CONTENTS                                                    *p5-dom-contents*
   passed in as the argument to the callback.
   @chainable
 
-*Sub-module: dom*
+📂 *Sub-module: dom*
 
 ---
 
-### disconnect
+### 🔧 disconnect
 
 *   Disconnect all Web Audio routing, including to
   main output. This is useful if you want to
   re-route the output through audio effects, for
   example.
 
-*Sub-module: dom*
+📂 *Sub-module: dom*
 
 ---
 
-### showControls
+### 🔧 showControls
 
 *   Show the default MediaElement controls, as
   determined by the web browser.
 
-*Sub-module: dom*
+📂 *Sub-module: dom*
 
 ---
 
-### hideControls
+### 🔧 hideControls
 
 *   Hide the default mediaElement controls.
 
-*Sub-module: dom*
+📂 *Sub-module: dom*
 
 ---
 
-### MediaElement
+### 🔧 MediaElement
 
 *   Schedule events to trigger every time a
   MediaElement (audio/video) reaches a playback cue
@@ -310,29 +310,29 @@ CONTENTS                                                    *p5-dom-contents*
   - **Returns**: id ID of this cue, useful for
   removeCue(id)
 
-*Sub-module: dom*
+📂 *Sub-module: dom*
 
 ---
 
-### clearCues
+### 🔧 clearCues
 
 *   Remove all of the callbacks that had originally
   been scheduled via the addCue method.
   - **id**: ID of the cue, as returned by addCue
 
-*Sub-module: dom*
+📂 *Sub-module: dom*
 
 ---
 
-### constructor
+### 🔧 constructor
 
 *   Path to the media element source.
 
-*Sub-module: dom*
+📂 *Sub-module: dom*
 
 ---
 
-### string
+### 🔧 string
 
 *   Searches the page for elements that match the
   given CSS selector string (can be an ID a class,
@@ -348,22 +348,22 @@ CONTENTS                                                    *p5-dom-contents*
   - **Returns**: Array of p5.Elements containing nodes
   found
 
-*Sub-module: dom*
+📂 *Sub-module: dom*
 
 ---
 
-### removeElements
+### 🔧 removeElements
 
 *   Removes all elements created by p5, except any
   canvas / graphics elements created by createCanvas
   or createGraphics. Event handlers are removed, and
   element is removed from the DOM.
 
-*Sub-module: dom*
+📂 *Sub-module: dom*
 
 ---
 
-### changed
+### 🔧 changed
 
 *   The .changed() function is called when the value
   of an element changes. This can be used to attach
@@ -374,33 +374,33 @@ CONTENTS                                                    *p5-dom-contents*
   fire.
   @chainable
 
-*Sub-module: dom*
+📂 *Sub-module: dom*
 
 ---
 
-### createP
+### 🔧 createP
 
 *   Creates a <p></p> element in the DOM with given
   inner HTML. Used for paragraph length text.
   @param [html] inner HTML for element created
   - **Returns**: pointer to p5.Element holding created node
 
-*Sub-module: dom*
+📂 *Sub-module: dom*
 
 ---
 
-### createSpan
+### 🔧 createSpan
 
 *   Creates a <span></span> element in the DOM with
   given inner HTML.
   @param [html] inner HTML for element created
   - **Returns**: pointer to p5.Element holding created node
 
-*Sub-module: dom*
+📂 *Sub-module: dom*
 
 ---
 
-### string
+### 🔧 string
 
 *   Creates an <img> element in the DOM with given src
   and alternate text.
@@ -410,11 +410,11 @@ CONTENTS                                                    *p5-dom-contents*
   that an image is not intended to be viewed.
   - **Returns**: pointer to p5.Element holding created node
 
-*Sub-module: dom*
+📂 *Sub-module: dom*
 
 ---
 
-### string
+### 🔧 string
 
 *   Creates an <img> element in the DOM with given src
   and alternate text.
@@ -432,11 +432,11 @@ CONTENTS                                                    *p5-dom-contents*
   argument
   - **Returns**: pointer to p5.Element holding created node
 
-*Sub-module: dom*
+📂 *Sub-module: dom*
 
 ---
 
-### size
+### 🔧 size
 
 *   Creates a slider <input></input> element in the
   DOM. Use .size() to set the display length of the
@@ -451,11 +451,11 @@ CONTENTS                                                    *p5-dom-contents*
   - **Returns**: pointer to p5.Element holding the created
   node
 
-*Sub-module: dom*
+📂 *Sub-module: dom*
 
 ---
 
-### size
+### 🔧 size
 
 *   Creates a <button></button> element in the DOM.
   Use .size() to set the display size of the button.
@@ -464,11 +464,11 @@ CONTENTS                                                    *p5-dom-contents*
   @param [value] value of the button
   - **Returns**: pointer to p5.Element holding created node
 
-*Sub-module: dom*
+📂 *Sub-module: dom*
 
 ---
 
-### checked
+### 🔧 checked
 
 *   Creates a checkbox <input></input> element in the
   DOM. Calling .checked() on a checkbox returns a
@@ -478,11 +478,11 @@ CONTENTS                                                    *p5-dom-contents*
   true, unchecked is false
   - **Returns**: pointer to p5.Element holding created node
 
-*Sub-module: dom*
+📂 *Sub-module: dom*
 
 ---
 
-### name
+### 🔧 name
 
 *   Creates a dropdown menu <select></select> element
   in the DOM. It also assigns select-related methods
@@ -513,11 +513,11 @@ CONTENTS                                                    *p5-dom-contents*
   multiple selections
   - **Returns**: pointer to p5.Element holding created node
 
-*Sub-module: dom*
+📂 *Sub-module: dom*
 
 ---
 
-### name
+### 🔧 name
 
 *   Creates a dropdown menu <select></select> element
   in the DOM. It also assigns select-related methods
@@ -546,11 +546,11 @@ CONTENTS                                                    *p5-dom-contents*
   the initial option is disabled.
   - **existing**: DOM select element
 
-*Sub-module: dom*
+📂 *Sub-module: dom*
 
 ---
 
-### option
+### 🔧 option
 
 *   Creates a radio button element in the DOM. It also
   helps existing radio buttons assign methods of
@@ -579,11 +579,11 @@ CONTENTS                                                    *p5-dom-contents*
   Element.
   - **Returns**: pointer to p5.Element holding created node
 
-*Sub-module: dom*
+📂 *Sub-module: dom*
 
 ---
 
-### option
+### 🔧 option
 
 *   Creates a radio button element in the DOM. It also
   helps existing radio buttons assign methods of
@@ -609,11 +609,11 @@ CONTENTS                                                    *p5-dom-contents*
   Element.
   - **Returns**: pointer to p5.Element holding created node
 
-*Sub-module: dom*
+📂 *Sub-module: dom*
 
 ---
 
-### option
+### 🔧 option
 
 *   Creates a radio button element in the DOM. It also
   helps existing radio buttons assign methods of
@@ -637,11 +637,11 @@ CONTENTS                                                    *p5-dom-contents*
   whole radio button element.
   - **Returns**: pointer to p5.Element holding created node
 
-*Sub-module: dom*
+📂 *Sub-module: dom*
 
 ---
 
-### value
+### 🔧 value
 
 *   Creates a colorPicker element in the DOM for color
   input. The .value() method will return a hex
@@ -651,11 +651,11 @@ CONTENTS                                                    *p5-dom-contents*
   @param [value] default color of element
   - **Returns**: pointer to p5.Element holding created node
 
-*Sub-module: dom*
+📂 *Sub-module: dom*
 
 ---
 
-### size
+### 🔧 size
 
 *   Creates an <input></input> element in the DOM for
   text input. Use .size() to set the display length
@@ -666,22 +666,22 @@ CONTENTS                                                    *p5-dom-contents*
   first.
   - **Returns**: pointer to p5.Element holding created node
 
-*Sub-module: dom*
+📂 *Sub-module: dom*
 
 ---
 
-### size
+### 🔧 size
 
 *   Creates an <input></input> element in the DOM for
   text input. Use .size() to set the display length
   of the box.
   @param [value] default value of the input box
 
-*Sub-module: dom*
+📂 *Sub-module: dom*
 
 ---
 
-### createFileInput
+### 🔧 createFileInput
 
 *   Creates an <input></input> element in the DOM of
   type 'file'. This allows users to select local
@@ -693,31 +693,31 @@ CONTENTS                                                    *p5-dom-contents*
   - **Returns**: pointer to p5.Element holding created DOM
   element
 
-*Sub-module: dom*
+📂 *Sub-module: dom*
 
 ---
 
-### addClass
+### 🔧 addClass
 
 *   Adds specified class to the element.
   - **class**: name of class to add
   @chainable
 
-*Sub-module: dom*
+📂 *Sub-module: dom*
 
 ---
 
-### removeClass
+### 🔧 removeClass
 
 *   Removes specified class from the element.
   - **class**: name of class to remove
   @chainable
 
-*Sub-module: dom*
+📂 *Sub-module: dom*
 
 ---
 
-### hasClass
+### 🔧 hasClass
 
 *   Checks if specified class is already applied to
   element.
@@ -725,21 +725,21 @@ CONTENTS                                                    *p5-dom-contents*
   - **Returns**: a boolean value if element has specified
   class
 
-*Sub-module: dom*
+📂 *Sub-module: dom*
 
 ---
 
-### toggleClass
+### 🔧 toggleClass
 
 *   Toggles element class.
   - **c**: class name to toggle
   @chainable
 
-*Sub-module: dom*
+📂 *Sub-module: dom*
 
 ---
 
-### child
+### 🔧 child
 
 *   Attaches the element as a child to the parent
   specified. Accepts either a string ID, DOM node,
@@ -747,11 +747,11 @@ CONTENTS                                                    *p5-dom-contents*
   array of children DOM nodes is returned.
   - **Returns**: an array of child nodes
 
-*Sub-module: dom*
+📂 *Sub-module: dom*
 
 ---
 
-### child
+### 🔧 child
 
 *   Attaches the element as a child to the parent
   specified. Accepts either a string ID, DOM node,
@@ -761,11 +761,11 @@ CONTENTS                                                    *p5-dom-contents*
   add to the current element
   @chainable
 
-*Sub-module: dom*
+📂 *Sub-module: dom*
 
 ---
 
-### center
+### 🔧 center
 
 *   Centers a p5.Element either vertically,
   horizontally, or both, relative to its parent or
@@ -776,11 +776,11 @@ CONTENTS                                                    *p5-dom-contents*
   aligns element accordingly
   @chainable
 
-*Sub-module: dom*
+📂 *Sub-module: dom*
 
 ---
 
-### html
+### 🔧 html
 
 *   If an argument is given, sets the inner HTML of
   the element, replacing any existing HTML. If true
@@ -790,11 +790,11 @@ CONTENTS                                                    *p5-dom-contents*
   element.
   - **Returns**: the inner HTML of the element
 
-*Sub-module: dom*
+📂 *Sub-module: dom*
 
 ---
 
-### html
+### 🔧 html
 
 *   If an argument is given, sets the inner HTML of
   the element, replacing any existing HTML. If true
@@ -807,11 +807,11 @@ CONTENTS                                                    *p5-dom-contents*
   @param [append] whether to append HTML to existing
   @chainable
 
-*Sub-module: dom*
+📂 *Sub-module: dom*
 
 ---
 
-### to
+### 🔧 to
 
 *   Sets the position of the element. If no position
   type argument is given, the position will be
@@ -828,11 +828,11 @@ CONTENTS                                                    *p5-dom-contents*
   - **Returns**: object of form { x: 0, y: 0 } containing
   the position of the element in an object
 
-*Sub-module: dom*
+📂 *Sub-module: dom*
 
 ---
 
-### to
+### 🔧 to
 
 *   Sets the position of the element. If no position
   type argument is given, the position will be
@@ -854,11 +854,11 @@ CONTENTS                                                    *p5-dom-contents*
   relative, sticky, initial or inherit (optional)
   @chainable
 
-*Sub-module: dom*
+📂 *Sub-module: dom*
 
 ---
 
-### style
+### 🔧 style
 
 *   Sets the given style (CSS) property (1st arg) of
   the element with the given value (2nd arg). If a
@@ -870,11 +870,11 @@ CONTENTS                                                    *p5-dom-contents*
   - **property**: property to be set
   - **Returns**: value of property
 
-*Sub-module: dom*
+📂 *Sub-module: dom*
 
 ---
 
-### style
+### 🔧 style
 
 *   Sets the given style (CSS) property (1st arg) of
   the element with the given value (2nd arg). If a
@@ -887,11 +887,11 @@ CONTENTS                                                    *p5-dom-contents*
   - **value**: value to assign to property
   @chainable
 
-*Sub-module: dom*
+📂 *Sub-module: dom*
 
 ---
 
-### attribute
+### 🔧 attribute
 
 *   Adds a new attribute or changes the value of an
   existing attribute on the specified element. If no
@@ -899,11 +899,11 @@ CONTENTS                                                    *p5-dom-contents*
   attribute, or null if the attribute is not set.
   - **Returns**: value of attribute
 
-*Sub-module: dom*
+📂 *Sub-module: dom*
 
 ---
 
-### attribute
+### 🔧 attribute
 
 *   Adds a new attribute or changes the value of an
   existing attribute on the specified element. If no
@@ -913,61 +913,61 @@ CONTENTS                                                    *p5-dom-contents*
   - **value**: value to assign to attribute
   @chainable
 
-*Sub-module: dom*
+📂 *Sub-module: dom*
 
 ---
 
-### removeAttribute
+### 🔧 removeAttribute
 
 *   Removes an attribute on the specified element.
   - **attr**: attribute to remove
   @chainable
 
-*Sub-module: dom*
+📂 *Sub-module: dom*
 
 ---
 
-### value
+### 🔧 value
 
 *   Either returns the value of the element if no
   arguments given, or sets the value of the element.
   - **Returns**: value of the element
 
-*Sub-module: dom*
+📂 *Sub-module: dom*
 
 ---
 
-### value
+### 🔧 value
 
 *   Either returns the value of the element if no
   arguments given, or sets the value of the element.
   @chainable
 
-*Sub-module: dom*
+📂 *Sub-module: dom*
 
 ---
 
-### show
+### 🔧 show
 
 *   Shows the current element. Essentially, setting
   display:block for the style.
   @chainable
 
-*Sub-module: dom*
+📂 *Sub-module: dom*
 
 ---
 
-### hide
+### 🔧 hide
 
 *   Hides the current element. Essentially, setting
   display:none for the style.
   @chainable
 
-*Sub-module: dom*
+📂 *Sub-module: dom*
 
 ---
 
-### size
+### 🔧 size
 
 *   Sets the width and height of the element. AUTO can
   be used to only adjust one dimension at a time. If
@@ -979,11 +979,11 @@ CONTENTS                                                    *p5-dom-contents*
   - **Returns**: the width and height of the element in an
   object
 
-*Sub-module: dom*
+📂 *Sub-module: dom*
 
 ---
 
-### size
+### 🔧 size
 
 *   Sets the width and height of the element. AUTO can
   be used to only adjust one dimension at a time. If
@@ -998,22 +998,22 @@ CONTENTS                                                    *p5-dom-contents*
   a number
   @chainable
 
-*Sub-module: dom*
+📂 *Sub-module: dom*
 
 ---
 
-### remove
+### 🔧 remove
 
 *   Removes the element, stops all media streams, and
   deregisters all listeners.
 
-*Sub-module: dom*
+📂 *Sub-module: dom*
 
 ---
 
-## Variables
+## 📊 Variables
 
-### elt
+### 📊 elt
 
 *   Extends p5.Element to handle audio and video. In
   addition to the methods of p5.Element, it also
@@ -1023,60 +1023,60 @@ CONTENTS                                                    *p5-dom-contents*
   createCapture.
          *   - **elt**: DOM node that is wrapped
 
-*Sub-module: dom*
+📂 *Sub-module: dom*
 
 ---
 
-### file
+### 📊 file
 
 *   Base class for a file. Used for Element.drop and
   createFileInput.
          *   - **file**: File that is wrapped
 
-*Sub-module: dom*
+📂 *Sub-module: dom*
 
 ---
 
-### type
+### 📊 type
 
 *   File type (image, text, etc.)
 
-*Sub-module: dom*
+📂 *Sub-module: dom*
 
 ---
 
-### subtype
+### 📊 subtype
 
 *   File subtype (usually the file extension jpg, png,
   xml, etc.)
 
-*Sub-module: dom*
+📂 *Sub-module: dom*
 
 ---
 
-### name
+### 📊 name
 
 *   File name
 
-*Sub-module: dom*
+📂 *Sub-module: dom*
 
 ---
 
-### size
+### 📊 size
 
 *   File size
 
-*Sub-module: dom*
+📂 *Sub-module: dom*
 
 ---
 
-### data
+### 📊 data
 
 *   URL string containing either image data, the text
   contents of the file or a parsed object if file is
   JSON and p5.XML if XML
 
-*Sub-module: dom*
+📂 *Sub-module: dom*
 
 ---
 

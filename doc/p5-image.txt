@@ -1,78 +1,78 @@
-p5-image🖼️.txt    p5.js image documentation    p5
+p5-image.txt    p5.js image documentation    p5
 
 ==============================================================================
-p5.js Image Module    *p5-image*
+🖼️ p5.js Image Module 🖼️    *p5-image*
 
-p5.js Version: 1.7.7~
-Last Updated: 2026-02-06 18:38:12~
+📦 p5.js Version: 1.7.7~
+⏰ Last Updated: 2026-02-07 02:20:06~
 
 ==============================================================================
-CONTENTS                                                    *p5-image-contents*
+📋 CONTENTS                                                    *p5-image-contents*
 
 
 ## Table of Contents
 
-### Functions
+### 🔧 Functions
 
-- Image
-- canvas
-- saveCanvas
-- loadImage
-- where
-- where
-- tint
-- tint
-- tint
-- tint
-- tint
-- noTint
-- image
-- blend
-- blend
-- copy
-- copy
-- 0
-- imageMode
-- imageMode
-- imageMode
-- set
-- imageMode
-- loadPixels
-- loadImage
-- updatePixels
-- updatePixels
-- get
-- get
-- get
-- updatePixels
-- resize
-- copy
-- copy
-- mask
-- 0
-- blend
-- blend
-- png
-- reset
-- getCurrentFrame
-- setFrame
-- numFrames
-- pause
-- pause
-- delay
+- Image 🔧
+- canvas 🔧
+- saveCanvas 🔧
+- loadImage 🔧
+- where 🔧
+- where 🔧
+- tint 🔧
+- tint 🔧
+- tint 🔧
+- tint 🔧
+- tint 🔧
+- noTint 🔧
+- image 🔧
+- blend 🔧
+- blend 🔧
+- copy 🔧
+- copy 🔧
+- 0 🔧
+- imageMode 🔧
+- imageMode 🔧
+- imageMode 🔧
+- set 🔧
+- imageMode 🔧
+- loadPixels 🔧
+- loadImage 🔧
+- updatePixels 🔧
+- updatePixels 🔧
+- get 🔧
+- get 🔧
+- get 🔧
+- updatePixels 🔧
+- resize 🔧
+- copy 🔧
+- copy 🔧
+- mask 🔧
+- 0 🔧
+- blend 🔧
+- blend 🔧
+- png 🔧
+- reset 🔧
+- getCurrentFrame 🔧
+- setFrame 🔧
+- numFrames 🔧
+- pause 🔧
+- pause 🔧
+- delay 🔧
 
-### Variables
+### 📊 Variables
 
-- srcImage
-- width
-- height
-- pixels
+- srcImage 📊
+- width 📊
+- height 📊
+- pixels 📊
 
 ---
 
-## Functions
+## 🔧 Functions
 
-### Image
+### 🔧 Image
 
 *   Creates a new p5.Image (the datatype for storing
   images). This provides a fresh buffer of pixels to
@@ -96,11 +96,11 @@ CONTENTS                                                    *p5-image-contents*
   - **height**: height in pixels
   - **Returns**: the p5.Image object
 
-*Sub-module: image*
+📂 *Sub-module: image*
 
 ---
 
-### canvas
+### 🔧 canvas
 
 *   Save the current canvas as an image. The browser
   will either save the file immediately, or prompt
@@ -109,22 +109,22 @@ CONTENTS                                                    *p5-image-contents*
   specific html5 canvas (optional)
   @param [extension] 'jpg' or 'png'
 
-*Sub-module: image*
+📂 *Sub-module: image*
 
 ---
 
-### saveCanvas
+### 🔧 saveCanvas
 
 *   Save the current canvas as an image. The browser
   will either save the file immediately, or prompt
   the user with a dialogue window.
   @param [extension] 'jpg' or 'png'
 
-*Sub-module: image*
+📂 *Sub-module: image*
 
 ---
 
-### loadImage
+### 🔧 loadImage
 
 *   Loads an image from a path and creates a p5.Image
   from it. The image may not be immediately
@@ -149,11 +149,11 @@ CONTENTS                                                    *p5-image-contents*
   if the image fails to load.
   - **Returns**: the p5.Image object
 
-*Sub-module: loading_displaying*
+📂 *Sub-module: loading_displaying*
 
 ---
 
-### where
+### 🔧 where
 
 *   Draw an image to the p5.js canvas. This function
   can be used with different numbers of parameters.
@@ -186,11 +186,11 @@ CONTENTS                                                    *p5-image-contents*
   @param [width] the width to draw the image
   @param [height] the height to draw the image
 
-*Sub-module: loading_displaying*
+📂 *Sub-module: loading_displaying*
 
 ---
 
-### where
+### 🔧 where
 
 *   Draw an image to the p5.js canvas. This function
   can be used with different numbers of parameters.
@@ -242,11 +242,11 @@ CONTENTS                                                    *p5-image-contents*
   @param [yAlign] either TOP, BOTTOM or CENTER
   default is CENTER
 
-*Sub-module: loading_displaying*
+📂 *Sub-module: loading_displaying*
 
 ---
 
-### tint
+### 🔧 tint
 
 *   Sets the fill value for displaying images. Images
   can be tinted to specified colors or made
@@ -267,11 +267,11 @@ CONTENTS                                                    *p5-image-contents*
   - **v3**: blue or brightness value relative to the
   current color range
 
-*Sub-module: loading_displaying*
+📂 *Sub-module: loading_displaying*
 
 ---
 
-### tint
+### 🔧 tint
 
 *   Sets the fill value for displaying images. Images
   can be tinted to specified colors or made
@@ -287,11 +287,11 @@ CONTENTS                                                    *p5-image-contents*
   by colorMode(). The default maximum value is 255.
   - **value**: a color string
 
-*Sub-module: loading_displaying*
+📂 *Sub-module: loading_displaying*
 
 ---
 
-### tint
+### 🔧 tint
 
 *   Sets the fill value for displaying images. Images
   can be tinted to specified colors or made
@@ -307,11 +307,11 @@ CONTENTS                                                    *p5-image-contents*
   by colorMode(). The default maximum value is 255.
   - **gray**: a gray value
 
-*Sub-module: loading_displaying*
+📂 *Sub-module: loading_displaying*
 
 ---
 
-### tint
+### 🔧 tint
 
 *   Sets the fill value for displaying images. Images
   can be tinted to specified colors or made
@@ -328,11 +328,11 @@ CONTENTS                                                    *p5-image-contents*
   - **values**: an array containing the
   red,green,blue & and alpha components of the color
 
-*Sub-module: loading_displaying*
+📂 *Sub-module: loading_displaying*
 
 ---
 
-### tint
+### 🔧 tint
 
 *   Sets the fill value for displaying images. Images
   can be tinted to specified colors or made
@@ -348,21 +348,21 @@ CONTENTS                                                    *p5-image-contents*
   by colorMode(). The default maximum value is 255.
   - **color**: the tint color
 
-*Sub-module: loading_displaying*
+📂 *Sub-module: loading_displaying*
 
 ---
 
-### noTint
+### 🔧 noTint
 
 *   Removes the current fill value for displaying
   images and reverts to displaying images with their
   original hues.
 
-*Sub-module: loading_displaying*
+📂 *Sub-module: loading_displaying*
 
 ---
 
-### image
+### 🔧 image
 
 *   Set image mode. Modifies the location from which
   images are drawn by changing the way in which
@@ -382,11 +382,11 @@ CONTENTS                                                    *p5-image-contents*
   are used to set the image's width and height.
   - **mode**: either CORNER, CORNERS, or CENTER
 
-*Sub-module: loading_displaying*
+📂 *Sub-module: loading_displaying*
 
 ---
 
-### blend
+### 🔧 blend
 
 *   Copies a region of pixels from one image to
   another, using a specified blend mode to do the
@@ -409,11 +409,11 @@ CONTENTS                                                    *p5-image-contents*
   EXCLUSION, SCREEN, REPLACE, OVERLAY, HARD_LIGHT,
   SOFT_LIGHT, DODGE, BURN, ADD or NORMAL.
 
-*Sub-module: pixels*
+📂 *Sub-module: pixels*
 
 ---
 
-### blend
+### 🔧 blend
 
 *   Copies a region of pixels from one image to
   another, using a specified blend mode to do the
@@ -435,11 +435,11 @@ CONTENTS                                                    *p5-image-contents*
   EXCLUSION, SCREEN, REPLACE, OVERLAY, HARD_LIGHT,
   SOFT_LIGHT, DODGE, BURN, ADD or NORMAL.
 
-*Sub-module: pixels*
+📂 *Sub-module: pixels*
 
 ---
 
-### copy
+### 🔧 copy
 
 *   Copies a region of the canvas to another region of
   the canvas and copies a region of pixels from an
@@ -462,11 +462,11 @@ CONTENTS                                                    *p5-image-contents*
   - **dw**: destination image width
   - **dh**: destination image height
 
-*Sub-module: pixels*
+📂 *Sub-module: pixels*
 
 ---
 
-### copy
+### 🔧 copy
 
 *   Copies a region of the canvas to another region of
   the canvas and copies a region of pixels from an
@@ -488,11 +488,11 @@ CONTENTS                                                    *p5-image-contents*
   - **dw**: destination image width
   - **dh**: destination image height
 
-*Sub-module: pixels*
+📂 *Sub-module: pixels*
 
 ---
 
-### 0
+### 🔧 0
 
 *   Applies a filter to the canvas. The presets
   options are: THRESHOLD Converts the image to black
@@ -532,11 +532,11 @@ CONTENTS                                                    *p5-image-contents*
   @param [filterParam] an optional parameter unique
   to each filter, see above
 
-*Sub-module: pixels*
+📂 *Sub-module: pixels*
 
 ---
 
-### imageMode
+### 🔧 imageMode
 
 *   Get a region of pixels, or a single pixel, from
   the canvas. Returns an array of [R,G,B,A] values
@@ -569,11 +569,11 @@ CONTENTS                                                    *p5-image-contents*
   - **h**: height of the section to be returned
   - **Returns**: the rectangle p5.Image
 
-*Sub-module: pixels*
+📂 *Sub-module: pixels*
 
 ---
 
-### imageMode
+### 🔧 imageMode
 
 *   Get a region of pixels, or a single pixel, from
   the canvas. Returns an array of [R,G,B,A] values
@@ -602,11 +602,11 @@ CONTENTS                                                    *p5-image-contents*
   p5.Image.get()
   - **Returns**: the whole p5.Image
 
-*Sub-module: pixels*
+📂 *Sub-module: pixels*
 
 ---
 
-### imageMode
+### 🔧 imageMode
 
 *   Get a region of pixels, or a single pixel, from
   the canvas. Returns an array of [R,G,B,A] values
@@ -638,11 +638,11 @@ CONTENTS                                                    *p5-image-contents*
   - **Returns**: color of pixel at x,y in array format [R,
   G, B, A]
 
-*Sub-module: pixels*
+📂 *Sub-module: pixels*
 
 ---
 
-### set
+### 🔧 set
 
 *   Loads the pixel data for the display window into
   the pixels[] array. This function must always be
@@ -650,11 +650,11 @@ CONTENTS                                                    *p5-image-contents*
   Note that only changes made with set() or direct
   manipulation of pixels[] will occur.
 
-*Sub-module: pixels*
+📂 *Sub-module: pixels*
 
 ---
 
-### imageMode
+### 🔧 imageMode
 
 *   Changes the color of any pixel, or writes an image
   directly to the display window. The x and y
@@ -682,11 +682,11 @@ CONTENTS                                                    *p5-image-contents*
   - **c**: insert a grayscale value | a pixel array
   | a p5.Color object | a p5.Image to copy
 
-*Sub-module: pixels*
+📂 *Sub-module: pixels*
 
 ---
 
-### loadPixels
+### 🔧 loadPixels
 
 *   Updates the display window with the data in the
   pixels[] array. Use in conjunction with
@@ -704,11 +704,11 @@ CONTENTS                                                    *p5-image-contents*
   @param [w] width of region to update
   @param [h] height of region to update
 
-*Sub-module: pixels*
+📂 *Sub-module: pixels*
 
 ---
 
-### loadImage
+### 🔧 loadImage
 
 *   Creates a new p5.Image. A p5.Image is a canvas
   backed representation of an image. p5 can display
@@ -726,11 +726,11 @@ CONTENTS                                                    *p5-image-contents*
   the loadPixels() method on the image to make sure
   that the pixel data is properly loaded.
 
-*Sub-module: p5.Image*
+📂 *Sub-module: p5.Image*
 
 ---
 
-### updatePixels
+### 🔧 updatePixels
 
 *   Updates the backing canvas for this image with the
   contents of the [pixels] array. If this image is
@@ -745,22 +745,22 @@ CONTENTS                                                    *p5-image-contents*
   - **h**: height of the target update area for the
   underlying canvas
 
-*Sub-module: p5.Image*
+📂 *Sub-module: p5.Image*
 
 ---
 
-### updatePixels
+### 🔧 updatePixels
 
 *   Updates the backing canvas for this image with the
   contents of the [pixels] array. If this image is
   an animated GIF then the pixels will be updated in
   the frame that is currently displayed.
 
-*Sub-module: p5.Image*
+📂 *Sub-module: p5.Image*
 
 ---
 
-### get
+### 🔧 get
 
 *   Get a region of pixels from an image. If no params
   are passed, the whole image is returned. If x and
@@ -773,11 +773,11 @@ CONTENTS                                                    *p5-image-contents*
   - **h**: height
   - **Returns**: the rectangle p5.Image
 
-*Sub-module: p5.Image*
+📂 *Sub-module: p5.Image*
 
 ---
 
-### get
+### 🔧 get
 
 *   Get a region of pixels from an image. If no params
   are passed, the whole image is returned. If x and
@@ -786,11 +786,11 @@ CONTENTS                                                    *p5-image-contents*
   region is extracted and a p5.Image is returned.
   - **Returns**: the whole p5.Image
 
-*Sub-module: p5.Image*
+📂 *Sub-module: p5.Image*
 
 ---
 
-### get
+### 🔧 get
 
 *   Get a region of pixels from an image. If no params
   are passed, the whole image is returned. If x and
@@ -802,11 +802,11 @@ CONTENTS                                                    *p5-image-contents*
   - **Returns**: color of pixel at x,y in array format [R,
   G, B, A]
 
-*Sub-module: p5.Image*
+📂 *Sub-module: p5.Image*
 
 ---
 
-### updatePixels
+### 🔧 updatePixels
 
 *   Set the color of a single pixel or write an image
   into this p5.Image. Note that for a large number
@@ -818,11 +818,11 @@ CONTENTS                                                    *p5-image-contents*
   - **a**: grayscale value | pixel array | a
   p5.Color | image to copy
 
-*Sub-module: p5.Image*
+📂 *Sub-module: p5.Image*
 
 ---
 
-### resize
+### 🔧 resize
 
 *   Resize the image to a new width and height. To
   make the image scale proportionally, use 0 as the
@@ -833,11 +833,11 @@ CONTENTS                                                    *p5-image-contents*
   - **width**: the resized image width
   - **height**: the resized image height
 
-*Sub-module: p5.Image*
+📂 *Sub-module: p5.Image*
 
 ---
 
-### copy
+### 🔧 copy
 
 *   Copies a region of pixels from one image to
   another. If no srcImage is specified this is used
@@ -859,11 +859,11 @@ CONTENTS                                                    *p5-image-contents*
   - **dw**: destination image width
   - **dh**: destination image height
 
-*Sub-module: p5.Image*
+📂 *Sub-module: p5.Image*
 
 ---
 
-### copy
+### 🔧 copy
 
 *   Copies a region of pixels from one image to
   another. If no srcImage is specified this is used
@@ -884,11 +884,11 @@ CONTENTS                                                    *p5-image-contents*
   - **dw**: destination image width
   - **dh**: destination image height
 
-*Sub-module: p5.Image*
+📂 *Sub-module: p5.Image*
 
 ---
 
-### mask
+### 🔧 mask
 
 *   Masks part of an image from displaying by loading
   another image and using its alpha channel as an
@@ -897,11 +897,11 @@ CONTENTS                                                    *p5-image-contents*
   cannot be removed.
   - **srcImage**: source image
 
-*Sub-module: p5.Image*
+📂 *Sub-module: p5.Image*
 
 ---
 
-### 0
+### 🔧 0
 
 *   Applies an image filter to a p5.Image THRESHOLD
   Converts the image to black and white pixels
@@ -940,11 +940,11 @@ CONTENTS                                                    *p5-image-contents*
   @param [filterParam] an optional parameter unique
   to each filter, see above
 
-*Sub-module: p5.Image*
+📂 *Sub-module: p5.Image*
 
 ---
 
-### blend
+### 🔧 blend
 
 *   Copies a region of pixels from one image to
   another, using a specified blend mode to do the
@@ -973,11 +973,11 @@ CONTENTS                                                    *p5-image-contents*
   | luminosity
          *   http://blogs.adobe.com/webplatform/2013/01/28/blending-features-in-canvas/
 
-*Sub-module: p5.Image*
+📂 *Sub-module: p5.Image*
 
 ---
 
-### blend
+### 🔧 blend
 
 *   Copies a region of pixels from one image to
   another, using a specified blend mode to do the
@@ -1005,11 +1005,11 @@ CONTENTS                                                    *p5-image-contents*
   | luminosity
          *   http://blogs.adobe.com/webplatform/2013/01/28/blending-features-in-canvas/
 
-*Sub-module: p5.Image*
+📂 *Sub-module: p5.Image*
 
 ---
 
-### png
+### 🔧 png
 
 *   Saves the image to a file and force the browser to
   download it. Accepts two strings for filename and
@@ -1020,66 +1020,66 @@ CONTENTS                                                    *p5-image-contents*
   - **filename**: give your file a name
   - **extension**: 'png' or 'jpg'
 
-*Sub-module: p5.Image*
+📂 *Sub-module: p5.Image*
 
 ---
 
-### reset
+### 🔧 reset
 
 *   Starts an animated GIF over at the beginning
   state.
 
-*Sub-module: p5.Image*
+📂 *Sub-module: p5.Image*
 
 ---
 
-### getCurrentFrame
+### 🔧 getCurrentFrame
 
 *   Gets the index for the frame that is currently
   visible in an animated GIF.
   - **Returns**: The index for the currently displaying
   frame in animated GIF
 
-*Sub-module: p5.Image*
+📂 *Sub-module: p5.Image*
 
 ---
 
-### setFrame
+### 🔧 setFrame
 
 *   Sets the index of the frame that is currently
   visible in an animated GIF
   - **index**: the index for the frame that should
   be displayed
 
-*Sub-module: p5.Image*
+📂 *Sub-module: p5.Image*
 
 ---
 
-### numFrames
+### 🔧 numFrames
 
 *   Returns the number of frames in an animated GIF
 
-*Sub-module: p5.Image*
+📂 *Sub-module: p5.Image*
 
 ---
 
-### pause
+### 🔧 pause
 
 *   Plays an animated GIF that was paused with pause()
 
-*Sub-module: p5.Image*
+📂 *Sub-module: p5.Image*
 
 ---
 
-### pause
+### 🔧 pause
 
 *   Pauses an animated GIF.
 
-*Sub-module: p5.Image*
+📂 *Sub-module: p5.Image*
 
 ---
 
-### delay
+### 🔧 delay
 
 *   Changes the delay between frames in an animated
   GIF. There is an optional second parameter that
@@ -1091,13 +1091,13 @@ CONTENTS                                                    *p5-image-contents*
   @param [index] the index of the frame that should
   have the new delay value {optional}
 
-*Sub-module: p5.Image*
+📂 *Sub-module: p5.Image*
 
 ---
 
-## Variables
+## 📊 Variables
 
-### srcImage
+### 📊 srcImage
 
 *   Copies a region of pixels from one image to
   another, using a specified blend mode to do the
@@ -1120,11 +1120,11 @@ CONTENTS                                                    *p5-image-contents*
   EXCLUSION, SCREEN, REPLACE, OVERLAY, HARD_LIGHT,
   SOFT_LIGHT, DODGE, BURN, ADD or NORMAL.
 
-*Sub-module: pixels*
+📂 *Sub-module: pixels*
 
 ---
 
-### width
+### 📊 width
 
 *   Creates a new p5.Image. A p5.Image is a canvas
   backed representation of an image. p5 can display
@@ -1142,19 +1142,19 @@ CONTENTS                                                    *p5-image-contents*
   the loadPixels() method on the image to make sure
   that the pixel data is properly loaded.
 
-*Sub-module: p5.Image*
+📂 *Sub-module: p5.Image*
 
 ---
 
-### height
+### 📊 height
 
 *   Image height.
 
-*Sub-module: p5.Image*
+📂 *Sub-module: p5.Image*
 
 ---
 
-### pixels
+### 📊 pixels
 
 *   Array containing the values for all the pixels in
   the display window. These values are numbers. This
@@ -1182,7 +1182,7 @@ CONTENTS                                                    *p5-image-contents*
   data has been modified, the updatePixels()
   function must be run to update the changes.
 
-*Sub-module: p5.Image*
+📂 *Sub-module: p5.Image*
 
 ---
 

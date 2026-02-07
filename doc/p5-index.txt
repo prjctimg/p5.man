@@ -4,24 +4,24 @@ p5-index.txt    p5.js Complete Documentation Index    p5
 p5.js Complete Documentation Index                    *p5-index*
 
 p5.js Version: 1.7.7~
-Last Updated: 2026-02-06 18:38:12~
+Last Updated: 2026-02-07 02:20:06~
 
 ==============================================================================
 CONTENTS                                                    *p5-index-contents*
 
 Available Modules:
-    ♿ Accessibility (p5-accessibility♿.txt)~        Functions: 4, Classes: 0, Variables: 0
-    🎨 Color (p5-color🎨.txt)~        Functions: 90, Classes: 0, Variables: 0
-    ⚙️ Core (p5-core⚙️.txt)~        Functions: 56, Classes: 0, Variables: 13
-    📊 Data (p5-data📊.txt)~        Functions: 27, Classes: 0, Variables: 0
-    🌐 Dom (p5-dom🌐.txt)~        Functions: 62, Classes: 0, Variables: 7
-    🖱️ Events (p5-events🖱️.txt)~        Functions: 21, Classes: 0, Variables: 30
-    🖼️ Image (p5-image🖼️.txt)~        Functions: 46, Classes: 0, Variables: 4
-    📁 Io (p5-io📁.txt)~        Functions: 56, Classes: 0, Variables: 2
-    🔢 Math (p5-math🔢.txt)~        Functions: 78, Classes: 0, Variables: 3
-    📝 Typography (p5-typography📝.txt)~        Functions: 17, Classes: 0, Variables: 1
-    🛠️ Utilities (p5-utilities🛠️.txt)~        Functions: 47, Classes: 0, Variables: 0
-    🎮 Webgl (p5-webgl🎮.txt)~        Functions: 97, Classes: 0, Variables: 12
+    ♿ Accessibility (p5-accessibility.txt)~        🔧 Functions: 4, 🏗️ Classes: 0, 📊 Variables: 0
+    🎨 Color (p5-color.txt)~        🔧 Functions: 90, 🏗️ Classes: 0, 📊 Variables: 0
+    ⚙️ Core (p5-core.txt)~        🔧 Functions: 56, 🏗️ Classes: 0, 📊 Variables: 13
+    📊 Data (p5-data.txt)~        🔧 Functions: 27, 🏗️ Classes: 0, 📊 Variables: 0
+    🌐 Dom (p5-dom.txt)~        🔧 Functions: 62, 🏗️ Classes: 0, 📊 Variables: 7
+    🖱️ Events (p5-events.txt)~        🔧 Functions: 21, 🏗️ Classes: 0, 📊 Variables: 30
+    🖼️ Image (p5-image.txt)~        🔧 Functions: 46, 🏗️ Classes: 0, 📊 Variables: 4
+    📁 Io (p5-io.txt)~        🔧 Functions: 56, 🏗️ Classes: 0, 📊 Variables: 2
+    🔢 Math (p5-math.txt)~        🔧 Functions: 78, 🏗️ Classes: 0, 📊 Variables: 3
+    📝 Typography (p5-typography.txt)~        🔧 Functions: 17, 🏗️ Classes: 0, 📊 Variables: 1
+    🛠️ Utilities (p5-utilities.txt)~        🔧 Functions: 47, 🏗️ Classes: 0, 📊 Variables: 0
+    🎮 Webgl (p5-webgl.txt)~        🔧 Functions: 97, 🏗️ Classes: 0, 📊 Variables: 12
 
 ==============================================================================
 Usage:

@@ -77,9 +77,8 @@ try {
     // Convert to Vimdoc using pandoc
     const vimdoc = convertToVimdoc(cleanMarkdown, moduleName, p5Version, timestamp);
     
-    // Save as p5-[module][emoji].txt 📝💾
-    const emoji = moduleEmojis[moduleName] || '📄';
-    const filename = `p5-${moduleName}${emoji}.txt`;
+    // Save as p5-[module].txt 📝💾
+    const filename = `p5-${moduleName}.txt`;
     const filepath = path.join(outputDir, filename);
     
     fs.writeFileSync(filepath, vimdoc);
@@ -219,76 +218,76 @@ function generateModuleMarkdown(moduleName, moduleData, p5Version, timestamp) {
 
 `;
 
-  // Add TOC for functions
+  // Add TOC for functions with emojis 🔧
   if (moduleData.functions.length > 0) {
-    markdown += '### Functions\n\n';
+    markdown += '### 🔧 Functions\n\n';
     moduleData.functions.forEach(func => {
-      markdown += `- [${func.name}](#${func.name.toLowerCase()})\n`;
+      markdown += `- [${func.name}](#${func.name.toLowerCase()}) 🔧\n`;
     });
     markdown += '\n';
   }
 
-  // Add TOC for classes
+  // Add TOC for classes with emojis 🏗️
   if (moduleData.classes.length > 0) {
-    markdown += '### Classes\n\n';
+    markdown += '### 🏗️ Classes\n\n';
     moduleData.classes.forEach(cls => {
-      markdown += `- [${cls.name}](#${cls.name.toLowerCase()})\n`;
+      markdown += `- [${cls.name}](#${cls.name.toLowerCase()}) 🏗️\n`;
     });
     markdown += '\n';
   }
 
-  // Add TOC for variables
+  // Add TOC for variables with emojis 📊
   if (moduleData.variables.length > 0) {
-    markdown += '### Variables\n\n';
+    markdown += '### 📊 Variables\n\n';
     moduleData.variables.forEach(variable => {
-      markdown += `- [${variable.name}](#${variable.name.toLowerCase()})\n`;
+      markdown += `- [${variable.name}](#${variable.name.toLowerCase()}) 📊\n`;
     });
     markdown += '\n';
   }
 
   markdown += '---\n\n';
 
-  // Add function documentation
+  // Add function documentation with emojis 🔧
   if (moduleData.functions.length > 0) {
-    markdown += '## Functions\n\n';
+    markdown += '## 🔧 Functions\n\n';
     moduleData.functions.forEach(func => {
-      markdown += `### ${func.name}\n\n`;
+      markdown += `### 🔧 ${func.name}\n\n`;
       if (func.description) {
         markdown += `${func.description}\n\n`;
       }
       if (func.subModule) {
-        markdown += `*Sub-module: ${func.subModule}*\n\n`;
+        markdown += `📂 *Sub-module: ${func.subModule}*\n\n`;
       }
       markdown += '---\n\n';
     });
   }
 
-  // Add class documentation
+  // Add class documentation with emojis 🏗️
   if (moduleData.classes.length > 0) {
-    markdown += '## Classes\n\n';
+    markdown += '## 🏗️ Classes\n\n';
     moduleData.classes.forEach(cls => {
-      markdown += `### ${cls.name}\n\n`;
-      markdown += `**Type:** ${cls.type}\n\n`;
+      markdown += `### 🏗️ ${cls.name}\n\n`;
+      markdown += `🏷️ **Type:** ${cls.type}\n\n`;
       if (cls.description) {
         markdown += `${cls.description}\n\n`;
       }
       if (cls.subModule) {
-        markdown += `*Sub-module: ${cls.subModule}*\n\n`;
+        markdown += `📂 *Sub-module: ${cls.subModule}*\n\n`;
       }
       markdown += '---\n\n';
     });
   }
 
-  // Add variable documentation
+  // Add variable documentation with emojis 📊
   if (moduleData.variables.length > 0) {
-    markdown += '## Variables\n\n';
+    markdown += '## 📊 Variables\n\n';
     moduleData.variables.forEach(variable => {
-      markdown += `### ${variable.name}\n\n`;
+      markdown += `### 📊 ${variable.name}\n\n`;
       if (variable.description) {
         markdown += `${variable.description}\n\n`;
       }
       if (variable.subModule) {
-        markdown += `*Sub-module: ${variable.subModule}*\n\n`;
+        markdown += `📂 *Sub-module: ${variable.subModule}*\n\n`;
       }
       markdown += '---\n\n';
     });
@@ -306,26 +305,26 @@ function removeInternalLinks(markdown) {
 
 function convertToVimdoc(markdown, moduleName, p5Version, timestamp) {
   const emoji = moduleEmojis[moduleName] || '📄';
-  const title = `p5-${moduleName}${emoji}`;
+  const title = `p5-${moduleName}`;
   
-  // Convert markdown to Vimdoc format
+  // Convert markdown to Vimdoc format with section emojis 📚✨
   let vimdoc = `${title}.txt    p5.js ${moduleName} documentation    p5
 
 ==============================================================================
-p5.js ${moduleName.charAt(0).toUpperCase() + moduleName.slice(1)} Module    *p5-${moduleName}*
+${emoji} p5.js ${moduleName.charAt(0).toUpperCase() + moduleName.slice(1)} Module ${emoji}    *p5-${moduleName}*
 
-p5.js Version: ${p5Version}~
-Last Updated: ${timestamp}~
+📦 p5.js Version: ${p5Version}~
+⏰ Last Updated: ${timestamp}~
 
 ==============================================================================
-CONTENTS                                                    *p5-${moduleName}-contents*
+📋 CONTENTS                                                    *p5-${moduleName}-contents*
 
 `;
 
-  // Convert markdown headers to Vimdoc
-  vimdoc = vimdoc.replace(/^# (.+)$/gm, '==============================================================================\n$1                                            *p5-${moduleName}-$1*\n');
-  vimdoc = vimdoc.replace(/^## (.+)$/gm, '\n$1~\n');
-  vimdoc = vimdoc.replace(/^### (.+)$/gm, '$1~\n');
+  // Convert markdown headers to Vimdoc with section emojis 🎨📝
+  vimdoc = vimdoc.replace(/^# (.+)$/gm, '==============================================================================\n📚 $1 📚                                            *p5-${moduleName}-$1*\n');
+  vimdoc = vimdoc.replace(/^## (.+)$/gm, '\n🔧 $1 🔧~\n');
+  vimdoc = vimdoc.replace(/^### (.+)$/gm, '\n📝 $1 📝~\n');
   
   // Convert bold text
   vimdoc = vimdoc.replace(/\*\*(.+?)\*\*/g, '$1');
@@ -371,16 +370,16 @@ CONTENTS                                                    *p5-index-contents*
 Available Modules:
 `;
 
-  // Add module list with emojis
+  // Add module list with emojis 📚
   for (const [moduleName, moduleData] of Object.entries(modules)) {
     const emoji = moduleEmojis[moduleName] || '📄';
-    const filename = `p5-${moduleName}${emoji}.txt`;
+    const filename = `p5-${moduleName}.txt`;
     const functionCount = moduleData.functions.length;
     const classCount = moduleData.classes.length;
     const variableCount = moduleData.variables.length;
     
     index += `    ${emoji} ${moduleName.charAt(0).toUpperCase() + moduleName.slice(1)} (${filename})~`;
-    index += `        Functions: ${functionCount}, Classes: ${classCount}, Variables: ${variableCount}\n`;
+    index += `        🔧 Functions: ${functionCount}, 🏗️ Classes: ${classCount}, 📊 Variables: ${variableCount}\n`;
   }
 
   index += `\n==============================================================================
