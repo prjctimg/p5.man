@@ -129,11 +129,11 @@ jobs:
           
           # Force add assets directories to ensure they're tracked
           if [ -d "assets/types" ]; then
-            git add assets/types/
+            git add -f assets/types/
             echo "✅ Added assets/types to git"
           fi
           if [ -d "assets/libs" ]; then
-            git add assets/libs/
+            git add -f assets/libs/
             echo "✅ Added assets/libs to git"
           fi
           
@@ -152,10 +152,10 @@ jobs:
               echo "Updated at $(date -Iseconds)" > assets/.last_update
               git add assets/.last_update
               if [ -d "assets/types" ]; then
-                git add assets/types/
+                git add -f assets/types/
               fi
               if [ -d "assets/libs" ]; then
-                git add assets/libs/
+                git add -f assets/libs/
               fi
               git commit -m "Update p5.js types and core modules ($(date +'%Y-%m-%d %H:%M:%S'))"
               echo "✅ Forced commit completed with assets"
