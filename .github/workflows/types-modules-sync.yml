@@ -117,8 +117,8 @@ jobs:
           fi
 
           # Configure git
-          git config user.name "iseeheaven"
-          git config user.email "iseeheaven@outlook.com"
+          git config user.name "gh-actions"
+          git config user.email "actions@github.com"
 
           # Debug: Check what we're copying
           echo "🔍 Debugging file copy process..."
@@ -269,8 +269,8 @@ jobs:
           cp -r /home/runner/work/automata/automata/doc/* doc/ || true
 
           # Configure git
-          git config user.name "iseeheaven"
-          git config user.email "iseeheaven@outlook.com"
+          git config user.name "gh-actions"
+          git config user.email "actions@github.com"
 
           # Add and commit changes
           git add doc/
