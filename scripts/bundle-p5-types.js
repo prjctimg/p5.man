@@ -29,12 +29,8 @@ function resolveReferences(content, basePath) {
         // Recursively resolve nested references
         const resolvedRefContent = resolveReferences(refContent, path.dirname(fullRefPath));
         
-        // Clean up module declarations and imports, but keep type definitions
-        let cleanedRefContent = resolvedRefContent
-          .replace(/declare module '[^']*'/g, '// Module declaration removed')
-          .replace(/import p5 = require\("\.\.\/[^"]*"\);?/g, '')
-          .replace(/export\s*\{[^}]*\}/g, '// Export removed')
-          .replace(/export\s+default\s+[^;]*;/g, '// Default export removed');
+        // Extract content from module declarations
+        let cleanedRefContent = extractModuleContent(resolvedRefContent);
         
         resolvedContent = resolvedContent.replace(match[0], `// Inlined from: ${refPath}\n${cleanedRefContent}`);
         processedFiles.add(fullRefPath);
@@ -46,6 +42,34 @@ function resolveReferences(content, basePath) {
   }
   
   return resolvedContent;
+}
+
+function extractModuleContent(content) {
+  // Extract content from within module declarations
+  const moduleRegex = /declare module\s+['"][^'"]*['"]\s*\{([\s\S]*?)\n\}/g;
+  let extractedContent = '';
+  let match;
+  
+  while ((match = moduleRegex.exec(content)) !== null) {
+    extractedContent += match[1] + '\n';
+  }
+  
+  // If no module declarations found, return the original content cleaned up
+  if (!extractedContent) {
+    return content
+      .replace(/import p5 = require\("\.\.\/[^"]*"\);?/g, '')
+      .replace(/export\s*\{[^}]*\}/g, '// Export removed')
+      .replace(/export\s+default\s+[^;]*;/g, '// Default export removed')
+      .replace(/export\s+\*\s+from\s+['"][^'"]*['"];?/g, '// Export from removed')
+      .replace(/\/\/\/\s*<reference\s+path="[^"]*"\s*\/>/g, '// Reference directive removed');
+  }
+  
+  return extractedContent
+    .replace(/import p5 = require\("\.\.\/[^"]*"\);?/g, '')
+    .replace(/export\s*\{[^}]*\}/g, '// Export removed')
+    .replace(/export\s+default\s+[^;]*;/g, '// Default export removed')
+    .replace(/export\s+\*\s+from\s+['"][^'"]*['"];?/g, '// Export from removed')
+    .replace(/\/\/\/\s*<reference\s+path="[^"]*"\s*\/>/g, '// Reference directive removed');
 }
 
 function extractAndInlineTypes(content) {
@@ -87,17 +111,24 @@ try {
   // Step 3: Process and clean the content to ensure all types are properly inlined
   console.log('🧹 Cleaning and processing type definitions...');
   
-  // Remove module declarations and imports that could cause conflicts
+  // Remove module declarations, imports, and reference directives that could cause conflicts
   let cleanIndexContent = resolvedIndexContent
     .replace(/import\s+p5\s*=\s*require\("\.\/index"\);?/g, '')
+    .replace(/import\s+p5\s*=\s*require\("\.\/[^"]*"\);?/g, '// Import removed')
     .replace(/declare module ['"][^'"]*['"]/g, '// Module declaration removed')
     .replace(/export\s*\{[^}]*\}/g, '// Export removed')
-    .replace(/export\s+default\s+[^;]*;/g, '// Default export removed');
+    .replace(/export\s+default\s+[^;]*;/g, '// Default export removed')
+    .replace(/export\s+\*\s+from\s+['"][^'"]*['"];?/g, '// Export from removed')
+    .replace(/\/\/\/\s*<reference\s+path="[^"]*"\s*\/>/g, '// Reference directive removed');
   
   let cleanGlobalContent = globalContent
+    .replace(/import\s+p5\s*=\s*require\("\.\/index"\);?/g, '')
+    .replace(/import\s+p5\s*=\s*require\("\.\/[^"]*"\);?/g, '// Import removed')
     .replace(/declare module ['"][^'"]*['"]/g, '// Module declaration removed')
     .replace(/export\s*\{[^}]*\}/g, '// Export removed')
-    .replace(/export\s+default\s+[^;]*;/g, '// Default export removed');
+    .replace(/export\s+default\s+[^;]*;/g, '// Default export removed')
+    .replace(/export\s+\*\s+from\s+['"][^'"]*['"];?/g, '// Export from removed')
+    .replace(/\/\/\/\s*<reference\s+path="[^"]*"\s*\/>/g, '// Reference directive removed');
   
   // Extract and inline all type definitions
   cleanIndexContent = extractAndInlineTypes(cleanIndexContent);
